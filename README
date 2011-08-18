@@ -1,0 +1,15 @@
+Tyger demo application
+
+Django application to handle:
+challenges  
+
+TODO: Django - publish canvas page (data only)
+TODO: Integrate HTML template & files from Jugal
+
+TODO: Integrate Django user authentication & password protected front page
+TODO: Establish server @ stg.tyger.us
+
+TODO: Use Django to publish about page (simple text)
+TODO: Django - publish activity pages (replace profile)
+
+TODO: Create API to for canvas data (serializable response) 
