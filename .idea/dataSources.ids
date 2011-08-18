@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Django default" product="" version="" jdbc-version="" driver-version="" uuid="6d697f88-37fe-439a-b768-40c9a556501c">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/Users/me/Dropbox/Mediabank/Tyger/tygerapi/dev.db</jdbc-url>
+    <libraries>
+      <library>
+        <url>jar://$USER_HOME$/Library/Preferences/PyCharm10/jdbc-drivers/sqlitejdbc-v056.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Django default" product="" version="" jdbc-version="" driver-version="" uuid="2c8e8f3a-818b-46d5-adc3-9235e873a954">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:/Users/me/Dropbox/Mediabank/Tyger/tygerapi/dev.db</jdbc-url>
+    <libraries>
+      <library>
+        <url>jar://$USER_HOME$/Library/Preferences/PyCharm10/jdbc-drivers/sqlitejdbc-v056.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
