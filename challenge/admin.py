@@ -6,11 +6,10 @@ class CriteriaInline(admin.TabularInline):
 	extra = 2
 
 class ChallengeAdmin(admin.ModelAdmin):
-	list_display = ('name', 'points', 'bounty', 'bounty_avail')
+	list_display = ('name', 'votes', 'bounty', 'bounty_avail')
 	fieldsets = [
-        	('General',               {'fields': ['name', 'create_date']}),
-            ('Description',               {'fields': ['descrip']}),
-        	('Rewards', {'fields': ['points', 'bounty']}),
+        	('General', {'fields': ['name', 'create_date', 'tags', 'descrip']}),
+        	('Rewards', {'fields': ['votes', 'bounty']})
     ]
 	inlines = [CriteriaInline]
 	search_fields = ['name']

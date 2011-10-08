@@ -121,6 +121,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
+    'piston',
+    'tagging',
+    'misc'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -145,3 +148,6 @@ LOGGING = {
         },
     }
 }
+
+# Forces use of lowercase tags in tagging application
+FORCE_LOWERCASE_TAGS = True

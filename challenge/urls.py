@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
 from challenge.models import Challenge
 
@@ -18,4 +18,6 @@ urlpatterns = patterns('',
             template_name='challenge/solution.html'),
         name='challenge_results'),
     (r'^(?P<challenge_id>\d+)/submit/$', 'challenge.views.submit'),
+    (r'^tags/$', 'challenge.views.tags'),
+    (r'^tag/(?P<tag>[-_A-Za-z0-9]+)/$','challenge.views.with_tag')
 )
