@@ -16,7 +16,7 @@ def submit(request, challenge_id):
         selected_criteria = c.criteria_set.get(pk=request.POST['criteria'])
     except (KeyError, Challenge.DoesNotExist):
         # Redisplay the poll voting form.
-        return render_to_response('challenge/detail.html', {
+        return render_to_response('/challenge/challenge_detail.html', {
             'challenge': c,
             'error_message': "No challenge selected.",
         }, context_instance=RequestContext(request))
@@ -29,10 +29,13 @@ def submit(request, challenge_id):
         return HttpResponseRedirect(reverse('challenge_results', args=(c.id,)))
 
 def tags(request):
-        return render_to_response("challenge/tags.html")
+        return render_to_response('challenge/challenges_tag_cloud.html',
+        context_instance=RequestContext(request))
 
 def with_tag(request, tag, object_id=None, page=1):
     query_tag = Tag.objects.get(name=tag)
     tagged_challenges = TaggedItem.objects.get_by_model(models.Challenge, query_tag)
     tagged_challenges = tagged_challenges.order_by('-create_date')
-    return render_to_response("challenge/with_tag.html", dict(tag=tag, tagged_challenges=tagged_challenges))
+    return render_to_response('challenge/challenges_with_tag.html',
+                              dict(tag=tag, tagged_challenges=tagged_challenges),
+                              context_instance=RequestContext(request))
