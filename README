@@ -1,15 +1,10 @@
-Tyger demo application
+Tyger is creating an open platform to publish and solve the most important challenges in synthetic biology.
 
-Django application to handle:
-challenges  
+The Challenge application is written in Django and controls the creation, display and update of challenges that are submitted and solved by the Tyger community.
 
-TODO: Django - publish canvas page (data only)
-TODO: Integrate HTML template & files from Jugal
+The Canvas application is the IDE for bio-developers.
 
-TODO: Integrate Django user authentication & password protected front page
-TODO: Establish server @ stg.tyger.us
+We will use piston to create open APIs that mimic the core challenge functionality, allowing bio-developers to use the design platform of their choosing.
 
-TODO: Use Django to publish about page (simple text)
-TODO: Django - publish activity pages (replace profile)
-
-TODO: Create API to for canvas data (serializable response) 
+Configuration best practices:
+-Update the settings.py file to reflect your local environment.

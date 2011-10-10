@@ -3,9 +3,13 @@
 {% block title %} {{ challenge.name }} {% endblock title %}
 
 {% block listings %}
-    {{ challenge.name }}
-    Tags: {{ challenge.tags }}
-    Description: {{ challenge.descrip }}
+    {{ challenge.name }} <br>
+    Tags: {{ challenge.tags }} <br>
+    Description: {{ challenge.descrip }} <br>
+    <p> Winning conditions: <p>
+    {% for condition in challenge.criteria_set.all %}
+        {{ condition.desc }}, {{ condition.status}} <br />
+    {% endfor %}
 
     <form action='/challenge/{{ challenge.id }}/submit/' method="post">
     {% csrf_token %}
@@ -20,11 +24,11 @@
 {% endblock listings %}
 
 {% block sidebar %}
-Sponsored by: Tyger Library
-First created: {{ challenge.create_date }}
+Sponsored by: Tyger Library <br>
+Created: {{ challenge.create_date }}<br>
 <h4> Available rewards</h4>
-{% if challenge.bounty_avail %} Bounty: {{ challenge.bounty }}
-{% else %} Bounty claimed.
+{% if challenge.bounty_avail %} Bounty: ${{ challenge.bounty }} <br>
+{% else %} Bounty claimed. <br>
 {% endif %}
 <br>
 Votes: {{ challenge.points }}

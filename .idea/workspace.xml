@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66f675d1-b85d-43dc-a0bb-c677e3bdfada" name="Default" comment="CSS/Javascript &amp; Template inheritance added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.localized" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/base_challenge.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/challenge_detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/challenge_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/challenge_solutions_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/challenges_tag_cloud.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/challenges_with_tag.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/inc/tag_cloud.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crossdomain.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/humans.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/robots.txt" />
+    <list default="true" id="66f675d1-b85d-43dc-a0bb-c677e3bdfada" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/base_site.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/API_Docs.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev.db" afterPath="$PROJECT_DIR$/dev.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenge_detail.html" afterPath="$PROJECT_DIR$/challenge/challenge_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenge_list.html" afterPath="$PROJECT_DIR$/challenge/challenge_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenge_solutions_list.html" afterPath="$PROJECT_DIR$/challenge/challenge_solutions_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/models.py" afterPath="$PROJECT_DIR$/challenge/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/urls.py" afterPath="$PROJECT_DIR$/challenge/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/views.py" afterPath="$PROJECT_DIR$/challenge/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
@@ -47,28 +40,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="40" selection-start="2682" selection-end="2682" vertical-scroll-proportion="0.36010364">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_challenge.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/base_challenge.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="25" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="challenge_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/challenge_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="30" column="0" selection-start="1167" selection-end="1167" vertical-scroll-proportion="-10.083333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="0" selection-start="4618" selection-end="4618" vertical-scroll-proportion="0.6721311">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="52" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -77,25 +79,7 @@
       <file leaf-file-name="challenge_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/challenge_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-4.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenge_solutions_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="-7.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenges_with_tag.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="3" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -104,16 +88,34 @@
       <file leaf-file-name="challenges_tag_cloud.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/challenges_tag_cloud.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="-11.875">
+            <state line="12" column="42" selection-start="408" selection-end="408" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tag_cloud.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/inc/tag_cloud.html">
+      <file leaf-file-name="challenges_with_tag.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="88" selection-end="88" vertical-scroll-proportion="-1.25">
+            <state line="25" column="23" selection-start="817" selection-end="817" vertical-scroll-proportion="-14.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="challenge_solutions_list.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="35" selection-start="368" selection-end="368" vertical-scroll-proportion="-8.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/Sites/challenge/static/inc/tag_cloud.html" />
-        <option value="$PROJECT_DIR$/challenge/views.py" />
-        <option value="$USER_HOME$/Sites/base.html" />
-        <option value="$USER_HOME$/Sites/challenge/base_challenge.html" />
-        <option value="$USER_HOME$/Sites/challenge/challenge_list.html" />
-        <option value="$PROJECT_DIR$/challenge/urls.py" />
-        <option value="$USER_HOME$/Sites/challenge/challenge_detail.html" />
-        <option value="$USER_HOME$/Sites/challenge/challenges_tag_cloud.html" />
-        <option value="$USER_HOME$/Sites/challenge/challenges_with_tag.html" />
         <option value="$USER_HOME$/Sites/challenge/challenge_solutions_list.html" />
         <option value="$USER_HOME$/Sites/admin/base_site.html" />
         <option value="$PROJECT_DIR$/challenge/inc/tag_cloud.html" />
         <option value="$PROJECT_DIR$/challenge/base_challenge.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/500.html" />
         <option value="$PROJECT_DIR$/404.html" />
+        <option value="$PROJECT_DIR$/static/challenge/challenge_detail.html" />
+        <option value="$PROJECT_DIR$/challenge/views.py" />
+        <option value="$PROJECT_DIR$/challenge/models.py" />
+        <option value="$PROJECT_DIR$/challenge/challenge_list.html" />
+        <option value="$PROJECT_DIR$/challenge/urls.py" />
+        <option value="$PROJECT_DIR$/challenge/challenge_detail.html" />
+        <option value="$PROJECT_DIR$/challenge/challenge_solutions_list.html" />
+        <option value="$PROJECT_DIR$/static/README" />
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/settings.py" />
       </list>
     </option>
   </component>
@@ -451,7 +453,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="27" width="1109" height="873" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987747" sideWeight="0.61986756" order="3" side_tool="false" content_ui="tabs" />
@@ -460,7 +462,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25611326" sideWeight="0.21459228" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33773586" sideWeight="0.61986756" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33773586" sideWeight="0.61986756" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38013244" sideWeight="0.9990575" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -497,7 +499,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS/Javascript &amp; Template inheritance added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added templates and static content" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -513,119 +515,106 @@
     <MESSAGE value="Adding updated readme" />
     <MESSAGE value="Tagging functionality added" />
     <MESSAGE value="CSS/Javascript &amp; Template inheritance added" />
+    <MESSAGE value="Added templates and static content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/canvas/canvas_settings_view.html">
+    <entry file="file://$PROJECT_DIR$/canvas/canvas_challenge_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.5549738">
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.039267015">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/humans.txt">
+    <entry file="file://$PROJECT_DIR$/canvas/canvas_add_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/base_site.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="207" selection-end="207" vertical-scroll-proportion="0.13667426">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/inc/tag_cloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="88" selection-end="88" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenge_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenges_tag_cloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="-11.875">
+        <state line="14" column="48" selection-start="628" selection-end="628" vertical-scroll-proportion="0.5497382">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/challenge/base_challenge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="25" vertical-scroll-proportion="-0.0">
+        <state line="28" column="0" selection-start="890" selection-end="890" vertical-scroll-proportion="-14.666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="52" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/challenge/challenge_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-4.375">
+        <state line="3" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/404.html">
+    <entry file="file://$PROJECT_DIR$/challenge/challenges_tag_cloud.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.9171271">
+        <state line="12" column="42" selection-start="408" selection-end="408" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/500.html">
+    <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="49" selection-start="27" selection-end="76" vertical-scroll-proportion="0.08">
+        <state line="25" column="23" selection-start="817" selection-end="817" vertical-scroll-proportion="-14.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenge_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1167" selection-end="1167" vertical-scroll-proportion="-10.083333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="35" selection-start="368" selection-end="368" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="575" selection-end="575" vertical-scroll-proportion="0.40983605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/handheld.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="40" selection-start="2682" selection-end="2682" vertical-scroll-proportion="0.36010364">
+        <state line="127" column="0" selection-start="4618" selection-end="4618" vertical-scroll-proportion="0.6721311">
           <folding />
         </state>
       </provider>

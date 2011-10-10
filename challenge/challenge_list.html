@@ -4,22 +4,19 @@
 
 {% block listings %}
     {% if top25_challenge_list %}
-        <ul>
         {% for c in top25_challenge_list %}
-            <li><p></p><a href="/challenge/{{ c.id }}/">{{ c.name }}</a></p>
-                {{ c.descrip|truncatewords:50 }}<br>
+            {% block challenge_title %} <a href="/challenge/{{ c.id }}/">{{ c.name }}</a><br> {% endblock %}
+                {{ c.descrip|truncatewords:50 }}
                 {%  if c.bounty_avail %}
-                    ${{c.bounty}} bounty available!
+                    ${{c.bounty}}
                 {% else %}
                     ${{ c.bounty }} bounty claimed by userid.
                 {% endif %}<br>
                 Votes: {{ c.votes }}<br>
                 Tags: {{ c.tags }}<br>
-            </li>
         {% endfor %}
-        </ul>
     {%  else %}
-        <p>No challenges available.</p>
+        No challenges available
     {% endif %}
 {% endblock listings%}
 
