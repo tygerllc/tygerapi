@@ -1,0 +1,19 @@
+{% extends 'base_challenge.html' %}
+
+{% block title %} Tyger community's solutions to challenge.name {% endblock title %}
+
+{% block listings %}
+List Solutions to {{ challenge.name }}
+
+    <ul>
+    {% for condition in challenge.criteria_set.all %}
+        <li>{{condition.desc}} -- {{condition.status}}</li>
+    {% endfor %}
+    </ul>
+
+<a href='/challenge/{{ challenge.id }}/'>Submit solution again?</a>
+{% endblock listings %}
+
+
+{% block sidebar %}
+{% endblock sidebar %}

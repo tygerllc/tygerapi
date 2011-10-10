@@ -29,13 +29,13 @@ def submit(request, challenge_id):
         return HttpResponseRedirect(reverse('challenge_results', args=(c.id,)))
 
 def tags(request):
-        return render_to_response('challenge/challenges_tag_cloud.html',
+        return render_to_response('challenges_tag_cloud.html',
         context_instance=RequestContext(request))
 
 def with_tag(request, tag, object_id=None, page=1):
     query_tag = Tag.objects.get(name=tag)
     tagged_challenges = TaggedItem.objects.get_by_model(models.Challenge, query_tag)
     tagged_challenges = tagged_challenges.order_by('-create_date')
-    return render_to_response('challenge/challenges_with_tag.html',
+    return render_to_response('challenges_with_tag.html',
                               dict(tag=tag, tagged_challenges=tagged_challenges),
                               context_instance=RequestContext(request))

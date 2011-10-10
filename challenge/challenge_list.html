@@ -1,0 +1,29 @@
+{% extends 'base_challenge.html' %}
+
+{% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
+
+{% block listings %}
+    {% if top25_challenge_list %}
+        <ul>
+        {% for c in top25_challenge_list %}
+            <li><p></p><a href="/challenge/{{ c.id }}/">{{ c.name }}</a></p>
+                {{ c.descrip|truncatewords:50 }}<br>
+                {%  if c.bounty_avail %}
+                    ${{c.bounty}} bounty available!
+                {% else %}
+                    ${{ c.bounty }} bounty claimed by userid.
+                {% endif %}<br>
+                Votes: {{ c.votes }}<br>
+                Tags: {{ c.tags }}<br>
+            </li>
+        {% endfor %}
+        </ul>
+    {%  else %}
+        <p>No challenges available.</p>
+    {% endif %}
+{% endblock listings%}
+
+{% block sidebar %}
+    {% include 'inc/tag_cloud.html' %}
+{% endblock sidebar %}
+

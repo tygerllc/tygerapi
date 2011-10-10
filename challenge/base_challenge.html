@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
+
+{% block topnav %}
+    <div id="title">
+        <h1 id="logo"><img src="{{ STATIC_URL }}img/logo.jpg" alt="Tyger Logo"/></h1>
+        <h2 id="tagline">Design New <span class="green">Life</span>. Improve The <span class="green">World</span>. Make <span class="green">Money</span>.</h2>
+        <div class="clear"></div>
+    </div>
+    <nav>
+        <ul class="side">
+            <li><a class="current" href="#">Challenges</a></li>
+            <li><a href="#">Canvas</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+{%  endblock topnav %}
+
+{% block content %}
+    {% block listings %}
+    {% endblock listings%}
+
+    {% block sidebar %}
+    {% endblock sidebar %}
+{% endblock content %}
+

@@ -1,0 +1,26 @@
+{% extends 'base_challenge.html' %}
+
+{% block title %} Challenges tagged with {{ tag }} on Tyger {% endblock title %}
+
+{% block listings %}
+Challenges Tagged with <span class="highlight">{{tag}}</span>
+
+{% if tagged_challenges %}
+    <ul>
+    {% for c in tagged_challenges %}
+        <li><p></p><a href="/challenge/{{ c.id }}/">{{ c.name }}</a></p>
+            {{ c.descrip|truncatewords:50 }}<br>
+            {%  if c.bounty_avail %}
+                Bounty: {{c.bounty}} available!
+            {% else %}
+                Bounty: {{ c.bounty }} claimed by userid.
+            {% endif %}<br>
+            Votes: {{ c.votes }}<br>
+            Tags: {{ c.tags }}<br>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+<p>No challenges with that tag. Maybe you should create one?!</p>
+{% endif %}
+{% endblock listings %}
