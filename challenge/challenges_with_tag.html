@@ -8,7 +8,7 @@ Challenges Tagged with <span class="highlight">{{tag}}</span>
 {% if tagged_challenges %}
     <ul>
     {% for c in tagged_challenges %}
-        <li><p></p><a href="/challenge/{{ c.id }}/">{{ c.name }}</a></p>
+        <li><p></p><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></p>
             {{ c.descrip|truncatewords:50 }}<br>
             {%  if c.bounty_avail %}
                 Bounty: {{c.bounty}} available!

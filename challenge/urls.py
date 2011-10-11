@@ -10,10 +10,6 @@ urlpatterns = patterns('',
          queryset = Challenge.objects.order_by('-create_date')[:25],
          context_object_name='top25_challenge_list',
          template_name='challenge_list.html'))),
-    (r'^(?P<pk>\d+)/$',
-        login_required(DetailView.as_view(
-            model=Challenge,
-            template_name='challenge_detail.html'))),
     url(r'^(?P<pk>\d+)/results/$',
         DetailView.as_view(
             model=Challenge,
@@ -24,5 +20,9 @@ urlpatterns = patterns('',
     (r'^tags/$',
         'challenge.views.tags'),
     (r'^tag/(?P<tag>[-_A-Za-z0-9]+)/$',
-        'challenge.views.with_tag')
+        'challenge.views.with_tag'),
+    (r'^(?P<slug>[-_A-Za-z0-9]+)/$',
+        login_required(DetailView.as_view(
+            model=Challenge,
+            template_name='challenge_detail.html')))
 )

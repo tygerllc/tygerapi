@@ -2,17 +2,146 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f675d1-b85d-43dc-a0bb-c677e3bdfada" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/base_site.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/API_Docs.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/arrow-down.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/arrow-up.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/changelist-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/changelist-bg_rtl.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/chooser-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/chooser_stacked-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/default-bg-reverse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/default-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/deleted-overlay.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon-no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon-unknown.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon-yes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_addlink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_alert.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_calendar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_changelink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_clock.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_deletelink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_searchbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/icon_success.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/inline-delete-8bit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/inline-delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/inline-restore-8bit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/inline-restore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/inline-splitter-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/nav-bg-grabber.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/nav-bg-reverse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/nav-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector-addall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector-remove.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector-removeall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector-search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector_stacked-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/selector_stacked-remove.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tool-left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tool-left_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tool-right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tool-right_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tooltag-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tooltag-add_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tooltag-arrowright.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/admin/tooltag-arrowright_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/gis/move_vertex_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/img/gis/move_vertex_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/br-arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cancelh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/canvas-back.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cgen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cgenc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cgenh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cmes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cmesc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/cmesh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/crep.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/crepc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/creph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/csig.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/csigc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/csigh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/csor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/csorc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/csorh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/saveh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tai.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/taic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/taih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tci.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tcic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tcih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tei.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/teic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/teih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/thi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/thic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/thih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tool-add-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tool-challenge-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tool-edit-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tool-settings-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tsi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tsic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/tsih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/win-done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/win-rem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/changelists.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/forms.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/css/widgets.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/LICENSE-JQUERY.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/SelectBox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/SelectFilter2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/actions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/admin/ordering.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/collapse.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/compress.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/dateparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/getElementsBySelector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/inlines.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/inlines.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/jquery.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/prepopulate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/prepopulate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/timeparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/admin/js/urlify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/css/handheld.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/js/libs/dd_belatedpng.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/js/libs/jquery-1.5.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/js/libs/jquery-1.5.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/js/libs/modernizr-1.7.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/js/plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/misc/templatetags/date_diff.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev.db" afterPath="$PROJECT_DIR$/dev.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenge_detail.html" afterPath="$PROJECT_DIR$/challenge/challenge_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/admin.py" afterPath="$PROJECT_DIR$/challenge/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/base_challenge.html" afterPath="$PROJECT_DIR$/challenge/base_challenge.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenge_list.html" afterPath="$PROJECT_DIR$/challenge/challenge_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenge_solutions_list.html" afterPath="$PROJECT_DIR$/challenge/challenge_solutions_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/challenges_with_tag.html" afterPath="$PROJECT_DIR$/challenge/challenges_with_tag.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/models.py" afterPath="$PROJECT_DIR$/challenge/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/urls.py" afterPath="$PROJECT_DIR$/challenge/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/views.py" afterPath="$PROJECT_DIR$/challenge/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
     </list>
     <ignored path="tygerapi.iws" />
@@ -43,7 +172,7 @@
       <file leaf-file-name="challenge_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/challenge_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1167" selection-end="1167" vertical-scroll-proportion="-10.083333">
+            <state line="36" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="-13.833333">
               <folding />
             </state>
           </provider>
@@ -52,16 +181,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="0" selection-start="4618" selection-end="4618" vertical-scroll-proportion="0.6721311">
+            <state line="45" column="0" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,7 +190,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="52" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+            <state line="24" column="31" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,34 +199,7 @@
       <file leaf-file-name="challenge_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/challenge_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenges_tag_cloud.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/challenges_tag_cloud.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="408" selection-end="408" vertical-scroll-proportion="-7.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenges_with_tag.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="23" selection-start="817" selection-end="817" vertical-scroll-proportion="-14.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenge_solutions_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="368" selection-end="368" vertical-scroll-proportion="-8.125">
+            <state line="5" column="24" selection-start="183" selection-end="183" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -115,7 +208,25 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+            <state line="7" column="46" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag_cloud.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/templatetags/tag_cloud.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="date_diff.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/misc/templatetags/date_diff.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.21479714">
               <folding />
             </state>
           </provider>
@@ -135,22 +246,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$USER_HOME$/Sites/challenge/challenge_solutions_list.html" />
-        <option value="$USER_HOME$/Sites/admin/base_site.html" />
-        <option value="$PROJECT_DIR$/challenge/inc/tag_cloud.html" />
-        <option value="$PROJECT_DIR$/challenge/base_challenge.html" />
         <option value="$PROJECT_DIR$/500.html" />
         <option value="$PROJECT_DIR$/404.html" />
         <option value="$PROJECT_DIR$/static/challenge/challenge_detail.html" />
         <option value="$PROJECT_DIR$/challenge/views.py" />
-        <option value="$PROJECT_DIR$/challenge/models.py" />
-        <option value="$PROJECT_DIR$/challenge/challenge_list.html" />
-        <option value="$PROJECT_DIR$/challenge/urls.py" />
         <option value="$PROJECT_DIR$/challenge/challenge_detail.html" />
-        <option value="$PROJECT_DIR$/challenge/challenge_solutions_list.html" />
         <option value="$PROJECT_DIR$/static/README" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/challenge/base_challenge.html" />
+        <option value="$PROJECT_DIR$/challenge/admin.py" />
+        <option value="$PROJECT_DIR$/challenge/models.py" />
+        <option value="$PROJECT_DIR$/challenge/urls.py" />
+        <option value="$PROJECT_DIR$/challenge/challenge_solutions_list.html" />
+        <option value="$PROJECT_DIR$/challenge/challenges_with_tag.html" />
+        <option value="$PROJECT_DIR$/challenge/challenge_list.html" />
+        <option value="$PROJECT_DIR$/misc/templatetags/date_diff.py" />
       </list>
     </option>
   </component>
@@ -288,6 +399,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="misc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="misc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -304,10 +461,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/challenge" />
       <recent name="$USER_HOME$/Sites/challenge" />
       <recent name="$PROJECT_DIR$/misc/templatetags" />
       <recent name="$PROJECT_DIR$/misc" />
-      <recent name="$PROJECT_DIR$/challenge" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.tygerapi">
@@ -453,7 +610,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="27" width="1109" height="873" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987747" sideWeight="0.61986756" order="3" side_tool="false" content_ui="tabs" />
@@ -462,7 +619,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25611326" sideWeight="0.21459228" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33773586" sideWeight="0.61986756" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33773586" sideWeight="0.61986756" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38013244" sideWeight="0.9990575" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -499,7 +656,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added templates and static content" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up duplicate static content" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -516,77 +673,15 @@
     <MESSAGE value="Tagging functionality added" />
     <MESSAGE value="CSS/Javascript &amp; Template inheritance added" />
     <MESSAGE value="Added templates and static content" />
+    <MESSAGE value="Cleaned up duplicate static content" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/canvas/canvas_challenge_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.039267015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/canvas/canvas_add_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="48" selection-start="628" selection-end="628" vertical-scroll-proportion="0.5497382">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/base_challenge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="890" selection-end="890" vertical-scroll-proportion="-14.666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="52" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenge_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenges_tag_cloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="408" selection-end="408" vertical-scroll-proportion="-7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="817" selection-end="817" vertical-scroll-proportion="-14.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenge_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1167" selection-end="1167" vertical-scroll-proportion="-10.083333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="368" selection-end="368" vertical-scroll-proportion="-8.125">
           <folding />
         </state>
       </provider>
@@ -598,23 +693,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/views.py">
+    <entry file="file://$PROJECT_DIR$/challenge/static/admin/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/handheld.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="0" selection-start="4618" selection-end="4618" vertical-scroll-proportion="0.6721311">
+        <state line="54" column="24" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.15544042">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="31" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenge_solutions_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="333" selection-end="333" vertical-scroll-proportion="0.52">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenges_with_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="363" selection-end="363" vertical-scroll-proportion="0.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenges_tag_cloud.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="366" selection-end="366" vertical-scroll-proportion="0.4556962">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenge_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1271" selection-end="1271" vertical-scroll-proportion="-13.833333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="17" selection-start="336" selection-end="336" vertical-scroll-proportion="0.3579952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/base_challenge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="951" selection-end="951" vertical-scroll-proportion="0.8821989">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="46" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/challenge_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="24" selection-start="183" selection-end="183" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/templatetags/tag_cloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/templatetags/date_diff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.21479714">
           <folding />
         </state>
       </provider>

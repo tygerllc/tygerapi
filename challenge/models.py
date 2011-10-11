@@ -5,8 +5,7 @@ from tagging.models import Tag
 
 class Challenge(models.Model):
         name = models.CharField(max_length=200)
-#        slug_name = models.SlugField(max_length=50)
-# TODO add slug field to challenges and automatically create it
+        slug = models.SlugField(max_length=200)
         descrip = models.CharField(max_length=1000)
         votes = models.IntegerField()
         bounty = models.DecimalField(max_digits = 10, decimal_places=2)

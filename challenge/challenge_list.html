@@ -3,10 +3,12 @@
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
 {% block listings %}
+    {% load date_diff %}
     {% if top25_challenge_list %}
         {% for c in top25_challenge_list %}
-            {% block challenge_title %} <a href="/challenge/{{ c.id }}/">{{ c.name }}</a><br> {% endblock %}
-                {{ c.descrip|truncatewords:50 }}
+            {% block challenge_title %} <a href="/challenge/{{ c.slug }}/">{{ c.name }}</a><br> {% endblock %}
+                Challenge created {{ c.create_date|date_diff }}. <br>
+                {{ c.descrip|truncatewords:50 }}<br>
                 {%  if c.bounty_avail %}
                     ${{c.bounty}}
                 {% else %}
