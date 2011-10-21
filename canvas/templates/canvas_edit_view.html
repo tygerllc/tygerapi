@@ -1,0 +1,190 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Tyger | Canvas - Edit</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="../../challenge/static/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&v2' rel='stylesheet' type='text/css'>
+  <script src="../../challenge/static/js/libs/modernizr-1.7.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+    		<div class="container">
+	    		<div id="title">
+					<h1 id="logo"><img src="../../challenge/static/img/logo.jpg" alt="Tyger Logo"/></h1>
+					<h2 id="tagline">Design New <span class="green">Life</span>. Improve The <span class="green">World</span>. Make <span class="green">Money</span>.</h2>
+					<div class="clear"></div>
+				</div>
+				<nav>
+					<ul class="side">
+						<li><a href="#">Challenges</a></li>
+						<li><a class="current" href="#">Canvas</a></li>
+						<li><a href="#">Tutorial</a></li>
+						<li><a href="#">Profile</a></li>
+					</ul>
+				</nav>
+				
+			</div>
+			<div id="breadcrumb">
+				<ul class="side">
+					<li><a href="#">Challenges</a></li>
+					<li><a href="#">Health</a></li>
+					<li><a href="#">E Coli that glows blue in the presence of arsenic</a></li>
+					<li class="current">My Solution</li>
+				</ul>
+			</div>
+			
+    </header>
+    <div id="main" role="main">
+    	<div class="container">
+    		<table cellspacing="0" cellpadding="0" width="100%" height="100%">
+    			<tbody>
+    				<tr>
+    					
+    					<td id="sidebar">
+    						<div id="toolbar">
+								<div id="view-buttons">
+									<a class="button lb">
+										<span class="b-tci"></span>
+									</a>
+									<a class="button">
+										<span class="b-tai"></span>
+									</a>
+									<a class="button">
+										<span class="b-tei"></span>
+									</a>
+									<a class="button rb">
+										<span class="b-tsi"></span>
+									</a>									
+								</div>	
+								
+								<div id="toolbar-toggle">
+									<a class="button lb">
+										<span class="b-thi"></span>
+									</a>
+								</div>
+								
+								<div id="edit-view">
+									<div class="toolbar-content">
+										<div id="edit-box" class="info-box">
+											<ul>
+												<li>
+													<label>Device Name:</label><br/>
+													<input type="text" name="dev-name"/>
+												</li>
+												<li>
+													<label>Device Description:</label><br/>
+														<p>
+															Random Description of the device currently selected.
+														</p>
+													
+												</li>
+												<div class="sep"></div>
+												<li>
+													<label>Device Type:</label>
+													<select name="dev-type" class="control-side">
+													  <option value="generator">Generator</option>
+													  <option value="reporter">Reporter</option>
+													  <option value="measurement">Measurement</option>
+													  <option value="signalling">Signalling</option>
+													</select>
+												</li>
+												
+												<li>
+													<label>Function:</label>
+													<select name="dev-func" class="control-side">
+													  <option value="glowblue">Glow Blue</option>
+													</select>
+												</li>
+												
+												<li>
+													<label>Default:</label>
+													<span class="control-side">
+														<input type="radio" name="default" value="on" /> On
+														<input type="radio" name="default" value="off" /> Off	
+													</span>												
+												</li>
+
+												<li>
+													<label>Induced By:</label>
+													<select name="dev-induced" class="control-side">
+													  <option value="yes">Yes</option>
+													  <option value="no">No</option>
+													</select>
+												</li>
+												<li>
+													<label>Biobrick ID:</label>
+													<a href="#" class="control-side">BB_12345</a>
+												</li>
+											</ul>
+										</div>
+										
+										<span class="rfloat">
+											<a class="button smallButton lb rb">
+												<span class="b-cancel"></span>
+											</a>
+											<a class="button smallButton lb rb">
+												<span class="b-save"></span>
+											</a>
+										</span>
+										<div class="clear"></div>
+									</div>
+								</div>
+    						</div>
+    					</td>
+						
+						
+						<td id="editorPane">
+							<div id="canvas-container">
+								<canvas id="editCanvas" width="1" height="1">
+									
+								</canvas>
+							</div>
+						</td>
+						
+						
+    				</tr>
+    			</tbody>
+    		</table>
+			
+		</div>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!-- eo #container -->
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="../../challenge/static/js/plugins.js"></script>
+  <script src="../../challenge/static/js/script.js"></script>
+  <!-- end scripts-->
+
+
+  <!--[if lt IE 7 ]>
+    <script src="js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg");</script>
+  <![endif]-->
+
+</body>
+</html>

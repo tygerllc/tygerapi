@@ -1,15 +1,16 @@
-{% extends 'base_challenge.html' %}
+{% extends 'challenge/templates/base_challenge.html' %}
 
 {% block title %} Challenges tagged with {{ tag }} on Tyger {% endblock title %}
 
 {% block listings %}
 Challenges Tagged with <span class="highlight">{{tag}}</span>
-
 {% if tagged_challenges %}
+    {% load date_diff %}
     <ul>
     {% for c in tagged_challenges %}
         <li><p></p><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></p>
             {{ c.descrip|truncatewords:50 }}<br>
+            Created {{ c.create_date|date_diff }}
             {%  if c.bounty_avail %}
                 Bounty: {{c.bounty}} available!
             {% else %}

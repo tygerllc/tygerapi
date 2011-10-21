@@ -153,3 +153,5 @@ LOGGING = {
 
 # Forces use of lowercase tags in tagging application
 FORCE_LOWERCASE_TAGS = True
+
+AUTH_PROFILE_MODULE = 'challenge.UserProfile'

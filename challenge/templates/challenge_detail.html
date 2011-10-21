@@ -1,0 +1,26 @@
+{% extends 'challenge/templates/base_challenge.html' %}
+
+{% block title %} {{ challenge.name }} {% endblock title %}
+
+{% block listings %}
+    {{ challenge.name }} <br>
+    Tags: {{ challenge.tags }} <br>
+    Description: {{ challenge.descrip }} <br>
+    <p> Winning conditions: <p>
+    {% for condition in challenge.criteria_set.all %}
+        {{ condition.desc }}, {{ condition.status}} <br />
+    {% endfor %}
+
+{% endblock listings %}
+
+{% block sidebar %}
+    {% load date_diff %}
+    Sponsored by: {{ challenge.sponsor.user.username }} {{ challenge.create_date|date_diff }}<br>
+<h4> Available rewards</h4>
+{% if challenge.bounty_avail %} Bounty: ${{ challenge.bounty }} <br>
+{% else %} Bounty claimed. <br>
+{% endif %}
+<br>
+Votes: {{ challenge.votes }}
+{%  endblock sidebar %}
+
