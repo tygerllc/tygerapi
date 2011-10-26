@@ -3,23 +3,61 @@
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
 {% block listings %}
-    {% load date_diff %}
-    {% if top25_challenge_list %}
-        {% for c in top25_challenge_list %}
-            {% block challenge_title %} <a href="/challenge/{{ c.slug }}/">{{ c.name }}</a><br> {% endblock %}
-                Created {{ c.create_date|date_diff }}. <br>
-                {{ c.descrip|truncatewords:50 }}<br>
-                {%  if c.bounty_avail %}
-                    ${{c.bounty}}
-                {% else %}
-                    ${{ c.bounty }} bounty claimed by userid.
-                {% endif %}<br>
-                Votes: {{ c.votes }}<br>
-                Tags: {{ c.tags }}<br>
-        {% endfor %}
-    {%  else %}
-        No challenges available
-    {% endif %}
+    <ul id="recent-listings">
+        {% load date_diff %}
+        {% if top25_challenge_list %}
+            {% for c in top25_challenge_list %}
+                <li class="list-item">
+                    <div class="clearfix">
+                        <div class="challenge-rewards">
+                            {%  if c.bounty_avail %}
+                                <div class="bounty">${{c.bounty}}</div>
+                            {% else %}
+                                ${{ c.bounty }} bounty claimed by userid.
+                            {% endif %}
+                            <div class="votes">
+                                <div class="votecount">
+                                    {{ c.votes }}
+                                </div>
+                                votes
+                            </div>
+
+                            <button class="btn-sponsor"><span class="ico-uparr"></span>Sponsor</button>
+                        </div>
+                        <div class="challenge-info">
+                            {% block challenge_title %} 
+                                <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
+                            {% endblock %}
+                            <div class="description">
+                                {{ c.descrip|truncatewords:50 }}
+                            </div>
+                            <div class="challenge-details clearfix">
+                                <div class="sponsor-details">
+                                    <div class="sponsors">
+                                        <h4>Sponsored By</h4>
+                                    </div>
+                                    <div class="co-sponsors">
+                                        <h5>Co-Sponsored By</h5>
+                                    </div>
+                                    
+                                </div>
+                                <div class="tags">
+                                    {% for t in c.get_tags %}
+                                        <a class="tag">{{t}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="created">
+                            created <span class="bold">{{ c.create_date|date_diff }}</span>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        {%  else %}
+            No challenges available
+        {% endif %}
+    </ul>
 {% endblock listings%}
 
 {% block sidebar %}

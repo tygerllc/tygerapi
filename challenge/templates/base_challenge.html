@@ -19,10 +19,28 @@
 {%  endblock topnav %}
 
 {% block content %}
-    {% block listings %}
-    {% endblock listings%}
+    <div class="clearfix">
+        <div id="challenge-listings">
+            <div id="viewtabs" class="clearfix">
+                <h2>Challenges</h2>
+                <ul id="tabs">
+                    <li class="current"><a href="#">Most Recent</a></li>
+                    <li><a href="#">Top Bounty</a></li>
+                    <li><a href="#">Top Points</a></li>
+                    <li><a href="#">Oldest Unsolved</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+            </div>
+            <div id="listings">
+                {% block listings %}
+                {% endblock listings%}
+            </div>
+        </div>
 
-    {% block sidebar %}
-    {% endblock sidebar %}
+        <div id="challenge-sidebar">
+            {% block sidebar %}
+            {% endblock sidebar %}
+        </div>
+    </div>
 {% endblock content %}
 

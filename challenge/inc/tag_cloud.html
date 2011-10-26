@@ -1,6 +1,6 @@
 <div class="tag-cloud-header">
     {% block tag_cloud_header %}
-        <h4>Filter by tag</h4>
+        <h2>Filter by tag</h2>
     {% endblock tag_cloud_header %}
 </div>
 
@@ -9,9 +9,14 @@
     {% load tag_cloud %}
     {% tag_cloud_for_model challenge.Challenge as tags with steps=6 min_count=1 distribution=log %}
     {% for tag in tags %}
-        <span class="tag-{{tag.font_size}}"><a href="/challenge/tag/{{tag.name}}/">{{tag.name}} - {{ tag.count }}</a></span>
+        <span class="tag-item">
+            <a href="/challenge/tag/{{tag.name}}/" class="tag">{{tag.name}}
+            </a>
+            <span class="tag-count">x{{ tag.count }}</span>
+        </span>
     {% endfor %}
     {% endblock tag_cloud%}
 </div><!-- tag-cloud end -->
-
+<!--
 <p><em>View <a href="/challenge/tags/">tags as a cloud</a></em></p>
+-->
