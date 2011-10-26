@@ -19,11 +19,11 @@ Make sure python and django are installed and running on your system.
 
     $ git clone git@github.com:tygerllc/tygerapi.git
 
-2. Run the server
+2. Run the server::
 
     ./manage.py runserver
 
-3. Direct your browser to the local address http://127.0.0.1/admin. Enter *root* for both username and password fields.
+3. Direct your browser to the local address http://127.0.0.1:8000/admin. Enter *root* for both username and password fields.
 
 
 4. You are now a *superuser*. Enjoy!
