@@ -1,0 +1,6 @@
+# Ignore all Python compiled source files
+*.py[co]
+*.egg
+
+# Ignore local settings
+local_settings.py
