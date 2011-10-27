@@ -1,32 +1,27 @@
 # Django settings for tygerapi project.
 
+from os.path import abspath, dirname, basename, join
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+ROOT_PATH = abspath(dirname(__file__))
+PROJECT_NAME = basename(ROOT_PATH)
 
 ADMINS = (
     # ('Tim Ogilvie', 'me@timogilvie.com'),
 )
-
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'dev.db',                      # sqlite3 path.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', 
+        'NAME': 'dev.db',                       # sqlite3 path.
     }
 }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
 TIME_ZONE = 'America/New_York'
 
 # Language code for this installation. All choices can be found here:
@@ -45,7 +40,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/static/static.lawrence.com/static/"
-MEDIA_ROOT = "/Users/me/Dropbox/Tyger/tygerapi/media/"
+MEDIA_ROOT = join(ROOT_PATH, 'media')
 
 # URL that handles the static served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -56,7 +51,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/static/static.lawrence.com/static/"
-STATIC_ROOT = "/Users/me/Dropbox/Tyger/tygerapi/static/"
+STATIC_ROOT = join(ROOT_PATH, 'static')
 
 # URL prefix for static files.
 # Example: "http://static.lawrence.com/static/"
@@ -104,8 +99,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'tygerapi.urls'
 
 TEMPLATE_DIRS = (
-    "/Users/me/Dropbox/Tyger/tygerapi/",
-    "/Users/me/Dropbox/Tyger/tygerapi/challenge/"
+    ROOT_PATH,
+    join(ROOT_PATH, 'challenge')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -155,3 +150,8 @@ LOGGING = {
 FORCE_LOWERCASE_TAGS = True
 
 AUTH_PROFILE_MODULE = 'challenge.UserProfile'
+
+try:
+    from local_settings import *
+except:
+    pass
