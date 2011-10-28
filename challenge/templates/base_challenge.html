@@ -3,24 +3,25 @@
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
 {% block topnav %}
-    <div id="title">
-        <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo.jpg" alt="Tyger Logo"/></a></h1>
-        <h2 id="tagline">Design New <span class="green">Life</span>. Improve The <span class="green">World</span>. Make <span class="green">Money</span>.</h2>
-        <div class="clear"></div>
+    <div class="container">
+        <div id="title" class="span-8 append-1">
+            <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo-t.png" alt="Tyger Logo"/></a></h1>
+
+        </div>
+        <div id="nav" class="span-15 last">
+            <ul class="side">
+                <li><a class="current" href="/challenge">Challenges</a></li>
+                <li><a href="/canvas">Canvas</a></li>
+                <li><a href="/tutorial/">Tutorial</a></li>
+                <li><div class="profpic"><span class="bg-prof"></span></div></li>
+            </ul>
+        </div>
     </div>
-    <nav>
-        <ul class="side">
-            <li><a class="current" href="/challenge">Challenges</a></li>
-            <li><a href="/canvas">Canvas</a></li>
-            <li><a href="/tutorial/">Tutorial</a></li>
-            <li><a href="/profile/">Profile</a></li>
-        </ul>
-    </nav>
 {%  endblock topnav %}
 
 {% block content %}
-    <div class="clearfix">
-        <div id="challenge-listings">
+    <div id="main-wrapper" class="container">
+        <div id="challenge-listings" class="span-17 append-1">
             <div id="viewtabs" class="clearfix">
                 <h2>Challenges</h2>
                 <ul id="tabs">
@@ -37,7 +38,7 @@
             </div>
         </div>
 
-        <div id="challenge-sidebar">
+        <div id="challenge-sidebar" class="span-6 last">
             {% block sidebar %}
             {% endblock sidebar %}
         </div>

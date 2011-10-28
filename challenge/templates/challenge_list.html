@@ -8,8 +8,8 @@
         {% if top25_challenge_list %}
             {% for c in top25_challenge_list %}
                 <li class="list-item">
-                    <div class="clearfix">
-                        <div class="challenge-rewards">
+
+                        <div class="challenge-rewards span-3">
                             {%  if c.bounty_avail %}
                                 <div class="bounty">${{c.bounty}}</div>
                             {% else %}
@@ -22,9 +22,9 @@
                                 votes
                             </div>
 
-                            <button class="btn-sponsor"><span class="ico-uparr"></span>Sponsor</button>
+                            <button class="btn-sponsor">Sponsor<span class="arrow-up"></span></button>
                         </div>
-                        <div class="challenge-info">
+                        <div class="challenge-info span-14 last">
                             {% block challenge_title %} 
                                 <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
                             {% endblock %}
@@ -51,7 +51,6 @@
                         <div class="created">
                             created <span class="bold">{{ c.create_date|date_diff }}</span>
                         </div>
-                    </div>
                 </li>
             {% endfor %}
         {%  else %}
