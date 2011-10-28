@@ -9,9 +9,22 @@ class UserProfile(models.Model):
     url = models.URLField()
     active_user = models.BooleanField()
     profile_desc = models.CharField(max_length=500)
+    cumulative_votes = models.IntegerField(default=0)
+    cumulative_bounty = models.IntegerField(default=0)
+    current_votes = models.IntegerField(default=0)
+    current_bounty = models.IntegerField(default=0)
+
     def __unicode__(self):
         return self.user.username
-    
+    def get_absolute_url(self):
+        return ('profiles_profile_detail', (), { 'username': self.user.username })
+    get_absolute_url = models.permalink(get_absolute_url)
+    #TODO add photo to user profile
+    #TODO add achievements to user profile
+    #TODO Extract User functions to their own app
+    #TODO add user profile page
+    #TODO Add function to debit/credit votes & bounties
+
 
 class Challenge(models.Model):
         name = models.CharField(max_length=200)
@@ -34,6 +47,7 @@ class Challenge(models.Model):
             if not self.id:
                 self.create_date = datetime.now()
                 super(Challenge, self).save()
+
 
 class Criteria(models.Model):
     challenge = models.ForeignKey(Challenge)
