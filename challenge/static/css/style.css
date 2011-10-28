@@ -86,7 +86,7 @@ a:hover { color: #111;}
 .clear {clear:both;}
 
 /*------- TOP-BAR -------*/
-header{min-width:900px;}
+header{min-width:950px;}
 #title{width: 550px;padding: 10px;height:100%;position:relative;top:0;left:0;}
 #logo{height:65px;float:left;}
 #tagline{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;font-weight:normal;position:relative;top:24px;}
@@ -127,15 +127,16 @@ h2{font-size:18px;padding: 6px 0;line-height:20px;margin-bottom:5px}
 #tabs li.current a{color:#000}
 #tabs li.current a:hover{text-decoration:none}
 
-#challenge-listings{width:70%;min-width:672px;position:absolute;top:0;left:0;padding:10px 20px;}
-#challenge-sidebar{width:22%;min-width:211px;position:absolute;top:0;right:0;padding:10px 20px;}
+#main{min-width:950px}
+#challenge-listings{width:70%;min-width:440px;position:relative;top:0;left:0;padding:10px 20px;}
+#challenge-sidebar{width:22%;min-width:190px;position:absolute;top:0;right:0;padding:10px 20px;}
 
 #listings{margin:30px 0}
 .list-item{position:relative;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #ddd}
-.list-item h3{width:80%;margin-bottom:10px}
+.list-item h3{width:78%;margin-bottom:10px}
 .list-item h3 a{font-size:16px;color:#2167bd;text-transform:capitalize;}
 .challenge-rewards{float:left;width:80px;min-width:80px;text-align:center;font-size:20px;font-weight:bold}
-.challenge-info{float:left;width:88%;min-width:550px;margin-left:20px}
+.challenge-info{position:relative;left:20px;top:0;padding-right:20px}
 .challenge-details{margin-top:15px}
 
 .bounty{color:#73c81a;margin-bottom:5px;padding-bottom:5px;border-bottom:1px solid #eee}
