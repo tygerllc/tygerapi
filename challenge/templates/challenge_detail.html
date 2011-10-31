@@ -8,7 +8,17 @@
     Description: {{ challenge.descrip }} <br>
     <p> Winning conditions: <p>
     {% for condition in challenge.criteria_set.all %}
-        {{ condition.desc }}, {{ condition.status}} <br />
+        {{ condition.desc }}, {{ condition.status}} <br>
+    {% endfor %}
+
+    <p> Useful components: <p>
+    {% for link in challenge.useful_component_set.all %}
+        <a href="{{ link.url }}">{{ link.desc }}</a><br>
+    {% endfor %}
+
+    <p> References: <p>
+    {% for ref in challenge.useful_link_set.all %}
+        <a href="{{ ref.url }}">{{ ref.desc }}</a><br>
     {% endfor %}
 
 {% endblock listings %}

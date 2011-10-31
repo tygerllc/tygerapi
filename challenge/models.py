@@ -56,4 +56,16 @@ class Criteria(models.Model):
     def __unicode__(self):
         return self.desc
 
+class Useful_Link(models.Model):
+    challenge = models.ForeignKey(Challenge)
+    desc = models.CharField(max_length=100)
+    url = models.URLField()
+    def __unicode__(self):
+        return self.desc
 
+class Useful_Component(models.Model):
+    challenge = models.ForeignKey(Challenge)
+    desc = models.CharField(max_length=100)
+    url = models.URLField()
+    def __unicode__(self):
+        return self.desc
