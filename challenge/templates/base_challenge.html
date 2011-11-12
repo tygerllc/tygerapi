@@ -2,46 +2,100 @@
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
-{% block topnav %}
+{% block header %}
     <div class="container">
-        <div id="title" class="span-8 append-1">
+        <div class="span-8 append-1">
+            <div id="title">
             <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo-t.png" alt="Tyger Logo"/></a></h1>
-
+            </div>
         </div>
-        <div id="nav" class="span-15 last">
-            <ul class="side">
-                <li><a class="current" href="/challenge">Challenges</a></li>
-                <li><a href="/canvas">Canvas</a></li>
-                <li><a href="/tutorial/">Tutorial</a></li>
-                <li><div class="profpic"><span class="bg-prof"></span></div></li>
-            </ul>
-        </div>
-    </div>
-{%  endblock topnav %}
-
-{% block content %}
-    <div id="main-wrapper" class="container">
-        <div id="challenge-listings" class="span-17 append-1">
-            <div id="viewtabs" class="clearfix">
-                <h2>Challenges</h2>
-                <ul id="tabs">
-                    <li class="current"><a href="#">Most Recent</a></li>
-                    <li><a href="#">Top Bounty</a></li>
-                    <li><a href="#">Top Points</a></li>
-                    <li><a href="#">Oldest Unsolved</a></li>
-                    <li><a href="#">Library</a></li>
+        <div class="span-15 last">
+            <div id="nav">
+                <ul class="side">
+                    <li><a class="current" href="/challenge">Challenges</a></li>
+                    <li><a href="/canvas">Canvas</a></li>
+                    <li><a href="/tutorial/">Tutorial</a></li>
+                    <li class="drop-down-container" style="position:relative">
+                        <div class="profpic"><span class="bg-prof"></span></div>
+                        <div class="drop-down-menu"> 
+                            <div class="column"> 
+                                <div class="prof-large">
+                                    <span class="bg-prof-large"></span>
+                                </div>
+                            </div>
+                            <div class="column last"> 
+                                <ul style="padding:10px;text-align:left"> 
+                                    <li style="font-weight:bold; color:#222">Full Name</li>
+                                    <li style="color:#666">username@mail.com</li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">My Challenges</a></li>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Settings</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div id="listings">
-                {% block listings %}
-                {% endblock listings%}
+        </div>
+    </div>
+{%  endblock header %}
+
+{% block content %}
+    <div class="container">
+        <div id="main-wrapper" class="span-17"> 
+            <div id="challenge-title" class="span-17 last"> 
+                <span id="challenge-icon" class="column"> 
+                    <div class="ico-challenge"></div>
+                </span>
+                <span class="column last" style="border-bottom:1px solid #ddd;width:619px;box-shadow:white 0 1px 0;">
+                    <span class="column">
+                        <h1>Challenges</h1>
+                    </span>
+                    <span class="column last" style="float:right">
+                        <ul id="tabs">
+                            <li class="current"><a href="#">Most Recent</a></li>
+                            <li><a href="#">Top Bounty</a></li>
+                            <li><a href="#">Top Points</a></li>
+                            <li><a href="#">Oldest Unsolved</a></li>
+                            <li><a href="#">Library</a></li>
+                        </ul>
+                    </span>
+                </span>
+            </div>
+
+            <div id="challenge-listings" class="span-17 last">
+                <div id="listings">
+                    {% block listings %}
+                    {% endblock listings%}
+                </div>
             </div>
         </div>
 
-        <div id="challenge-sidebar" class="span-6 last">
+        <div id="sidebar-wrapper" class="span-6 last" style="float:right"> 
             {% block sidebar %}
             {% endblock sidebar %}
         </div>
     </div>
+
 {% endblock content %}
+
+{% block footer %}
+    <div class="container">
+        <div class="column">
+            &copy TygerLLC 2011
+        </div>
+        <div class="column last" style="float:right;text-align:right"> 
+            <ul class="side"> 
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock footer %}
 

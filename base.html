@@ -28,19 +28,18 @@
 </head>
 
 <body>
-    <header>
+    <div id="header">
     {% block header %}
-        {% block topnav %}
-				{% endblock %}
 	  {% endblock header %}
-    </header>
+    </div>
+
     <div id="main">
       {% block content %}
       {% endblock content %}
     </div>
-    <footer>
+    <div id="footer">
     {% block footer %}{% endblock %}
-    </footer>
+    </div>
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
@@ -49,6 +48,17 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>
+  <script type="text/javascript">
+    $(".drop-down-container").click(function(){
+      if($(this).find('.drop-down-menu').is(":visible")){
+        $(this).find('.drop-down-menu').fadeOut('fast');
+      }
+      else{
+        $(this).find('.drop-down-menu').fadeIn('fast');
+      }
+    });
+
+  </script>
   <!-- end scripts-->
 
   <!--[if lt IE 7 ]>
