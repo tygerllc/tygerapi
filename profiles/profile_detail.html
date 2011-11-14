@@ -1,0 +1,28 @@
+{% extends 'profiles/base_profile.html' %}
+
+{% block title %} Tyger profile - {{ profile.user.username }} {% endblock title %}
+
+{% block content %}
+    <h1>{{ profile.user.username }} profile page</h1>
+    <ul>
+        <li> Name:
+            {{ profile.user.first_name }}
+            {{ profile.user.last_name }}
+        </li>
+        <li> Homepage:
+            {{ profile.url }}
+        </li>
+        <li> About me:
+            {{ profile.profile_desc }}
+        </li>
+            <li> Total votes earned:
+            {{ profile.cumulative_votes }}
+        </li>
+            <li> Total bounties earned:
+            {{ profile.cumulative_bounty }}
+        </li>
+    </ul>
+
+    <p><a href="/profile/edit/">Edit your profile</a> </p>
+
+{% endblock content %}

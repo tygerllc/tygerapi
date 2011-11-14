@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Tyger | Canvas - Challenge</title>
+  <title>Tyger | Bench - Edit</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -34,7 +34,7 @@
 				<nav>
 					<ul class="side">
 						<li><a href="#">Challenges</a></li>
-						<li><a class="current" href="#">Canvas</a></li>
+						<li><a class="current" href="#">Bench</a></li>
 						<li><a href="#">Tutorial</a></li>
 						<li><a href="#">Profile</a></li>
 					</ul>
@@ -80,40 +80,70 @@
 									</a>
 								</div>
 								
-								<div id="challenge-view">
+								<div id="edit-view">
 									<div class="toolbar-content">
-										<div id="win-cond" class="content-box">
-											<h2>Winning Conditions<span class="win-meter round-info ri-warn">2/4</span></h2>
-											<ul class="simple">
-												<li class="win-done">Glows blue when ArsR is present.</li>
-												<li class="win-done">No glow when ArsR absent.</li>
-												<li class="win-rem">No changes to environment.</li>
-												<li class="win-rem">No known toxins to E Coli.</li>
+										<div id="edit-box" class="info-box">
+											<ul>
+												<li>
+													<label>Device Name:</label><br/>
+													<input type="text" name="dev-name"/>
+												</li>
+												<li>
+													<label>Device Description:</label><br/>
+														<p>
+															Random Description of the device currently selected.
+														</p>
+													
+												</li>
+												<div class="sep"></div>
+												<li>
+													<label>Device Type:</label>
+													<select name="dev-type" class="control-side">
+													  <option value="generator">Generator</option>
+													  <option value="reporter">Reporter</option>
+													  <option value="measurement">Measurement</option>
+													  <option value="signalling">Signalling</option>
+													</select>
+												</li>
+												
+												<li>
+													<label>Function:</label>
+													<select name="dev-func" class="control-side">
+													  <option value="glowblue">Glow Blue</option>
+													</select>
+												</li>
+												
+												<li>
+													<label>Default:</label>
+													<span class="control-side">
+														<input type="radio" name="default" value="on" /> On
+														<input type="radio" name="default" value="off" /> Off	
+													</span>												
+												</li>
+
+												<li>
+													<label>Induced By:</label>
+													<select name="dev-induced" class="control-side">
+													  <option value="yes">Yes</option>
+													  <option value="no">No</option>
+													</select>
+												</li>
+												<li>
+													<label>Biobrick ID:</label>
+													<a href="#" class="control-side">BB_12345</a>
+												</li>
 											</ul>
 										</div>
 										
-										<div id="rewards" class="content-box">
-											<h2>Rewards</h2>
-											
-											<p id="reward-info">
-													<span><span class="round-info ri-info ri-spaced">1000</span> votes</span>
-													<span class="rfloat"><span class="round-info ri-succ ri-spaced">$500</span> bounty</span>
-											</p>
-											
-											<ul id="reward-by">
-												<li>
-													Created By:
-													<span class="rfloat"><a href="#">Marie Curie</a></span>
-												</li>
-												<li>
-													Claimed By:
-													<span class="rfloat"><a href="#">Barbara McClinkton</a></span>
-												</li>
-											</ul>
-										</div>
-										
-										<input type="submit" class="submit-disabled" value="Submit Solution"/>
-										<input type="submit" class="submit-enabled" value="Submit Solution" style="margin-top:10px;"/>
+										<span class="rfloat">
+											<a class="button smallButton lb rb">
+												<span class="b-cancel"></span>
+											</a>
+											<a class="button smallButton lb rb">
+												<span class="b-save"></span>
+											</a>
+										</span>
+										<div class="clear"></div>
 									</div>
 								</div>
     						</div>

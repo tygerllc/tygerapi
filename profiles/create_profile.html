@@ -1,0 +1,14 @@
+{% extends 'profiles/base_profile.html' %}
+
+{% block title %} Create Tyger profile{% endblock title %}
+
+{% block content %}
+    {% csrf_token %}
+    <h1>Create a Tyger profile for {{ user }} </h1>
+
+<form method="POST" action="">
+    {{ form }}
+    <input type="submit" name="submit" value="Update" id="submit">
+</form>
+
+{% endblock content %}

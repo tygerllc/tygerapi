@@ -2,6 +2,37 @@
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
+{% block sort-header %}
+    <ul id="tabs">
+        {% if sortOrder == "most-recent" %}
+            <li class="current"><a href="/challenge/">Most Recent</a></li>
+        {% else %}
+            <li><a href="/challenge/">Most Recent</a></li>
+        {% endif %}
+        {% if sortOrder == "top-bounty" %}
+            <li class="current"><a href="/challenge/top-bounty/">Top Bounty</a></li>
+        {% else %}
+            <li><a href="/challenge/top-bounty/">Top Bounty</a></li>
+        {% endif %}
+        {% if sortOrder == "top-votes" %}
+            <li class="current"><a href="/challenge/top-votes/">Top Votes</a></li>
+        {% else %}
+            <li><a href="/challenge/top-votes/">Top Votes</a></li>
+        {% endif %}
+        {% if sortOrder == "oldest-unsolved" %}
+            <li class="current"><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
+        {% else %}
+            <li><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
+        {% endif %}
+        {% if sortOrder == "library" %}
+            <li class="current"><a href="/challenge/library/">Library</a></li>
+        {% else %}
+            <li><a href="/challenge/library/">Library</a></li>
+        {% endif %}
+    </ul>
+{% endblock sort-header %}
+
+
 {% block listings %}
     <ul id="recent-listings">
         {% load date_diff %}
@@ -21,8 +52,6 @@
                                 </div>
                                 votes
                             </div>
-
-                            <button class="btn-sponsor"><span class="ico-uparr"></span>Sponsor</button>
                         </div>
                         <div class="challenge-info">
                             {% block challenge_title %} 
@@ -34,12 +63,10 @@
                             <div class="challenge-details clearfix">
                                 <div class="sponsor-details">
                                     <div class="sponsors">
-                                        <h4>Sponsored By</h4>
+                                        <h4>Sponsored by <a href="/profile/{{ c.sponsor.user.username }}/">{{ c.sponsor.user.username }}</a></h4>
                                     </div>
                                     <div class="co-sponsors">
-                                        <h5>Co-Sponsored By</h5>
                                     </div>
-                                    
                                 </div>
                                 <div class="tags">
                                     {% for t in c.get_tags %}

@@ -1,27 +1,90 @@
-{% extends 'challenge/templates/base_challenge.html' %}
+{% extends 'challenge/templates/challenge_list.html' %}
 
-{% block title %} Challenges tagged with {{ tag }} on Tyger {% endblock title %}
+{% block title %} Challenges tagged {{ tag }} on Tyger {% endblock title %}
+{% block sub-header %}
+    <h2> Challenges tagged {{ tag }}</h2>
+{% endblock %}
+{% block sort-header %}
+    <ul id="tabs">
+        {% if sortOrder == "most-recent" %}
+            <li class="current"><a href="/challenge/tag/{{ tag }}">Most Recent</a></li>
+        {% else %}
+            <li><a href="/challenge/tag/{{ tag }}">Most Recent</a></li>
+        {% endif %}
+        {% if sortOrder == "top-bounty" %}
+            <li class="current"><a href="/challenge/tag/{{ tag }}/top-bounty/">Top Bounty</a></li>
+        {% else %}
+            <li><a href="/challenge/tag/{{ tag }}/top-bounty/">Top Bounty</a></li>
+        {% endif %}
+        {% if sortOrder == "top-votes" %}
+            <li class="current"><a href="/challenge/tag/{{ tag }}/top-votes/">Top Votes</a></li>
+        {% else %}
+            <li><a href="/challenge/tag/{{ tag }}/top-votes/">Top Votes</a></li>
+        {% endif %}
+        {% if sortOrder == "oldest-unsolved" %}
+            <li class="current"><a href="/challenge/tag/{{ tag }}/oldest-unsolved/">Oldest Unsolved</a></li>
+        {% else %}
+            <li><a href="/challenge/tag/{{ tag }}/oldest-unsolved/">Oldest Unsolved</a></li>
+        {% endif %}
+        {% if sortOrder == "library" %}
+            <li class="current"><a href="/challenge/tag/{{ tag }}/library/">Library</a></li>
+        {% else %}
+            <li><a href="/challenge/tag/{{ tag }}/library/">Library</a></li>
+        {% endif %}
+
+    </ul>
+{% endblock sort-header %}
 
 {% block listings %}
-Challenges Tagged with <span class="highlight">{{tag}}</span>
-{% if tagged_challenges %}
-    {% load date_diff %}
-    <ul>
-    {% for c in tagged_challenges %}
-        <li><p></p><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></p>
-            {{ c.descrip|truncatewords:50 }}<br>
-            Created {{ c.create_date|date_diff }}
-            {%  if c.bounty_avail %}
-                Bounty: {{c.bounty}} available!
-            {% else %}
-                Bounty: {{ c.bounty }} claimed by userid.
-            {% endif %}<br>
-            Votes: {{ c.votes }}<br>
-            Tags: {{ c.tags }}<br>
-        </li>
-    {% endfor %}
+    <ul id="recent-listings">
+        {% load date_diff %}
+        {% if tagged_challenges %}
+            {% for c in tagged_challenges %}
+                <li class="list-item">
+                    <div class="clearfix">
+                        <div class="challenge-rewards">
+                            {%  if c.bounty_avail %}
+                                <div class="bounty">${{c.bounty}}</div>
+                            {% else %}
+                                ${{ c.bounty }} bounty claimed by userid.
+                            {% endif %}
+                            <div class="votes">
+                                <div class="votecount">
+                                    {{ c.votes }}
+                                </div>
+                                votes
+                            </div>
+                        </div>
+                        <div class="challenge-info">
+                            {% block challenge_title %}
+                                <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
+                            {% endblock %}
+                            <div class="description">
+                                {{ c.descrip|truncatewords:50 }}
+                            </div>
+                            <div class="challenge-details clearfix">
+                                <div class="sponsor-details">
+                                    <div class="sponsors">
+                                        <h4>Sponsored by <a href="/profile/{{ c.sponsor.user.username }}/">{{ c.sponsor.user.username }}</a></h4>
+                                    </div>
+                                    <div class="co-sponsors">
+                                    </div>
+                                </div>
+                                <div class="tags">
+                                    {% for t in c.get_tags %}
+                                        <a class="tag">{{t}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="created">
+                            created <span class="bold">{{ c.create_date|date_diff }}</span>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        {%  else %}
+            No challenges available
+        {% endif %}
     </ul>
-{% else %}
-<p>No challenges with that tag. Maybe you should create one?!</p>
-{% endif %}
-{% endblock listings %}
+{% endblock listings%}

@@ -1,0 +1,30 @@
+{% extends 'profiles/base_profile.html' %}
+
+{% block title %} Create Tyger profile{% endblock title %}
+{% block content %}
+    <h1>Most active users</h1>
+    <ul id="recent-listings">
+        {% for p in object_list  %}
+            <li class="list-item">
+                <div class="clearfix">
+                    <div class="challenge-rewards">
+                        <div class="bounty">${{p.cumulative_bounty}}</div>
+                        <div class="votes">
+                            <div class="votecount">
+                                {{ p.cumulative_votes }}
+                            </div>
+                            votes
+                        </div>
+                    </div>
+                    <div class="challenge-info">
+                        <h3><a href="/profile/{{ p.user.username }}/">{{ p.user.username }}</a></h3>
+                        <div class="description">
+                            {{ c.descrip|truncatewords:50 }}
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+    </ul>
+    
+{% endblock content %}

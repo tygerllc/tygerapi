@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
@@ -10,28 +10,21 @@
     </div>
     <nav>
         <ul class="side">
-            <li><a class="current" href="/challenge">Challenges</a></li>
-            <li><a href="/bench/">Bench</a></li>
+            <li><a href="/challenge/">Challenges</a></li>
+            <li><a href="/bench/">Canvas</a></li>
             <li><a href="/tutorial/">Tutorial</a></li>
-            <li><a href="/profile/">Profile</a></li>
+            <li><a class="current" href="/profile/">Profile</a></li>
         </ul>
     </nav>
 {%  endblock topnav %}
 
 {% block content %}
-    <div id="challenges" class="clearfix">
+        <div id="challenges" class="clearfix">
         <div id="challenge-listings">
             <div id="viewtabs" class="clearfix">
-                {% block sub-header %}<h2>All challenges</h2> {% endblock sub-header %}
-                {% block sort-header %}
+                {% block sub-header %}<h2>Most active users</h2> {% endblock %}
                 <ul id="tabs">
-                    <li class="current"><a href="/challenge/">Most Recent</a></li>
-                    <li><a href="/challenge/top-bounty/">Top Bounty</a></li>
-                    <li><a href="/challenge/top-votes/">Top Votes</a></li>
-                    <li><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
-                    <li><a href="/challenge/library/">Library</a></li>
                 </ul>
-                {% endblock sort-header %}
             </div>
             <div id="listings">
                 {% block listings %}

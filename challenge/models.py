@@ -22,9 +22,7 @@ class UserProfile(models.Model):
     #TODO add photo to user profile
     #TODO add achievements to user profile
     #TODO Extract User functions to their own app
-    #TODO add user profile page
     #TODO Add function to debit/credit votes & bounties
-
 
 class Challenge(models.Model):
         name = models.CharField(max_length=200)
@@ -36,23 +34,24 @@ class Challenge(models.Model):
         first_completed = models.DateTimeField('First solved', null=True)
         votes = models.IntegerField()
         bounty = models.DecimalField(max_digits = 10, decimal_places=2)
-
+        #TODO add Environment to Challenge
         def __unicode__(self):
             return self.name
         def bounty_avail(self):
             return not self.first_completed
         def get_tags(self):
             return Tag.objects.get_for_object(self)
-        def save(self):
-            if not self.id:
-                self.create_date = datetime.now()
-                super(Challenge, self).save()
-
+#        def save(self):
+#            if not self.id:
+#                self.create_date = datetime.now()
+#                super(Challenge, self).save()
 
 class Criteria(models.Model):
     challenge = models.ForeignKey(Challenge)
     desc = models.CharField(max_length=200)
     status = models.BooleanField()
+    #TODO: Add type to Criteria [Max bps, No changes to environment, Tyger-Verified]
+    #TODO: Add boolean logic for contests [If X, THEN GFP; IF _X, THEN GFP]
     def __unicode__(self):
         return self.desc
 

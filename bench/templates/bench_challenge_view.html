@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Tyger | Canvas - Add</title>
+  <title>Tyger | Bench - Challenge</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -34,7 +34,7 @@
 				<nav>
 					<ul class="side">
 						<li><a href="#">Challenges</a></li>
-						<li><a class="current" href="#">Canvas</a></li>
+						<li><a class="current" href="#">Bench</a></li>
 						<li><a href="#">Tutorial</a></li>
 						<li><a href="#">Profile</a></li>
 					</ul>
@@ -80,45 +80,40 @@
 									</a>
 								</div>
 								
-								<div id="add-view">
-									<div id="add-tabs">
-										<ul class="tabs">
-											<li>
-												<div class="tab"><span class="spr-c spr-csor"></span>Sources and Sinks</div>
-												<ul class="subtabs"></ul>
-											</li>
-											<li>
-												<div class="tab"><span class="spr-c spr-cgen"></span>Generators</div>
-												<ul class="subtabs">
-													<li onclick="addGenerator()">Generate <span class="add-ico"/>+</li>
-												</ul>
-											</li>	
-											<li>
-												<div class="tab current"><span class="spr-c spr-crep"></span>Reporters</div>
-												<ul class="subtabs" style="display:block">
-													<li onclick="addReporter()">Glow<span class="add-ico"/>+</li>
-													<li onclick="addReporter()">Smell<span class="add-ico"/>+</li>
-													<li onclick="addReporter()">Touch<span class="add-ico"/>+</li>
-												</ul>
-											</li>	
-											<li>
-												<div class="tab"><span class="spr-c spr-cmes"></span>Measurement</div>
-												<ul class="subtabs">
-												</ul>
-											</li>
-											<li>
-												<div class="tab"><span class="spr-c spr-csig"></span>Signalling</div>
-												<ul class="subtabs">
-												</ul>
-											</li>																				
-										</ul>
-									</div>
-									
-									<div id="component-desc" class="toolbar-content">
-										<div class="info-box">
-											<h2>Glow<span class="rfloat caption">Reporter</span></h2>
-											<p>This is random text showing description of the component over which the mouse currently hovers.</p>
+								<div id="challenge-view">
+									<div class="toolbar-content">
+										<div id="win-cond" class="content-box">
+											<h2>Winning Conditions<span class="win-meter round-info ri-warn">2/4</span></h2>
+											<ul class="simple">
+												<li class="win-done">Glows blue when ArsR is present.</li>
+												<li class="win-done">No glow when ArsR absent.</li>
+												<li class="win-rem">No changes to environment.</li>
+												<li class="win-rem">No known toxins to E Coli.</li>
+											</ul>
 										</div>
+										
+										<div id="rewards" class="content-box">
+											<h2>Rewards</h2>
+											
+											<p id="reward-info">
+													<span><span class="round-info ri-info ri-spaced">1000</span> votes</span>
+													<span class="rfloat"><span class="round-info ri-succ ri-spaced">$500</span> bounty</span>
+											</p>
+											
+											<ul id="reward-by">
+												<li>
+													Created By:
+													<span class="rfloat"><a href="#">Marie Curie</a></span>
+												</li>
+												<li>
+													Claimed By:
+													<span class="rfloat"><a href="#">Barbara McClinkton</a></span>
+												</li>
+											</ul>
+										</div>
+										
+										<input type="submit" class="submit-disabled" value="Submit Solution"/>
+										<input type="submit" class="submit-enabled" value="Submit Solution" style="margin-top:10px;"/>
 									</div>
 								</div>
     						</div>
@@ -127,7 +122,7 @@
 						
 						<td id="editorPane">
 							<div id="canvas-container">
-								<canvas id="editCanvas" width="300" height="200">
+								<canvas id="editCanvas" width="1" height="1">
 									
 								</canvas>
 							</div>

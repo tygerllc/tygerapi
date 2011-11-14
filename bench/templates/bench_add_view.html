@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Tyger | Canvas - Edit</title>
+  <title>Tyger | Bench - Add</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -34,7 +34,7 @@
 				<nav>
 					<ul class="side">
 						<li><a href="#">Challenges</a></li>
-						<li><a class="current" href="#">Canvas</a></li>
+						<li><a class="current" href="#">Bench</a></li>
 						<li><a href="#">Tutorial</a></li>
 						<li><a href="#">Profile</a></li>
 					</ul>
@@ -80,70 +80,45 @@
 									</a>
 								</div>
 								
-								<div id="edit-view">
-									<div class="toolbar-content">
-										<div id="edit-box" class="info-box">
-											<ul>
-												<li>
-													<label>Device Name:</label><br/>
-													<input type="text" name="dev-name"/>
-												</li>
-												<li>
-													<label>Device Description:</label><br/>
-														<p>
-															Random Description of the device currently selected.
-														</p>
-													
-												</li>
-												<div class="sep"></div>
-												<li>
-													<label>Device Type:</label>
-													<select name="dev-type" class="control-side">
-													  <option value="generator">Generator</option>
-													  <option value="reporter">Reporter</option>
-													  <option value="measurement">Measurement</option>
-													  <option value="signalling">Signalling</option>
-													</select>
-												</li>
-												
-												<li>
-													<label>Function:</label>
-													<select name="dev-func" class="control-side">
-													  <option value="glowblue">Glow Blue</option>
-													</select>
-												</li>
-												
-												<li>
-													<label>Default:</label>
-													<span class="control-side">
-														<input type="radio" name="default" value="on" /> On
-														<input type="radio" name="default" value="off" /> Off	
-													</span>												
-												</li>
-
-												<li>
-													<label>Induced By:</label>
-													<select name="dev-induced" class="control-side">
-													  <option value="yes">Yes</option>
-													  <option value="no">No</option>
-													</select>
-												</li>
-												<li>
-													<label>Biobrick ID:</label>
-													<a href="#" class="control-side">BB_12345</a>
-												</li>
-											</ul>
+								<div id="add-view">
+									<div id="add-tabs">
+										<ul class="tabs">
+											<li>
+												<div class="tab"><span class="spr-c spr-csor"></span>Sources and Sinks</div>
+												<ul class="subtabs"></ul>
+											</li>
+											<li>
+												<div class="tab"><span class="spr-c spr-cgen"></span>Generators</div>
+												<ul class="subtabs">
+													<li onclick="addGenerator()">Generate <span class="add-ico"/>+</li>
+												</ul>
+											</li>	
+											<li>
+												<div class="tab current"><span class="spr-c spr-crep"></span>Reporters</div>
+												<ul class="subtabs" style="display:block">
+													<li onclick="addReporter()">Glow<span class="add-ico"/>+</li>
+													<li onclick="addReporter()">Smell<span class="add-ico"/>+</li>
+													<li onclick="addReporter()">Touch<span class="add-ico"/>+</li>
+												</ul>
+											</li>	
+											<li>
+												<div class="tab"><span class="spr-c spr-cmes"></span>Measurement</div>
+												<ul class="subtabs">
+												</ul>
+											</li>
+											<li>
+												<div class="tab"><span class="spr-c spr-csig"></span>Signalling</div>
+												<ul class="subtabs">
+												</ul>
+											</li>																				
+										</ul>
+									</div>
+									
+									<div id="component-desc" class="toolbar-content">
+										<div class="info-box">
+											<h2>Glow<span class="rfloat caption">Reporter</span></h2>
+											<p>This is random text showing description of the component over which the mouse currently hovers.</p>
 										</div>
-										
-										<span class="rfloat">
-											<a class="button smallButton lb rb">
-												<span class="b-cancel"></span>
-											</a>
-											<a class="button smallButton lb rb">
-												<span class="b-save"></span>
-											</a>
-										</span>
-										<div class="clear"></div>
 									</div>
 								</div>
     						</div>
@@ -152,7 +127,7 @@
 						
 						<td id="editorPane">
 							<div id="canvas-container">
-								<canvas id="editCanvas" width="1" height="1">
+								<canvas id="editCanvas" width="300" height="200">
 									
 								</canvas>
 							</div>

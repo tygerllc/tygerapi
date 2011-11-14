@@ -3,7 +3,6 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
 
-
 admin.site.unregister(User)
 
 class UserProfileInline(admin.StackedInline):
@@ -31,8 +30,7 @@ class ChallengeAdmin(admin.ModelAdmin):
         ('General', {'fields': ['name', 'slug', 'tags', 'descrip', 'sponsor']}),
         ('Rewards', {'fields': ['votes', 'bounty']})
     ]
-    inlines = [CriteriaInline, ComponentInline, RefInline]
-    search_fields = ['name']
+    inlines = [CriteriaInline, ComponentInline, RefInline,]
 
 admin.site.register(User, UserProfileAdmin)
 admin.site.register(Challenge, ChallengeAdmin)

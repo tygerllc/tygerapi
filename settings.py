@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'piston',
     'tagging',
+    'profiles',
     'misc'
 )
 
@@ -150,6 +151,7 @@ LOGGING = {
 FORCE_LOWERCASE_TAGS = True
 
 AUTH_PROFILE_MODULE = 'challenge.UserProfile'
+LOGIN_REDIRECT_URL = '/profile/'
 
 try:
     from local_settings import *
