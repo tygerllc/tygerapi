@@ -47,7 +47,7 @@ def with_tag(request, tag, sortOrder, object_id=None, page=1):
         tagged_challenges = tagged_challenges.order_by('-votes')
     elif sortOrder == "oldest-unsolved":
         tagged_challenges = tagged_challenges.filter(first_completed__isnull=True).order_by('create_date')
-    else:
+    elif sortOrder == "library":
         tagged_challenges = tagged_challenges.filter(sponsor__user__username='tyger-library').order_by('-create_date')
     return render_to_response('challenge/templates/challenges_with_tag.html',
                               dict(tag=tag, tagged_challenges=tagged_challenges, sortOrder=sortOrder),
@@ -107,5 +107,5 @@ class ChallengeListViewLibrary(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ChallengeListViewLibrary, self).get_context_data(**kwargs)
-        context['sortOrder'] = "tyger-library"
+        context['sortOrder'] = "library"
         return context

@@ -1,10 +1,9 @@
 {% extends 'challenge/templates/base_challenge.html' %}
 
 {% block title %} {{ challenge.name }} {% endblock title %}
-{% block sub-header %}<h2>Challenge details</h2> {% endblock %}
+{% block sub-header %}<h2>{{ challenge.name }}</h2> {% endblock %}
 
 {% block listings %}
-    {{ challenge.name }} <br>
     Tags: {{ challenge.tags }} <br>
     Description: {{ challenge.descrip }} <br>
     <p> Winning conditions: <p>

@@ -15,42 +15,31 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/print.css" type="text/css" media="print">
+  <!--[if lt IE 8]>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/ie.css" type="text/css" media="screen, projection">
+  <![endif]-->
+
+  <!--
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&v2' rel='stylesheet' type='text/css'>
+  -->
   <script src="{{ STATIC_URL }}js/libs/modernizr-1.7.min.js"></script>
 </head>
 
 <body>
-
-  <div id="container">
-    <header>
+    <div id="header">
     {% block header %}
-    		<div class="container">
-        {% block topnav %}
-				{% endblock %}
-			</div>
-	{% endblock header %}
-    </header>
-    <div id="main" role="main">
-      <div class="container">
-        {% block content %}
-        {% endblock content %}
-      </div>
+	  {% endblock header %}
     </div>
-    <footer>
-        <ul id="tabs">
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/jobs/">Jobs</a></li>
-            <li><a href="/logout/">Logout</a></li>
-        </ul>
-    {% block footer %}
 
-
-
-    {% endblock %}
-    </footer>
-  </div> <!-- eo #container -->
+    <div id="main">
+      {% block content %}
+      {% endblock content %}
+    </div>
+    <div id="footer">
+    {% block footer %}{% endblock %}
+    </div>
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
@@ -59,6 +48,17 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>
+  <script type="text/javascript">
+    $(".drop-down-container").click(function(){
+      if($(this).find('.drop-down-menu').is(":visible")){
+        $(this).find('.drop-down-menu').fadeOut('fast');
+      }
+      else{
+        $(this).find('.drop-down-menu').fadeIn('fast');
+      }
+    });
+
+  </script>
   <!-- end scripts-->
 
   <!--[if lt IE 7 ]>

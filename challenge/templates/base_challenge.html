@@ -2,46 +2,77 @@
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
-{% block topnav %}
-    <div id="title">
-        <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo.jpg" alt="Tyger Logo"/></a></h1>
-        <h2 id="tagline">Design New <span class="green">Life</span>. Improve The <span class="green">World</span>. Make <span class="green">Money</span>.</h2>
-        <div class="clear"></div>
+{% block header %}
+    <div class="container">
+        <div class="span-8 append-1">
+            <div id="title">
+            <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo-t.png" alt="Tyger Logo"/></a></h1>
+            </div>
+        </div>
+        <div class="span-15 last">
+            <div id="nav">
+                <ul class="side">
+                    <li><a class="current" href="/challenge/">Challenges</a></li>
+                    <li><a href="/bench/">Bench</a></li>
+                    <li><a href="/tutorial/">Tutorial</a></li>
+                    <li class="drop-down-container" style="position:relative">
+                        <div class="profpic"><span class="bg-prof"></span></div>
+                        <div class="drop-down-menu"> 
+                            <div class="column"> 
+                                <div class="prof-large">
+                                    <span class="bg-prof-large"></span>
+                                </div>
+                            </div>
+                            <div class="column last"> 
+                                <ul style="padding:10px;text-align:left"> 
+                                    <li style="font-weight:bold; color:#222"> {{ profile.user.first_name }}</li>
+                                    <li style="color:#666">email@email.com</li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">My Challenges</a></li>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Settings</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/logout/">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <nav>
-        <ul class="side">
-            <li><a class="current" href="/challenge">Challenges</a></li>
-            <li><a href="/bench/">Bench</a></li>
-            <li><a href="/tutorial/">Tutorial</a></li>
-            <li><a href="/profile/">Profile</a></li>
-        </ul>
-    </nav>
-{%  endblock topnav %}
+{%  endblock header %}
 
 {% block content %}
-    <div id="challenges" class="clearfix">
-        <div id="challenge-listings">
-            <div id="viewtabs" class="clearfix">
-                {% block sub-header %}<h2>All challenges</h2> {% endblock sub-header %}
-                {% block sort-header %}
-                <ul id="tabs">
-                    <li class="current"><a href="/challenge/">Most Recent</a></li>
-                    <li><a href="/challenge/top-bounty/">Top Bounty</a></li>
-                    <li><a href="/challenge/top-votes/">Top Votes</a></li>
-                    <li><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
-                    <li><a href="/challenge/library/">Library</a></li>
-                </ul>
-                {% endblock sort-header %}
+    <div class="container">
+        <div id="main-wrapper" class="span-17"> 
+            <div id="challenge-title" class="span-17 last"> 
+                <span id="challenge-icon" class="column"> 
+                    <div class="ico-challenge"></div>
+                </span>
+                <span class="column last" style="border-bottom:1px solid #ddd;width:619px;box-shadow:white 0 1px 0;">
+                    <span class="column">
+                        {% block sub-header %}<h1>Challenges</h1> {% endblock sub-header %}
+                    </span>
+                    <span class="column last" style="float:right">
+                        {% block sort-header %}
+                        {% endblock sort-header %}
+                    </span>
+                </span>
             </div>
-            <div id="listings">
-                {% block listings %}
-                {% endblock listings%}
+
+            <div id="challenge-listings" class="span-17 last">
+                <div id="listings">
+                    {% block listings %}
+                    {% endblock listings%}
+                </div>
             </div>
         </div>
 
-        <div id="challenge-sidebar">
+        <div id="sidebar-wrapper" class="span-6 last" style="float:right"> 
             {% block sidebar %}
             {% endblock sidebar %}
         </div>
     </div>
+
 {% endblock content %}
