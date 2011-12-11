@@ -1,0 +1,289 @@
+{% extends 'base_bench.html' %}
+
+{% block title %} My solution - E Coli that glows blue in the presence of arsenic{% endblock title %}
+
+{% block content %}
+
+    <div id="container">
+    <div id="breadcrumb">
+	    <ul class="side">
+            <li><a href="#"> {{ b.challenge.name }}: </a></li>
+            <li class="current"> {{ b.name }}</li>
+		</ul>
+        {% for t in b.challenge.get_tags %}
+            <a class="tag">{{t}}</a>
+        {% endfor %}
+	</div>
+
+    <div id="main" role="main">
+    	<div class="container">
+    		<table cellspacing="0" cellpadding="0" width="100%" height="100%">
+    			<tbody>
+    				<tr>
+    					<td id="sidebar">
+    						<div id="toolbar">
+								<div id="view-buttons">
+									<a class="button lb">
+										<span class="b-tci"></span>
+									</a>
+									<a class="button">
+										<span class="b-tai"></span>
+									</a>
+									<a class="button">
+										<span class="b-tei"></span>
+									</a>
+									<a class="button rb">
+										<span class="b-tsi"></span>
+									</a>									
+								</div>	
+								
+								<div id="toolbar-toggle">
+									<a class="button lb">
+										<span class="b-thi"></span>
+									</a>
+								</div>
+
+								<div id="add-view">
+									<div id="add-tabs">
+										<ul class="tabs">
+											<li>
+												<div class="tab"><span class="spr-c spr-csor"></span>Sources and Sinks</div>
+												<ul class="subtabs"></ul>
+											</li>
+											<li>
+												<div class="tab"><span class="spr-c spr-cgen"></span>Proteins</div>
+												<ul class="subtabs">
+													<li onclick="addProtein()">Proteins <span class="add-ico"/>+</li>
+												</ul>
+											</li>	
+                                            <li>
+                                                <div class="tab"><span class="spr-c spr-csig"></span>Signalling</div>
+                                                <ul class="subtabs">
+                                                </ul>
+                                            </li>																				
+											<li>
+												<div class="tab current"><span class="spr-c spr-crep"></span>Reporting</div>
+												<ul class="subtabs" style="display:block">
+													<li onclick="addReporter()">Glow<span class="add-ico"/>+</li>
+													<li onclick="addReporter()">Smell<span class="add-ico"/>+</li>
+													<li onclick="addReporter()">Touch<span class="add-ico"/>+</li>
+												</ul>
+											</li>	
+											<li>
+												<div class="tab"><span class="spr-c spr-cmes"></span>Promoters</div>
+												<ul class="subtabs">
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<div id="component-desc" class="toolbar-content">
+										<div class="info-box">
+											<h3>Glow<span class="rfloat caption"> Reporter</span></h3>
+											<p>Green fluorescent protein glows green and is used as a reporter protein.</p>
+										</div>
+									</div>
+								</div>
+
+                                <div id="challenge-view">
+                                    <div class="toolbar-content">
+                                        <div id="win-cond" class="content-box">
+                                            <h3>Winning Conditions: <span class="win-meter round-info ri-warn">2/4</span></h3>
+                                            <ul class="simple">
+                                                {% for condition in b.challenge.criteria_set.all %}
+                                                    {% if condition.status %}
+                                                        <li class="win-done"> {{ condition.desc }} </li>
+                                                    {% else %}
+                                                        <li class="win-rem"> {{ condition.desc }} </li>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+
+                                        <div id="rewards" class="content-box">
+                                            <h3>Rewards</h3>
+                                            <p id="reward-info">
+                                                    <span><span class="round-info ri-info ri-spaced">{{ b.challenge.votes }}</span> votes</span>
+                                                    <span class="rfloat"><span class="round-info ri-succ ri-spaced">${{ b.challenge.bounty }}</span> bounty</span>
+                                            </p>
+
+                                            <ul id="reward-by">
+                                                <li>
+                                                    Sponsored By:
+                                                    <span class="rfloat"><a href="#">{{ b.challenge.sponsor.name }}</a></span>
+                                                </li>
+                                                <li>
+                                                    Claimed By:
+                                                    <span class="rfloat"><a href="#">Barbara McClintock</a></span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <input type="submit" class="submit-disabled" value="Submit Solution"/>
+                                        <input type="submit" class="submit-enabled" value="Submit Solution" style="margin-top:10px;"/>
+                                    </div>
+                                </div>
+
+								<div id="edit-view">
+									<div class="toolbar-content">
+										<div id="edit-box" class="info-box">
+											<ul>
+												<li>
+													<label>Component Name:</label><br/>
+													<input type="text" name="dev-name"/>
+												</li>
+												<li>
+													<label>Device Description:</label><br/>
+														<p>
+															Random Description of the device currently selected.
+														</p>
+												</li>
+												<div class="sep"></div>
+												<li>
+													<label>Device Type:</label>
+													<select name="dev-type" class="control-side">
+													  <option value="generator">Generator</option>
+													  <option value="reporter">Reporter</option>
+													  <option value="measurement">Measurement</option>
+													  <option value="signalling">Signalling</option>
+													</select>
+												</li>
+
+												<li>
+													<label>Function:</label>
+													<select name="dev-func" class="control-side">
+													  <option value="glowblue">Glow Blue</option>
+													</select>
+												</li>
+
+												<li>
+													<label>Default:</label>
+													<span class="control-side">
+														<input type="radio" name="default" value="on" /> On
+														<input type="radio" name="default" value="off" /> Off
+													</span>
+												</li>
+												<li>
+													<label>Induced By:</label>
+													<select name="dev-induced" class="control-side">
+													  <option value="yes">Yes</option>
+													  <option value="no">No</option>
+													</select>
+												</li>
+												<li>
+													<label>Biobrick ID:</label>
+													<a href="#" class="control-side">BB_12345</a>
+												</li>
+											</ul>
+										</div>
+
+										<span class="rfloat">
+											<a class="button smallButton lb rb">
+												<span class="b-cancel"></span>
+											</a>
+											<a class="button smallButton lb rb">
+												<span class="b-save"></span>
+											</a>
+										</span>
+										<div class="clear"></div>
+									</div>
+								</div>
+
+                                <div id="settings-view">
+                                    <div class="toolbar-content">
+                                        <div id="settings-box" class="info-box">
+                                            <ul>
+                                                <li>
+                                                    <label>Device Name:</label><br/>
+                                                    <input type="text" name="dev-name"/>
+                                                </li>
+                                                <li>
+                                                    <label>Device Description:</label><br/>
+                                                        <textarea style="width:188px; max-height:100px; resize: none;">Random Description of the device currently selected.</textarea>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="privacy-box" class="content-box">
+                                            <h2>Privacy</h2>
+                                            <div>
+                                                <label class="compact" for="priv-pub"><input type="radio" name="privacy-type" id="priv-pub" value="public"/> Public
+                                                    <span class="tool-tip info-box">
+                                                        <h3>Public<span class="rfloat caption">Privacy</span></h3>
+                                                        <p>
+                                                            This is random text displaying description about the public privacy type.
+                                                        </p>
+                                                    </span>
+                                                </label>
+                                                <label class="compact" for="priv-lim"><input type="radio" name="privacy-type" id="priv-lim" value="limited"/> Limited
+                                                    <span class="tool-tip info-box">
+                                                        <h3>Limited<span class="rfloat caption">Privacy</span></h3>
+                                                        <p>
+                                                            This is random text displaying description about the limited privacy type.
+                                                        </p>
+                                                    </span>
+                                                </label>
+                                                <label class="compact" for="priv-pvt"><input type="radio" name="privacy-type" id="priv-pvt" value="private"/> Private
+                                                    <span class="tool-tip info-box">
+                                                        <h3>Private<span class="rfloat caption">Privacy</span></h3>
+                                                        <p>
+                                                            This is random text displaying description about the private privacy type.
+                                                        </p>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div id="license-box" class="content-box">
+                                            <h2>License & Copyright</h2>
+                                            <div>
+                                                <label for="lic-anc"><input type="radio" name="license-type" id="lic-anc" value="lic-anc"/> Attribution - NonCommercial</label>
+                                                <label for="lic-a"><input type="radio" name="license-type" id="lic-a" value="lic-a"/> Attribution</label>
+                                                <label for="lic-ancnd"><input type="radio" name="license-type" id="lic-ancnd" value="lic-ancnd"/> Attribution - Non Commercial - No Derivatives</label>
+                                                <label for="lic-arr"><input type="radio" name="license-type" id="lic-arr" value="lic-arr"/> All Rights Reserved</label>
+                                            </div>
+                                        </div>
+                                        <span class="rfloat">
+                                            <a class="button smallButton lb rb">
+                                                <span class="b-cancel"></span>
+                                            </a>
+                                            <a class="button smallButton lb rb">
+                                                <span class="b-save"></span>
+                                            </a>
+                                        </span>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+        				<td id="editorPane">
+                            <div id="canvas-container">
+				            	<div id="editCanvas" width="300" height="200">
+                                <!--   Update to use the Canvas tag -->
+						            {{ b.challenge.environment.name }}<br>
+                                    {{ b.challenge.environment.temp }}<br>
+                                    {{ b.challenge.environment.pH }}<br>
+                                    {{ b.challenge.chassis }}<br>
+
+                                <!--   Sources & sinks in the environment -->
+                                    <p>{% for s in b.challenge.environment.sources_and_sinks.all %}
+                                        {{ s.name }} {{ s.quantity }}
+                                    {% endfor %} </p>
+
+                                <!--   DNA components in the chassis -->
+                                    Promoter cassette
+                                        Protein (with RBS embedded)
+                                        Potentially another RBS / Protein
+                                    Terminator
+                                    [Potentially another Promoter]
+            					</div>
+			        		</div>
+				        </td>
+
+        			</tr>
+    		    </tbody>
+    	    </table>
+		</div>
+    </div>
+  </div> <!-- eo #container -->
+
+{% endblock content %}

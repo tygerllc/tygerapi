@@ -2,24 +2,313 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f675d1-b85d-43dc-a0bb-c677e3bdfada" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/challenge_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/ico-clock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/ico-tick.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/logo-t.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/prof-large.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/prof.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/img/search_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/css/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/challenge/static/css/print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/static/img/up-arr.png" afterPath="$PROJECT_DIR$/challenge/static/img/up-arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/arrow-down.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/arrow-up.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/changelist-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/changelist-bg_rtl.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/chooser-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/chooser_stacked-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/default-bg-reverse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/default-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/deleted-overlay.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon-no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon-unknown.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon-yes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_addlink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_alert.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_calendar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_changelink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_clock.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_deletelink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_searchbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/icon_success.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/inline-delete-8bit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/inline-delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/inline-restore-8bit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/inline-restore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/inline-splitter-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/nav-bg-grabber.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/nav-bg-reverse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/nav-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector-addall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector-remove.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector-removeall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector-search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector_stacked-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/selector_stacked-remove.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tool-left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tool-left_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tool-right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tool-right_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tooltag-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tooltag-add_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tooltag-arrowright.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/admin/tooltag-arrowright_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/gis/move_vertex_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/img/gis/move_vertex_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/br-arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cancelh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/canvas-back.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cgen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cgenc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cgenh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/challenge_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cmes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cmesc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/cmesh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/crep.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/crepc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/creph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/csig.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/csigc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/csigh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/csor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/csorc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/csorh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/ico-clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/ico-tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/logo-t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/prof-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/prof.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/saveh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/search_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tai.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/taic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/taih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tci.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tcic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tcih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tei.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/teic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/teih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/thi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/thic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/thih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tool-add-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tool-challenge-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tool-edit-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tool-settings-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tsi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tsic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/tsih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/up-arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/win-done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/img/win-rem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/arrow-down.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/arrow-up.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/changelist-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/changelist-bg_rtl.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/chooser-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/chooser_stacked-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/default-bg-reverse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/default-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/deleted-overlay.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon-no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon-unknown.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon-yes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_addlink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_alert.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_calendar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_changelink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_clock.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_deletelink.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_searchbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/icon_success.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/inline-delete-8bit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/inline-delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/inline-restore-8bit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/inline-restore.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/inline-splitter-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/nav-bg-grabber.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/nav-bg-reverse.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/nav-bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector-addall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector-remove.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector-removeall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector-search.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector_stacked-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/selector_stacked-remove.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tool-left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tool-left_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tool-right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tool-right_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tooltag-add.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tooltag-add_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tooltag-arrowright.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/admin/tooltag-arrowright_over.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/gis/move_vertex_off.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/img/gis/move_vertex_on.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/br-arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cancelh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/canvas-back.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cgen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cgenc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cgenh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/challenge_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cmes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cmesc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/cmesh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/crep.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/crepc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/creph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/csig.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/csigc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/csigh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/csor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/csorc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/csorh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/ico-clock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/ico-tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/logo-t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/prof-large.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/prof.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/saveh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/search_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tai.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/taic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/taih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tci.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tcic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tcih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tei.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/teic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/teih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/thi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/thic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/thih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tool-add-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tool-challenge-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tool-edit-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tool-settings-ico.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tsi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tsic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/tsih.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/up-arr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/win-done.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/img/win-rem.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/changelists.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/forms.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/css/widgets.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/LICENSE-JQUERY.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/SelectBox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/SelectFilter2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/actions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/admin/ordering.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/collapse.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/compress.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/dateparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/getElementsBySelector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/inlines.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/inlines.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/jquery.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/prepopulate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/prepopulate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/timeparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/admin/js/urlify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/css/handheld.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/css/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/js/libs/dd_belatedpng.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/js/libs/jquery-1.5.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/js/libs/jquery-1.5.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/js/libs/modernizr-1.7.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/js/plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/static/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/templates/base_bench.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/templates/bench_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/templates/bench_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bench/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/auth.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/changelists.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/dashboard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/forms.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/css/widgets.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/LICENSE-JQUERY.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/SelectBox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/SelectFilter2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/actions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/actions.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/admin/ordering.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/collapse.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/compress.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/dateparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/getElementsBySelector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/inlines.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/inlines.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/jquery.init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/prepopulate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/prepopulate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/timeparse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/admin/js/urlify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/css/handheld.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/css/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/js/libs/dd_belatedpng.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/js/libs/jquery-1.5.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/js/libs/jquery-1.5.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/js/libs/modernizr-1.7.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/js/plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/static/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profiles/user_insert.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/challenge/tests.py" afterPath="$PROJECT_DIR$/bench/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base.html" afterPath="$PROJECT_DIR$/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/inc/tag_cloud.html" afterPath="$PROJECT_DIR$/challenge/inc/tag_cloud.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/static/css/style.css" afterPath="$PROJECT_DIR$/challenge/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/admin.py" afterPath="$PROJECT_DIR$/challenge/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/models.py" afterPath="$PROJECT_DIR$/challenge/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/templates/base_challenge.html" afterPath="$PROJECT_DIR$/challenge/templates/base_challenge.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/templates/challenge_detail.html" afterPath="$PROJECT_DIR$/challenge/templates/challenge_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/templates/challenge_list.html" afterPath="$PROJECT_DIR$/challenge/templates/challenge_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/templates/challenges_with_tag.html" afterPath="$PROJECT_DIR$/challenge/templates/challenges_with_tag.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/views.py" afterPath="$PROJECT_DIR$/challenge/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev.db" afterPath="$PROJECT_DIR$/dev.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/base_profile.html" afterPath="$PROJECT_DIR$/profiles/base_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/edit_profile.html" afterPath="$PROJECT_DIR$/profiles/edit_profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/profile_detail.html" afterPath="$PROJECT_DIR$/profiles/profile_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/profile_list.html" afterPath="$PROJECT_DIR$/profiles/profile_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.py" afterPath="$PROJECT_DIR$/urls.py" />
     </list>
     <ignored path="tygerapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,19 +335,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/models.py">
+      <file leaf-file-name="bench_detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bench/templates/bench_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2930" selection-end="2930" vertical-scroll-proportion="0.0">
+            <state line="13" column="36" selection-start="397" selection-end="433" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,32 +347,14 @@
       <file leaf-file-name="challenge_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="36" selection-start="834" selection-end="834" vertical-scroll-proportion="-11.875">
+            <state line="35" column="0" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_challenge.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/challenge/templates/base_challenge.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="81" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.8041775">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/challenge/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="22" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls.py">
+      <file leaf-file-name="user_insert.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profiles/user_insert.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -100,10 +362,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="base_bench.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bench/templates/base_bench.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="79" selection-start="301" selection-end="321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="13" selection-start="3998" selection-end="3998" vertical-scroll-proportion="0.0">
+            <state line="17" column="45" selection-start="359" selection-end="359" vertical-scroll-proportion="0.62653565">
               <folding />
             </state>
           </provider>
@@ -123,22 +403,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/profiles/models.py" />
+        <option value="$PROJECT_DIR$/profiles/profile_list.html" />
+        <option value="$PROJECT_DIR$/profiles/views.py" />
+        <option value="$PROJECT_DIR$/profiles/urls.py" />
+        <option value="$PROJECT_DIR$/profiles/profile_detail.html" />
+        <option value="$PROJECT_DIR$/profiles/base_profile.html" />
         <option value="$PROJECT_DIR$/profiles/edit_profile.html" />
-        <option value="$PROJECT_DIR$/profiles/create_profile.html" />
-        <option value="$PROJECT_DIR$/challenge/admin.py" />
         <option value="$PROJECT_DIR$/urls.py" />
-        <option value="$PROJECT_DIR$/challenge/templates/challenges_with_tag.html" />
-        <option value="$PROJECT_DIR$/challenge/urls.py" />
-        <option value="$PROJECT_DIR$/challenge/models.py" />
-        <option value="$PROJECT_DIR$/canvas/templates/canvas_settings_view.html" />
-        <option value="$PROJECT_DIR$/canvas/templates/canvas_edit_view.html" />
-        <option value="$PROJECT_DIR$/canvas/templates/canvas_add_view.html" />
-        <option value="$PROJECT_DIR$/canvas/templates/canvas_challenge_view.html" />
-        <option value="$PROJECT_DIR$/base.html" />
-        <option value="$PROJECT_DIR$/challenge/templates/challenge_detail.html" />
+        <option value="$PROJECT_DIR$/profiles/auth.html" />
         <option value="$PROJECT_DIR$/challenge/views.py" />
-        <option value="$PROJECT_DIR$/challenge/templates/challenge_list.html" />
-        <option value="$PROJECT_DIR$/challenge/templates/base_challenge.html" />
+        <option value="$PROJECT_DIR$/challenge/templates/challenge_detail.html" />
+        <option value="$PROJECT_DIR$/profiles/user_insert.html" />
+        <option value="$PROJECT_DIR$/challenge/templates/challenges_with_tag.html" />
+        <option value="$PROJECT_DIR$/bench/templates/base_bench.html" />
+        <option value="$PROJECT_DIR$/challenge/models.py" />
+        <option value="$PROJECT_DIR$/settings.py" />
       </list>
     </option>
   </component>
@@ -184,82 +464,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profiles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="challenge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tygerapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="challenge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Favorites">
-        <subPane subId="tygerapi">
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -324,28 +528,178 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.6.1 (/System/Library/Frameworks/Python.framework/Versions/2.6/bin/python) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bench" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bench" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Favorites">
+        <subPane subId="tygerapi">
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="/tygerapi" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/profiles" />
+      <recent name="$PROJECT_DIR$/bench" />
+      <recent name="$PROJECT_DIR$/bench/templates" />
       <recent name="$PROJECT_DIR$/challenge" />
       <recent name="$USER_HOME$/Sites/challenge" />
-      <recent name="$PROJECT_DIR$/misc/templatetags" />
-      <recent name="$PROJECT_DIR$/misc" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.tygerapi">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="tygerapi" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonUnitTestConfigurationType" factoryName="Python's unittest">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -490,20 +844,20 @@
     <frame x="63" y="25" width="1109" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987747" sideWeight="0.61986756" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25611326" sideWeight="0.21459228" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3528302" sideWeight="0.62119204" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3773585" sideWeight="0.62119204" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37880793" sideWeight="0.9990575" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -534,7 +888,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed &quot;canvas&quot; to &quot;bench&quot;. Making design changes &amp; adding profiles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'redesign' of github.com:tygerllc/tygerapi into adding_userProfile&#10;&#10;Conflicts:&#10;&#9;base.html&#10;&#9;challenge/static/css/style.css&#10;&#9;challenge/templates/base_challenge.html&#10;&#9;challenge/templates/challenge_list.html&#10;&#9;dev.db&#10;&#9;urls.py&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -556,119 +910,90 @@
     <MESSAGE value="Added reference links and useful components to challenge details" />
     <MESSAGE value="Added disqus commenting to challenge_detail" />
     <MESSAGE value="Changed &quot;canvas&quot; to &quot;bench&quot;. Making design changes &amp; adding profiles." />
+    <MESSAGE value="Merge branch 'redesign' of github.com:tygerllc/tygerapi into adding_userProfile&#10;&#10;Conflicts:&#10;&#9;base.html&#10;&#9;challenge/static/css/style.css&#10;&#9;challenge/templates/base_challenge.html&#10;&#9;challenge/templates/challenge_list.html&#10;&#9;dev.db&#10;&#9;urls.py&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bench/templates/bench_add_view.html">
+    <entry file="file://$PROJECT_DIR$/challenge/templates/base_challenge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="417" selection-end="417" vertical-scroll-proportion="0.37190083">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench/templates/bench_settings_view.html">
+    <entry file="file://$PROJECT_DIR$/profiles/auth.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.87603307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bench/templates/bench_edit_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="417" selection-end="417" vertical-scroll-proportion="0.3524804">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/templates/challenges_with_tag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="170" selection-end="170" vertical-scroll-proportion="0.15665796">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/templates/challenges_tag_cloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="56" selection-end="56" vertical-scroll-proportion="0.036057692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="1569" selection-end="1569" vertical-scroll-proportion="-27.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="13" selection-start="3998" selection-end="3998" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.22332506">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="36" selection-start="834" selection-end="834" vertical-scroll-proportion="-11.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2930" selection-end="2930" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="22" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="15" selection-start="130" selection-end="130" vertical-scroll-proportion="0.17857143" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="39" selection-start="534" selection-end="534" vertical-scroll-proportion="0.4642857" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="8" selection-start="1182" selection-end="1182" vertical-scroll-proportion="-14.708333" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bench/templates/bench_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/profiles/profile_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="245" selection-end="268" vertical-scroll-proportion="0.3030303">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.11363637" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profiles/create_profile.html">
+    <entry file="file://$PROJECT_DIR$/challenge/templates/challenges_with_tag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.07832898" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/templates/base_challenge.html">
+    <entry file="file://$PROJECT_DIR$/challenge/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="81" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.8041775">
+        <state line="63" column="0" selection-start="2964" selection-end="2964" vertical-scroll-proportion="0.74201477" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="293" column="1" selection-start="13784" selection-end="13784" vertical-scroll-proportion="0.37236533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="93" selection-start="855" selection-end="855" vertical-scroll-proportion="0.3452381" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bench/templates/bench_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="397" selection-end="433" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profiles/user_insert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bench/templates/base_bench.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="79" selection-start="301" selection-end="321" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="45" selection-start="359" selection-end="359" vertical-scroll-proportion="0.62653565">
           <folding />
         </state>
       </provider>

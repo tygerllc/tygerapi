@@ -1,0 +1,18 @@
+{% extends 'base_bench.html' %}
+{% block title %} All projects on your bench{% endblock title %}
+
+{% block content %}
+    <ul id="recent-listings">
+        {% if open_challenge_list %}
+            <h3 style="padding:20px 25px;">Challenges you've worked on recently</h3>
+            {% for c in open_challenge_list %}
+                <li class="list-item">
+                    <h3 style="padding:20px 25px;"><a href="/bench/{{ c.slug }}/">{{ c.name }}</a></h3>
+                    {{ c.desc|truncatewords:50 }}
+                </li>
+            {% endfor %}
+        {%  else %}
+            You haven't started work on any challenges. Get started with our Tutorial!
+        {% endif %}
+    </ul>
+{% endblock content %}

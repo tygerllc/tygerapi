@@ -1,8 +1,8 @@
 {% extends 'challenge/templates/challenge_list.html' %}
 
-{% block title %} Challenges tagged {{ tag }} on Tyger {% endblock title %}
+{% block title %} Challenges tagged {{ tag }} {% endblock title %}
 {% block sub-header %}
-    <h2> Challenges tagged {{ tag }}</h2>
+    <h2> Challenges</h2>
 {% endblock %}
 {% block sort-header %}
     <ul id="tabs">
@@ -32,53 +32,86 @@
             <li><a href="/challenge/tag/{{ tag }}/library/">Library</a></li>
         {% endif %}
 
-    </ul>
+    </ul><br>
+
 {% endblock sort-header %}
 
 {% block listings %}
+
     <ul id="recent-listings">
         {% load date_diff %}
         {% if tagged_challenges %}
+            {{ tagged_challenges.count }} tagged as <a class="tag">{{tag}}</a>
             {% for c in tagged_challenges %}
                 <li class="list-item">
-                    <div class="clearfix">
-                        <div class="challenge-rewards">
-                            {%  if c.bounty_avail %}
-                                <div class="bounty">${{c.bounty}}</div>
-                            {% else %}
-                                ${{ c.bounty }} bounty claimed by userid.
-                            {% endif %}
-                            <div class="votes">
-                                <div class="votecount">
-                                    {{ c.votes }}
+
+                    <div class="span-17 last">
+                        <div class="span-3">
+                            <div class="challenge-rewards">
+                                <div class="span-3 last">
+                                    {%  if c.bounty_avail %}
+                                        <div class="bounty">${{c.bounty}}</div>
+                                    {% else %}
+                                        ${{ c.bounty }} bounty claimed by userid.
+                                    {% endif %}
                                 </div>
-                                votes
+                                <div class="span-3 last">
+                                    <div class="votes" style="position:relative;left:50%;margin:0 auto">
+                                        <div style="position:relative;right:50%">
+                                            <div class="column">
+                                                <span class="ico-tick"></span>
+                                            </div>
+                                            <div class="column">
+                                                <div class="votecount">
+                                                    {{ c.votes }}
+                                                </div>
+                                            </div>
+                                            <div class="column last">
+                                                <button class="btn-sponsor"><span class="ico-uparr"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span-3 last">
+                                    <div class="created">
+                                        <div class="column" style="margin:0">
+                                            <span class="ico-time"></span>
+                                        </div>
+                                        <div class="column last" style="text-align:left">
+                                            created<br/><strong>{{ c.create_date|date_diff }}</strong>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="challenge-info">
-                            {% block challenge_title %}
-                                <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
-                            {% endblock %}
-                            <div class="description">
-                                {{ c.descrip|truncatewords:50 }}
-                            </div>
-                            <div class="challenge-details clearfix">
-                                <div class="sponsor-details">
-                                    <div class="sponsors">
-                                        <h4>Sponsored by <a href="/profile/{{ c.sponsor.user.username }}/">{{ c.sponsor.user.username }}</a></h4>
+                        <div class="span-14 last" style="width:546px">
+                            <div style="background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.08);border-radius:3px;border:1px solid #e4e4e4;">
+                                <div class="challenge-info">
+                                    {% block challenge_title %}
+                                        <h3 style="padding:20px 25px;"><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
+                                    {% endblock %}
+                                    <div class="description" style="padding:10px 25px;color:#666;border-bottom:1px dashed #ddd;border-top:1px dashed #ddd;background:#f1f1f1;text-shadow:white 0 1px 0;">
+                                        {{ c.descrip|truncatewords:50 }}
                                     </div>
-                                    <div class="co-sponsors">
+                                    <div class="challenge-details clearfix" style="padding:10px 25px;">
+                                        <div class="sponsor-details">
+                                            <div class="sponsors">
+                                                <h4>Sponsored by <a href="/profile/{{ c.sponsor }}/">{{ c.sponsor }} </a></h4>
+                                            </div>
+                                            <div class="co-sponsors">
+                                            </div>
+
+                                        </div>
+                                        <!--
+                                        <div class="tags">
+                                            {% for t in c.get_tags %}
+                                                <a class="tag">{{t}}</a>
+                                            {% endfor %}
+                                        </div>
+                                        -->
                                     </div>
                                 </div>
-                                <div class="tags">
-                                    {% for t in c.get_tags %}
-                                        <a class="tag">{{t}}</a>
-                                    {% endfor %}
-                                </div>
                             </div>
-                        </div>
-                        <div class="created">
-                            created <span class="bold">{{ c.create_date|date_diff }}</span>
                         </div>
                     </div>
                 </li>

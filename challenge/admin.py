@@ -1,4 +1,4 @@
-from challenge.models import Challenge, Criteria, UserProfile, Useful_Component, Useful_Link
+from challenge.models import Challenge, Criteria, UserProfile, Useful_Component, Useful_Link, Environment, SourceSink
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
@@ -32,5 +32,13 @@ class ChallengeAdmin(admin.ModelAdmin):
     ]
     inlines = [CriteriaInline, ComponentInline, RefInline,]
 
+class EnvironmentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'temp', 'pH')
+
+class SourceSinkAdmin(admin.ModelAdmin):
+    list_display = ('name', 'quantity')
+
 admin.site.register(User, UserProfileAdmin)
+admin.site.register(Environment, EnvironmentAdmin)
+admin.site.register(SourceSink, SourceSinkAdmin)
 admin.site.register(Challenge, ChallengeAdmin)

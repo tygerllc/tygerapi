@@ -1,12 +1,14 @@
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render_to_response, get_object_or_404
-from challenge.models import Challenge, Criteria
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response, get_object_or_404, redirect
+from challenge.models import Challenge
 from django.core.urlresolvers import reverse
 from tagging.models import Tag, TaggedItem
-import models
-from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
+import models
+
 
 #TODO change solution view to list all solutions
 #TODO Add view that selects a solution by a specific user.
@@ -48,64 +50,87 @@ def with_tag(request, tag, sortOrder, object_id=None, page=1):
     elif sortOrder == "oldest-unsolved":
         tagged_challenges = tagged_challenges.filter(first_completed__isnull=True).order_by('create_date')
     elif sortOrder == "library":
-        tagged_challenges = tagged_challenges.filter(sponsor__user__username='tyger-library').order_by('-create_date')
+        tagged_challenges = tagged_challenges.filter(sponsor__user__username='tygerlibrary').order_by('-create_date')
     return render_to_response('challenge/templates/challenges_with_tag.html',
                               dict(tag=tag, tagged_challenges=tagged_challenges, sortOrder=sortOrder),
                               context_instance=RequestContext(request))
 
-
-#TODO: Hacked multiple views to handle sorting. Should be slicker
+#TODO: Hacked this into multiple views to handle sorting. Should be slicker
 class ChallengeListView(ListView):
     context_object_name = "top25_challenge_list"
-    model = Challenge
     template_name='challenge/templates/challenge_list.html'
     queryset = Challenge.objects.order_by('-create_date')[:25]
 
     def get_context_data(self, **kwargs):
         context = super(ChallengeListView, self).get_context_data(**kwargs)
         context['sortOrder'] = "most-recent"
+        context['request'] = self.request
         return context
 
 class ChallengeListViewBounty(ListView):
     context_object_name = "top25_challenge_list"
-    model = Challenge
     template_name='challenge/templates/challenge_list.html'
     queryset = Challenge.objects.order_by('-bounty')[:25]
 
     def get_context_data(self, **kwargs):
         context = super(ChallengeListViewBounty, self).get_context_data(**kwargs)
         context['sortOrder'] = "top-bounty"
+        context['request'] = self.request
         return context
 
 class ChallengeListViewVotes(ListView):
     context_object_name = "top25_challenge_list"
-    model = Challenge
     template_name='challenge/templates/challenge_list.html'
     queryset = Challenge.objects.order_by('-votes')[:25]
 
     def get_context_data(self, **kwargs):
         context = super(ChallengeListViewVotes, self).get_context_data(**kwargs)
         context['sortOrder'] = "top-votes"
+        context['request'] = self.request
         return context
 
 class ChallengeListViewOldestUnsolved(ListView):
     context_object_name = "top25_challenge_list"
-    model = Challenge
     template_name='challenge/templates/challenge_list.html'
     queryset = Challenge.objects.filter(first_completed__isnull=True).order_by('create_date')[:25]
 
     def get_context_data(self, **kwargs):
         context = super(ChallengeListViewOldestUnsolved, self).get_context_data(**kwargs)
         context['sortOrder'] = "oldest-unsolved"
+        context['request'] = self.request
         return context
 
 class ChallengeListViewLibrary(ListView):
     context_object_name = "top25_challenge_list"
-    model = Challenge
     template_name='challenge/templates/challenge_list.html'
     queryset = Challenge.objects.filter(sponsor__user__username='tyger-library').order_by('-create_date')[:25]
 
     def get_context_data(self, **kwargs):
         context = super(ChallengeListViewLibrary, self).get_context_data(**kwargs)
         context['sortOrder'] = "library"
+        context['request'] = self.request
         return context
+
+@login_required()
+def logout_view(request):
+    logout(request)
+    return redirect('/login/')
+
+def login_view(request):
+    state = "Please log in below..."
+    username = password = ''
+    if request.POST:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return redirect('/challenge/')
+            else:
+                state = "Account is not active, please contact the site admin."
+        else:
+            state = "Username and/or password were incorrect."
+
+    return render_to_response('profiles/auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))

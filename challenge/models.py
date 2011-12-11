@@ -1,8 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
 from tagging.fields import TagField
 from tagging.models import Tag
-from datetime import datetime
+from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
@@ -13,16 +12,35 @@ class UserProfile(models.Model):
     cumulative_bounty = models.IntegerField(default=0)
     current_votes = models.IntegerField(default=0)
     current_bounty = models.IntegerField(default=0)
-
+#    profile_pic = models.ImageField(default="{{ STATIC_URL }}img/profpic.png")
+    
     def __unicode__(self):
         return self.user.username
+
     def get_absolute_url(self):
         return ('profiles_profile_detail', (), { 'username': self.user.username })
     get_absolute_url = models.permalink(get_absolute_url)
+
     #TODO add photo to user profile
     #TODO add achievements to user profile
     #TODO Extract User functions to their own app
     #TODO Add function to debit/credit votes & bounties
+
+class SourceSink(models.Model):
+    name = models.CharField(max_length=200)
+    quantity = models.FloatField(default=0)
+
+    def __unicode__(self):
+        return self.name
+
+class Environment(models.Model):
+    name = models.CharField(max_length=200)
+    temp = models.FloatField(default=37.0)
+    pH = models.FloatField(default=7.0)
+    sources_and_sinks = models.ManyToManyField(SourceSink)
+
+    def __unicode__(self):
+        return self.name
 
 class Challenge(models.Model):
         name = models.CharField(max_length=200)
@@ -34,7 +52,9 @@ class Challenge(models.Model):
         first_completed = models.DateTimeField('First solved', null=True)
         votes = models.IntegerField()
         bounty = models.DecimalField(max_digits = 10, decimal_places=2)
-        #TODO add Environment to Challenge
+        chassis = models.CharField(max_length=50, default="e coli")
+        environment = models.ForeignKey(Environment, default='2')
+
         def __unicode__(self):
             return self.name
         def bounty_avail(self):
@@ -45,6 +65,7 @@ class Challenge(models.Model):
 #            if not self.id:
 #                self.create_date = datetime.now()
 #                super(Challenge, self).save()
+
 
 class Criteria(models.Model):
     challenge = models.ForeignKey(Challenge)

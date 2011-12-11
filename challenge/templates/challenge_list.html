@@ -91,7 +91,7 @@
                                     <div class="challenge-details clearfix" style="padding:10px 25px;">
                                         <div class="sponsor-details">
                                             <div class="sponsors">
-                                                <h4>Sponsored By</h4>
+                                                <h4>Sponsored by <a href="/profile/{{ c.sponsor }}/">{{ c.sponsor }} </a></h4>
                                             </div>
                                             <div class="co-sponsors">
                                             </div>
@@ -119,7 +119,8 @@
 
 {% block sidebar %}
     <div id="search-challenges"> 
-        <form method="post" action=""> 
+        <form method="post" action="">
+            {% csrf_token %}
             <div class="input">
                 <input type="text" placeholder="Find a Challenge" style="width:196px"/>
                 <span class="ico-search"></span>

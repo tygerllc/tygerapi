@@ -15,28 +15,7 @@
                     <li><a class="current" href="/challenge/">Challenges</a></li>
                     <li><a href="/bench/">Bench</a></li>
                     <li><a href="/tutorial/">Tutorial</a></li>
-                    <li class="drop-down-container" style="position:relative">
-                        <div class="profpic"><span class="bg-prof"></span></div>
-                        <div class="drop-down-menu"> 
-                            <div class="column"> 
-                                <div class="prof-large">
-                                    <span class="bg-prof-large"></span>
-                                </div>
-                            </div>
-                            <div class="column last"> 
-                                <ul style="padding:10px;text-align:left"> 
-                                    <li style="font-weight:bold; color:#222"> {{ profile.user.first_name }}</li>
-                                    <li style="color:#666">email@email.com</li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">My Challenges</a></li>
-                                    <li><a href="#">Profile</a></li>
-                                    <li><a href="#">Settings</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="/logout/">Sign Out</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                    {% include "profiles/user_insert.html" %}
                 </ul>
             </div>
         </div>

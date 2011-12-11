@@ -4,23 +4,40 @@
 {% block sub-header %}<h2>{{ challenge.name }}</h2> {% endblock %}
 
 {% block listings %}
-    Tags: {{ challenge.tags }} <br>
-    Description: {{ challenge.descrip }} <br>
-    <p> Winning conditions: <p>
-    {% for condition in challenge.criteria_set.all %}
+
+    <p>Tags:
+    {% for t in challenge.get_tags %}
+        <a class="tag">{{t}}</a>
+    {% endfor %}
+    </p>
+    <h3>Description: </h3>
+    <p>{{ challenge.descrip }} </p>
+    <h3> Winning conditions: </h3>
+    <p>{% for condition in challenge.criteria_set.all %}
         {{ condition.desc }}, {{ condition.status}} <br>
     {% endfor %}
+    </p>
+    <h3>Environment </h3>
+    <p>
+        Chassis: {{ challenge.chassis }} <br>
+        Environment: {{ challenge.environment.name }} <br>
+        Temp: {{ challenge.environment.temp }}<br>
+        pH: {{ challenge.environment.pH }}<br>
+    </p>
 
-    <p> Useful components: <p>
-    {% for link in challenge.useful_component_set.all %}
-        <a href="{{ link.url }}">{{ link.desc }}</a><br>
-    {% endfor %}
+    <h3> Useful components </h3>
+    <p>
+        {% for link in challenge.useful_component_set.all %}
+            <a href="{{ link.url }}">{{ link.desc }}</a><br>
+        {% endfor %}
+    </p>
 
-    <p> References: <p>
-    {% for ref in challenge.useful_link_set.all %}
-        <a href="{{ ref.url }}">{{ ref.desc }}</a><br>
-    {% endfor %}
-
+    <h3> References:</h3>
+    <p>
+        {% for ref in challenge.useful_link_set.all %}
+            <a href="{{ ref.url }}">{{ ref.desc }}</a><br>
+        {% endfor %}
+    </p>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
     var disqus_shortname = 'tyger';

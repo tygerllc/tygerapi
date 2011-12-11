@@ -1,22 +1,26 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
-{% block topnav %}
-    <div id="title">
-        <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo.jpg" alt="Tyger Logo"/></a></h1>
-        <h2 id="tagline">Design New <span class="green">Life</span>. Improve The <span class="green">World</span>. Make <span class="green">Money</span>.</h2>
-        <div class="clear"></div>
+{% block header %}
+    <div class="container">
+        <div class="span-8 append-1">
+            <div id="title">
+            <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo-t.png" alt="Tyger Logo"/></a></h1>
+            </div>
+        </div>
+        <div class="span-15 last">
+            <div id="nav">
+                <ul class="side">
+                    <li><a class="current" href="/challenge/">Challenges</a></li>
+                    <li><a href="/bench/">Bench</a></li>
+                    <li><a href="/tutorial/">Tutorial</a></li>
+                    {% include "profiles/user_insert.html" %}
+                </ul>
+            </div>
+        </div>
     </div>
-    <nav>
-        <ul class="side">
-            <li><a href="/challenge/">Challenges</a></li>
-            <li><a href="/bench/">Canvas</a></li>
-            <li><a href="/tutorial/">Tutorial</a></li>
-            <li><a class="current" href="/profile/">Profile</a></li>
-        </ul>
-    </nav>
-{%  endblock topnav %}
+{%  endblock header %}
 
 {% block content %}
         <div id="challenges" class="clearfix">
