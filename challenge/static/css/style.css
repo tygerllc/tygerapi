@@ -76,7 +76,7 @@ legend {font-weight:bold;font-size:1.2em;margin-top:-0.2em;margin-bottom:1em;}
 fieldset, #IE8#HACK {padding-top:1.4em;}
 legend, #IE8#HACK {margin-top:0;margin-bottom:0;}
 input[type=text], input[type=password], input[type=url], input[type=email], input.text, input.title, textarea {background-color:#fff;border:1px solid #bbb;color:#000;}
-input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#666;}
+input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus, input.text:focus, input.title:focus, textarea:focus {border-color:#999;}
 select {background-color:#fff;border-width:1px;border-style:solid;}
 input[type=text], input[type=password], input[type=url], input[type=email], input.text, input.title, textarea, select {margin:0.5em 0;}
 input.text, input.title {width:300px;padding:5px;}
@@ -262,27 +262,39 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
  * Author: Jugal Manjeshwar
 **/
 a{text-decoration:none}
-body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;background:#f4f5f6}
+body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+.wrapper{
+background:#f4f5f6 url("../img/linen_texture.png");
+border-bottom:1px solid #bbb;	
+}
+
+.wrapper-inner{
+background:url("../img/fade.png") repeat-x 0 0;	
+padding:20px 0;
+}
+
 #header{
-background: #73c81a; /* Old browsers */
-background: -moz-linear-gradient(top, #73c81a 0%, #73c81a 0%, #6bbb18 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#73c81a), color-stop(0%,#73c81a), color-stop(100%,#6bbb18)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #73c81a 0%,#73c81a 0%,#6bbb18 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #73c81a 0%,#73c81a 0%,#6bbb18 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #73c81a 0%,#73c81a 0%,#6bbb18 100%); /* IE10+ */
-background: linear-gradient(top, #73c81a 0%,#73c81a 0%,#6bbb18 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73c81a', endColorstr='#6bbb18',GradientType=0 ); /* IE6-9 */
+background: #6db712; /* Old browsers */
+;
+background-image: linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -o-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -moz-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -webkit-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -ms-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
 box-shadow:0 2px 2px rgba(0,0,0,0.1);
 position:relative;z-index:10;
 border-bottom:1px solid #5ea514}
 
 /*------- TOP-BAR -------*/
-h1#logo{margin:0}
-h1#logo,#nav{padding:8px 0}
+h1#logo{margin:0;line-height:32px;font-size:32px}
+h1#logo > a{margin:0;text-indent:-9999px;
+width:66px;height: 32px;overflow: hidden;background:url("../img/logo-t.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;	}
+h1#logo,#nav{padding:6px 0}
 .green{color:#73c81a;font-weight:bold;}
 
 ul.side>li{display:inline-block;}
-#nav{text-align:right;padding-top:10px}
+#nav{text-align:right;}
 ul{margin:0;padding:0;list-style:none;}
 #nav li:last-child{margin-right:0;padding-right:0}
 
@@ -294,8 +306,49 @@ nav>ul>li>a.current{background:#73c81a;color:#fff;padding-right:10px;}
 .profpic{border-radius:2px; box-shadow: 0 1px 2px rgba(0,0,0,0.2);cursor:pointer;position:relative;top:-2px}
 
 #search-challenges{padding:6px 0 20px 0;border-bottom:1px dashed #ddd}
-.input{border:1px solid #ccc;box-shadow:inset 0 2px 5px rgba(0,0,0,0.1);background:#fff;padding:2px 6px;border-radius:3px}
+.input{border:1px solid #ccc;box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);background:#fff;padding:6px 8px;border-radius:2px}
 .input input[type="text"]{border:none;color:#777}
+label{color:#555;text-shadow:0 1px 0 #fff;margin:0 10px}
+.input:focus{box-shadow:0 0 5px #5f9d12}
+
+h2{
+	color:#555;
+	text-shadow:0 1px 0 #fff;
+	padding-bottom:1px;
+}
+
+h2:after{
+	content: "";
+	width:100%;
+	height:1px;border-top:1px dashed rgba(0,0,0,0.3);border-bottom:1px dashed rgba(255,255,255,0.6)
+}
+hr.title{height:1px;width:100%;border-top:1px dashed rgba(0,0,0,0.3);border-bottom:1px dashed rgba(255,255,255,0.6)}
+
+.btn{
+border:1px solid #bbb;
+padding:8px 16px;
+font-size:12px;
+color:#555;
+cursor:pointer;
+display:inline-block;
+background-color:#e6e6e6;
+background-repeat:no-repeat;
+background-image: linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
+background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
+background-image: -moz-linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
+background-image: -webkit-linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
+background-image: -ms-linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
+box-shadow:inset 0 1px 0 #fff, 0 2px 2px rgba(0,0,0,0.05);
+border-radius:2px;
+-webkit-transition: 0.1s linear all;
+-moz-transition: 0.1s linear all;
+-ms-transition: 0.1s linear all;
+-o-transition: 0.1s linear all;
+transition: 0.1s linear all;
+margin:0 0 10px;
+font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+font-weight:bold;
+}
 
 .tag-cloud{padding:20px 0}
 .tag-cloud h3{font-size:15px;color:#555;font-weight:bold}
@@ -305,7 +358,6 @@ nav>ul>li>a.current{background:#73c81a;color:#fff;padding-right:10px;}
 	Styles for the Challenges Page
 */
 .bold{font-weight:bold}
-#main{padding-top:30px}
 #main-wrapper{
 position:relative;z-index:1;}
 
@@ -342,6 +394,27 @@ display:block;overflow:hidden;}
 .challenge-details{margin-top:15px}
 
 
+.challenge-title h2{
+	text-transform:capitalize;
+	margin:0;
+	padding-bottom:10px;
+	font-size:22px;
+	font-weight:bold;
+	line-height:18px;
+	color:#444;
+}
+
+.challenge-thumbnail{margin-right:10px}
+
+.challenge-thumbnail-container{
+	width:120px;
+	height:120px;
+	background:#fff;
+	box-shadow:0 2px 2px rgba(0,0,0,0.05);
+	border:1px solid #ddd;
+}
+
+
 .bounty{margin-top:10px;background:#73c81a;color:#fff;margin-bottom:5px;padding:6px 10px;border-radius:3px;display:inline-block;border:1px solid #66b217;box-shadow:inset #8ddf37 0 1px 0;text-shadow:0 2px 2px rgba(0,0,0,0.2);width:100%;}
 .votes{color:#666;font-size:12px}
 .votecount{font-size:20px;line-height:20px;margin-top:10px}
@@ -350,8 +423,8 @@ display:block;overflow:hidden;}
 .sponsors{margin-bottom:10px}
 .co-sponsors h5{color:#666}
 
-#footer{font-size:11px;color:#666;}
-#footer .container{padding:20px 0;border-top:1px dashed #ddd}
+#footer{font-size:11px;color:#aaa;font-family: "lucida grande",tahoma,verdana,arial,sans-serif;}
+#footer .container{padding:20px 0;}
 #footer a{color:#555;padding:0 20px;}
 #footer a:hover{color:#222}
 
@@ -386,12 +459,20 @@ top:-8px;
 right:-3px
 }
 
+.content-box{
+	background:#fff;
+	border:1px solid #ddd;
+	box-shadow:0 2px 2px rgba(0,0,0,0.1)
+}
 .tag-item{display:inline-block;margin:0 2px 8px 0}
 .tag-count{font-weight:bold;font-size:11px}
 
 button.btn-sponsor{color:#0060ff;font-size:11px;border:none;padding:4px;border-radius:2px;vertical-align:middle;cursor:pointer;border:1px solid transparent;opacity:0.6;margin:7px 0}
 button.btn-sponsor:hover{background:#ddd;color:#fff;opacity:0.8}
 
+.bg-logo{
+height: 66px;width:32px;overflow: hidden;background:url("../img/logo-t.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;	
+}
 .bg-prof{height: 25px;width:25px;overflow: hidden;background:url("../img/prof.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 .bg-prof-large{height: 90px;width:90px;overflow: hidden;background:url("../img/prof-large.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="span-8 append-1">
             <div id="title">
-            <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo-t.png" alt="Tyger Logo"/></a></h1>
+                <h1 id="logo"><a href ="/challenge">Tyger</a></h1>
             </div>
         </div>
         <div class="span-15 last">
@@ -25,25 +25,24 @@
 {% block content %}
     <div class="container">
         <div id="main-wrapper" class="span-17"> 
-            <div id="challenge-title" class="span-17 last"> 
-                <span id="challenge-icon" class="column"> 
-                    <div class="ico-challenge"></div>
-                </span>
-                <span class="column last" style="border-bottom:1px solid #ddd;width:619px;box-shadow:white 0 1px 0;">
-                    <span class="column">
-                        {% block sub-header %}<h1>Challenges</h1> {% endblock sub-header %}
+            <div class="content-box clearfix">
+                <div class="challenge-title" class="span-17 last"> 
+                    <span class="column last" style="border-bottom:1px solid #ddd;width:619px;box-shadow:white 0 1px 0;">
+                        <span class="column">
+                            {% block sub-header %}<h1>Challenges</h1> {% endblock sub-header %}
+                        </span>
+                        <span class="column last" style="float:right">
+                            {% block sort-header %}
+                            {% endblock sort-header %}
+                        </span>
                     </span>
-                    <span class="column last" style="float:right">
-                        {% block sort-header %}
-                        {% endblock sort-header %}
-                    </span>
-                </span>
-            </div>
+                </div>
 
-            <div id="challenge-listings" class="span-17 last">
-                <div id="listings">
-                    {% block listings %}
-                    {% endblock listings%}
+                <div id="challenge-listings" class="span-17 last">
+                    <div id="listings">
+                        {% block listings %}
+                        {% endblock listings%}
+                    </div>
                 </div>
             </div>
         </div>

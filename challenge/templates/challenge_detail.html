@@ -1,7 +1,64 @@
-{% extends 'challenge/templates/base_challenge.html' %}
+{% extends 'base.html' %}
 
-{% block title %} {{ challenge.name }} {% endblock title %}
-{% block sub-header %}<h2>{{ challenge.name }}</h2> {% endblock %}
+{% block title %} {{ challenge.name|capfirst} | Tyger {% endblock title %}
+
+{% block header %}
+    <div class="container">
+        <div class="span-8 append-1">
+            <div id="title">
+            <h1 id="logo"><a href ="/challenge"> <img src="{{ STATIC_URL }}img/logo-t.png" alt="Tyger Logo"/></a></h1>
+            </div>
+        </div>
+        <div class="span-15 last">
+            <div id="nav">
+                <ul class="side">
+                    <li><a class="current" href="/challenge/">Challenges</a></li>
+                    <li><a href="/bench/">Bench</a></li>
+                    <li><a href="/tutorial/">Tutorial</a></li>
+                    {% include "profiles/user_insert.html" %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{%  endblock header %}
+
+{% block content %}
+<div class="container">
+    <div class="spam-17">
+        <div class="row clearfix">
+            <div class="column">
+                <div class="challenge-thumbnail">
+                    <div class="challenge-thumbnail-container">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="column last">
+                <div class="challenge-title">
+                    <h2>{{ challenge.name }}</h2>
+                </div>  
+                <div class="column last">
+                    <div class="challenge-info">
+                        <div class="challenge-created">
+                            created <strong>2 days ago</strong>
+                        </div>
+                        <div class="challenge-tags">
+                            {% for t in challenge.get_tags %}
+                                <a class="tag">{{t}}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="challenge-description">
+                            {{ challenge.descrip }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span-7 last"></div>
+</div>
+{% endblock content %}
+
 
 {% block listings %}
 

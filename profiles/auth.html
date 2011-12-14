@@ -3,17 +3,22 @@
 {% block title %} {{ state }}{% endblock title %}
 
 {% block content %}
-    {{ state }}
-	    <form action="/login/" method="post">
-            {% csrf_token %}
-		    {% if next %}
-		        <input type="hidden" name="next" value="{{ next }}" />
-		    {% endif %}
-    		username:
-	    	<input type="text" name="username" value="{{ username}}" /><br />
-		    password:
-    		<input type="password" name="password" value="" /><br />
-    		<input type="submit" value="Log In" />
-	    </form>
-
+	<div class="container" style="padding:100px 0">
+		<div style="margin:0 auto;width:400px">
+			<div style="padding:10px; text-align:center">
+		    <h2>{{ state }}</h2>
+			    <form action="/login/" method="post">
+		            {% csrf_token %}
+				    {% if next %}
+				        <input type="hidden" name="next" value="{{ next }}" />
+				    {% endif %}
+		    		<label for="username">Username</label>
+			    	<input class="input" type="text" name="username" value="{{ username}}" /><br />
+				    <label for="password">Password</label>
+		    		<input class="input" type="password" name="password" value="" /><br />
+		    		<input class="btn" type="submit" value="Log In" />
+			    </form>
+		    </div>
+		</div>
+	</div>
 {% endblock content %}
