@@ -133,4 +133,4 @@ def login_view(request):
         else:
             state = "Username and/or password were incorrect."
 
-    return render_to_response('profiles/auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))
+    return render_to_response('auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))

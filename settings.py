@@ -102,7 +102,7 @@ TEMPLATE_DIRS = (
     join(ROOT_PATH, 'templates'),
     join(ROOT_PATH, 'challenge/templates'),
     join(ROOT_PATH, 'bench/templates'),
-    join(ROOT_PATH, 'profile/templates'),
+    join(ROOT_PATH, 'profiles'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

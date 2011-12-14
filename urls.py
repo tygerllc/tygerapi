@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^challenge/', include('challenge.urls')),
-    (r'^profile/', include('profile.urls')),
+    (r'^profiles/', include('profiles.urls')),
     (r'^bench/', include('bench.urls')),
     (r'^tutorial/', redirect_to, {'url': '/challenge/tag/tutorial/'}),
     (r'^logout/', 'challenge.views.logout_view'),

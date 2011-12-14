@@ -10,7 +10,9 @@
                 <li><a class="current" href="/challenge/">Challenges</a></li>
                 <li><a href="/bench/">Bench</a></li>
                 <li><a href="/tutorial/">Tutorial</a></li>
-                {% include "profile_menu.html" %}
+                {% if request.user.first_name %}
+                    {% include "user_menu.html" %}
+                {% endif %}
             </ul>
         </div>
     </div>
