@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(r'^(?P<pk>\d+)/results/$',
         DetailView.as_view(
             model=Challenge,
-            template_name='challenge/templates/challenge_solutions_list.html'),
+            template_name='challenge_solutions_list.html'),
             name='challenge_results'),
     (r'^(?P<challenge_id>\d+)/submit/$',
         'challenge.views.submit'),
@@ -32,5 +32,5 @@ urlpatterns = patterns('',
     (r'^(?P<slug>[-_A-Za-z0-9]+)/$',
         login_required(DetailView.as_view(
             model=Challenge,
-            template_name='challenge/templates/challenge_detail.html')))
+            template_name='challenge_detail.html')))
 )

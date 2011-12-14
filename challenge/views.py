@@ -20,7 +20,7 @@ def submit(request, challenge_id):
         selected_criteria = c.criteria_set.get(pk=request.POST['criteria'])
     except (KeyError, Challenge.DoesNotExist):
         # Redisplay the poll voting form.
-        return render_to_response('/challenge/challenge_detail.html', {
+        return render_to_response('challenge_detail.html', {
             'challenge': c,
             'error_message': "No challenge selected.",
         }, context_instance=RequestContext(request))
@@ -34,7 +34,7 @@ def submit(request, challenge_id):
 
 @login_required()
 def tags(request):
-        return render_to_response('challenge/templates/challenges_tag_cloud.html',
+        return render_to_response('challenges_tag_cloud.html',
         context_instance=RequestContext(request))
 
 @login_required()
@@ -51,14 +51,14 @@ def with_tag(request, tag, sortOrder, object_id=None, page=1):
         tagged_challenges = tagged_challenges.filter(first_completed__isnull=True).order_by('create_date')
     elif sortOrder == "library":
         tagged_challenges = tagged_challenges.filter(sponsor__user__username='tygerlibrary').order_by('-create_date')
-    return render_to_response('challenge/templates/challenges_with_tag.html',
+    return render_to_response('challenges_with_tag.html',
                               dict(tag=tag, tagged_challenges=tagged_challenges, sortOrder=sortOrder),
                               context_instance=RequestContext(request))
 
 #TODO: Hacked this into multiple views to handle sorting. Should be slicker
 class ChallengeListView(ListView):
     context_object_name = "top25_challenge_list"
-    template_name='challenge/templates/challenge_list.html'
+    template_name='challenge_list.html'
     queryset = Challenge.objects.order_by('-create_date')[:25]
 
     def get_context_data(self, **kwargs):
@@ -69,7 +69,7 @@ class ChallengeListView(ListView):
 
 class ChallengeListViewBounty(ListView):
     context_object_name = "top25_challenge_list"
-    template_name='challenge/templates/challenge_list.html'
+    template_name='challenge_list.html'
     queryset = Challenge.objects.order_by('-bounty')[:25]
 
     def get_context_data(self, **kwargs):
@@ -80,7 +80,7 @@ class ChallengeListViewBounty(ListView):
 
 class ChallengeListViewVotes(ListView):
     context_object_name = "top25_challenge_list"
-    template_name='challenge/templates/challenge_list.html'
+    template_name='challenge_list.html'
     queryset = Challenge.objects.order_by('-votes')[:25]
 
     def get_context_data(self, **kwargs):
@@ -91,7 +91,7 @@ class ChallengeListViewVotes(ListView):
 
 class ChallengeListViewOldestUnsolved(ListView):
     context_object_name = "top25_challenge_list"
-    template_name='challenge/templates/challenge_list.html'
+    template_name='challenge_list.html'
     queryset = Challenge.objects.filter(first_completed__isnull=True).order_by('create_date')[:25]
 
     def get_context_data(self, **kwargs):
@@ -102,7 +102,7 @@ class ChallengeListViewOldestUnsolved(ListView):
 
 class ChallengeListViewLibrary(ListView):
     context_object_name = "top25_challenge_list"
-    template_name='challenge/templates/challenge_list.html'
+    template_name='challenge_list.html'
     queryset = Challenge.objects.filter(sponsor__user__username='tyger-library').order_by('-create_date')[:25]
 
     def get_context_data(self, **kwargs):

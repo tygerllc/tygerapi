@@ -50,7 +50,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/static/static.lawrence.com/static/"
-STATIC_ROOT = join(ROOT_PATH, 'static')
+#STATIC_ROOT = join(ROOT_PATH, 'static_files')
 
 # URL prefix for static files.
 # Example: "http://static.lawrence.com/static/"
@@ -63,6 +63,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    join(ROOT_PATH, 'static/'),
     # "/Users/me/Dropbox/Tyger/tygerapi/static",
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
@@ -98,8 +99,10 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'tygerapi.urls'
 
 TEMPLATE_DIRS = (
-    ROOT_PATH,
-    join(ROOT_PATH, 'challenge')
+    join(ROOT_PATH, 'templates'),
+    join(ROOT_PATH, 'challenge/templates'),
+    join(ROOT_PATH, 'bench/templates'),
+    join(ROOT_PATH, 'profile/templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

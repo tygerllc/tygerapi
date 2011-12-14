@@ -15,6 +15,11 @@ Installation
 ------------
 Make sure python and django are installed and running on your system. 
 
+Also, the following dependencies will be required:
+- [Piston](https://bitbucket.org/jespern/django-piston/wiki/Home) 
+- [South](http://south.aeracode.org/)
+- [django-tagging](http://code.google.com/p/django-tagging/)
+
 1. Clone from github_::
 
     $ git clone git@github.com:tygerllc/tygerapi.git

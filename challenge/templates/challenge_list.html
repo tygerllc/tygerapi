@@ -1,4 +1,4 @@
-{% extends 'challenge/templates/base_challenge.html' %}
+{% extends 'challenge_base.html' %}
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
@@ -122,11 +122,11 @@
         <form method="post" action="">
             {% csrf_token %}
             <div class="input">
-                <input type="text" placeholder="Find a Challenge" style="width:196px"/>
+                <input type="text" placeholder="Find a Challenge" style="width:190px"/>
                 <span class="ico-search"></span>
             </div>
         </form>
     </div>
-    {% include 'inc/tag_cloud.html' %}
+    {% include 'tag_cloud.html' %}
 {% endblock sidebar %}
 
