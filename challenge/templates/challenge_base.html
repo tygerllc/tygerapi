@@ -6,16 +6,23 @@
     <div class="container">
         <div id="main-wrapper" class="span-17"> 
             <div class="content-box clearfix">
-                <div class="challenge-title" class="span-17 last"> 
-                    <span class="column last" style="border-bottom:1px solid #ddd;width:619px;box-shadow:white 0 1px 0;">
+                <div class="span-17 last"> 
+                    <div class="challenge-title column last" style="">
                         <span class="column">
-                            {% block sub-header %}<h1>Challenges</h1> {% endblock sub-header %}
+                            {% block sub-header %}
+                                <span class="column">
+                                    <span class="ico-challenge"></span>
+                                </span>
+                                <span class="column last">
+                                    <h1>Challenges</h1> 
+                                </span>
+                            {% endblock sub-header %}
                         </span>
                         <span class="column last" style="float:right">
                             {% block sort-header %}
                             {% endblock sort-header %}
                         </span>
-                    </span>
+                    </div>
                 </div>
 
                 <div id="challenge-listings" class="span-17 last">
@@ -27,7 +34,7 @@
             </div>
         </div>
 
-        <div id="sidebar-wrapper" class="span-6 last" style="float:right"> 
+        <div id="sidebar-wrapper" class="span-7 last" style="float:right"> 
             {% block sidebar %}
             {% endblock sidebar %}
         </div>

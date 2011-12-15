@@ -3,17 +3,18 @@
  *
  * Author: Jugal Manjeshwar
 **/
-a{text-decoration:none}
+a:link, a:visited{color:#0048ff;text-decoration:none}
+a:hover{color:#06c; text-decoration:underline;}
 body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 
 .wrapper{
-background:#f4f5f6 url("../img/linen_texture.png");
-border-bottom:1px solid #bbb;	
+background:#eee;
+border-bottom:1px solid #ccc;	
 }
 
 .wrapper-inner{
 background:url("../img/fade.png") repeat-x 0 0;	
-padding:20px 0;
+padding-bottom:20px;
 }
 
 #header{
@@ -58,10 +59,12 @@ border-left:1px solid #8fcd41;
 border-right:1px solid #8fcd41;
 }
 
+#nav a, #tabs a, a.tag{text-decoration:none}
+
 .profpic{border-radius:2px; box-shadow: 0 1px 2px rgba(0,0,0,0.2);cursor:pointer;position:relative;top:-2px}
 
 #search-challenges{padding:6px 0 20px 0;border-bottom:1px dashed #ddd}
-.input{border:1px solid #ccc;box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);background:#fff;padding:6px 8px;border-radius:2px}
+.input{border:1px solid #ccc;box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);background:#fff;padding:3px 8px;border-radius:2px}
 .input input[type="text"]{border:none;color:#777}
 label{color:#555;text-shadow:0 1px 0 #fff;margin:0 10px}
 .input:focus{box-shadow:0 0 5px #5f9d12}
@@ -86,7 +89,8 @@ font-size:12px;
 color:#555;
 cursor:pointer;
 display:inline-block;
-background-color:#e6e6e6;
+overflow:visible;
+background-color:#f5f5f5;
 background-repeat:no-repeat;
 background-image: linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
 background-image: -o-linear-gradient(bottom, #e6e6e6 0%, #f5f5f5 100%);
@@ -101,6 +105,7 @@ border-radius:2px;
 -o-transition: 0.1s linear all;
 transition: 0.1s linear all;
 margin:0 0 10px;
+text-shadow:0 1px 0 #fff;
 font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 font-weight:bold;
 }
@@ -119,34 +124,55 @@ position:relative;z-index:1;}
 #listings{}
 #viewtabs{border-bottom:1px solid #ccc;}
 #viewtabs::after{clear:both}
-#challenge-title h1{font-size:22px;padding-top:6px;line-height:28px;margin:0 0 5px 0;color:#444}
+.challenge-title{width:628px;
+background:#f4f5f6;
+background-image: linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
+background-image: -o-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
+background-image: -moz-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
+background-image: -webkit-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
+background-image: -ms-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
+padding:10px 20px 5px;border-bottom:1px solid #ccc}
+.challenge-title h1{font-size:18px;text-shadow:0 1px 0 #fff;line-height:30px;margin:0;color:#555;}
 #viewtabs h2{float:left;margin-bottom:0}
-#tabs{float:right;position:relative;top:7px}
+#tabs{float:right;padding-left:10px;}
 #tabs li{display:inline-block}
-#tabs li{padding: 6px 10px;font-size:12px;line-height:20px}
-#tabs li a{color:#777;text-shadow:white 0 1px 0;
+#tabs li{padding: 6px 0;font-size:12px;line-height:20px}
+#tabs li a{color:#777;padding:18px 10px 15px;
+	border-radius:2px;
 -webkit-transition: 0.1s linear all;
 -moz-transition: 0.1s linear all;
 -ms-transition: 0.1s linear all;
 -o-transition: 0.1s linear all;
-transition: 0.1s linear all;}
+transition: 0.1s linear all;
+text-shadow:0 1px 0 #fff;}
 #tabs li a:hover{color:#333}
 #tabs li.current{font-size:12px;font-weight:bold;font-size:13px}
-#tabs li.current a{color:#286bd4;}
+#tabs li.current a{
+box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);
+background-color:#fff;color:#444;border:1px solid #ccc;border-bottom-color:#fff}
 #tabs li.current a:hover{text-decoration:none}
 
 #challenge-listings{}
 #challenge-sidebar{}
 
 #listings{margin:30px 0}
-.list-item{position:relative;margin-bottom:20px;padding-top:20px;border-top:1px dashed #ddd;
-display:block;overflow:hidden;}
-.list-item:first-child{border:none;padding:0}
-.list-item h3{margin-bottom:-0}
-.list-item h3 a{font-size:22px;color:#555;text-transform:capitalize;font-weight:bold}
-.challenge-rewards{text-align:center;font-size:20px;font-weight:bold;}
-.challenge-info{}
-.challenge-details{margin-top:15px}
+.list-item{position:relative;
+margin-bottom:20px;
+padding:20px 20px 0 0;
+border-top:1px solid #ddd;
+display:block;
+overflow:hidden;
+}
+.list-item:first-child{border:none;padding-top:0}
+.list-item h3{margin-bottom:-0;padding:0}
+.list-item h3 a{font-size:18px;color:#555;text-transform:capitalize;font-weight:bold}
+.challenge-rewards{text-align:center;font-size:18px;color:#555;font-weight:bold;}
+.challenge-info{
+}
+.challenge-description{
+padding:10px 0;color:#666;
+}
+.challenge-details{margin-top:5px;font-size:12px}
 
 
 .challenge-title h2{
@@ -169,10 +195,37 @@ display:block;overflow:hidden;}
 	border:1px solid #ddd;
 }
 
+.challenge-side-icon-container{
+padding:0px 6px 10px 18px;	
+}
 
-.bounty{margin-top:10px;background:#73c81a;color:#fff;margin-bottom:5px;padding:6px 10px;border-radius:3px;display:inline-block;border:1px solid #66b217;box-shadow:inset #8ddf37 0 1px 0;text-shadow:0 2px 2px rgba(0,0,0,0.2);width:100%;}
-.votes{color:#666;font-size:12px}
-.votecount{font-size:20px;line-height:20px;margin-top:10px}
+.bounty{
+	font-size:20px;
+	line-height:18px;
+	text-align:center;
+	width:85px;
+color:#81c749;
+display:inline-block;overflow:hidden;
+margin-bottom:8px;
+}
+
+.bounty>span{position:relative;top:-2px}
+
+/*
+.bounty{
+margin-top:10px;
+background:#73c81a;
+color:#fff;
+margin-bottom:5px;
+padding:6px 10px;
+display:inline-block;
+font-size:18px;}
+*/
+
+.votecount{font-size:16px;
+font-weight:bold;
+padding:4px 0;width:85px;border:1px solid #ddd;border-bottom:none;
+text-align:center;display:inline-block;overflow:visible;color:#555;}
 
 .sponsor-details{float:left;font-size:12px}
 .sponsors{margin-bottom:10px}
@@ -183,7 +236,9 @@ display:block;overflow:hidden;}
 #footer a{color:#555;padding:0 20px;}
 #footer a:hover{color:#222}
 
-.drop-down-menu{position:absolute;top:38px;right:0;background:#fff;width:300px;font-size:13px;box-shadow:0 2px 2px rgba(0,0,0,0.1);border-radius:0 0 4px 4px;border:1px solid #ddd;display:none;
+.drop-down-menu{position:absolute;top:42px;right:0;background:#fff;width:300px;font-size:13px;
+border-radius:0 0 2px 2px;
+border:1px solid #ccc;display:none;border-top:none
 }
 .drop-down-menu li{display:block;overflow:hidden}
 .drop-down-menu li a{line-height:30px}
@@ -193,15 +248,26 @@ li.divider{height:1px;border-bottom:1px dashed #eee;margin:5px 0}
 
 .tags{float:right;text-align:right}
 
-a.tag{background:#eee;color:#666; box-shadow:0 1px 1px rgba(0,0,0,0.1);padding:2px 6px;border-radius:4px;display:inline-block;cursor:pointer;margin:0 0 3px 0;font-size:12px;
--webkit-transition: 0.1s linear all;
--moz-transition: 0.1s linear all;
--ms-transition: 0.1s linear all;
--o-transition: 0.1s linear all;
-transition: 0.1s linear all;
+a.tag{
+background-color:#FED870;
+background-repeat:no-repeat;
+background-image: linear-gradient(bottom, #FEBC4A 35%, #FED870 68%);
+background-image: -o-linear-gradient(bottom, #FEBC4A 35%, #FED870 68%);
+background-image: -moz-linear-gradient(bottom, #FEBC4A 35%, #FED870 68%);
+background-image: -webkit-linear-gradient(bottom, #FEBC4A 35%, #FED870 68%);
+background-image: -ms-linear-gradient(bottom, #FEBC4A 35%, #FED870 68%);
+color:#82572d; 
+text-shadow:0 1px 0 rgba(255,255,255,0.6);
+padding:2px 6px;border-radius:2px;display:inline-block;cursor:pointer;margin:0 0 3px 0;font-size:12px;
+-webkit-transition: 0.05s linear all;
+-moz-transition: 0.05s linear all;
+-ms-transition: 0.05s linear all;
+-o-transition: 0.05s linear all;
+transition: 0.05s linear all;
+border:1px solid #cc9940;
 }
 a.tag:first-child{margin-left:0}
-a.tag:hover{background:#ffdb6c;color:#7d4f00;box-shadow:none;box-shadow:0 1px 1px #f3a638;}
+a.tag:hover{background-position:0 15px;}
 
 .arrow-up {
 width: 0;
@@ -216,9 +282,10 @@ right:-3px
 
 .content-box{
 	background:#fff;
-	border:1px solid #ddd;
-	box-shadow:0 2px 2px rgba(0,0,0,0.1)
+	border:1px solid #ccc;
+	border-top:none
 }
+
 .tag-item{display:inline-block;margin:0 6px 8px 0}
 .tag-count{font-weight:bold;font-size:11px}
 
@@ -228,15 +295,22 @@ button.btn-sponsor:hover{background:#ddd;color:#fff;opacity:0.8}
 .bg-logo{
 height: 66px;width:32px;overflow: hidden;background:url("../img/logo-t.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;	
 }
+
+
+.ico-bounty{height: 18px;width:18px;overflow: hidden;background:url("../img/bounty_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
+.ico-promote{height: 18px;width:18px;overflow: hidden;background:url("../img/promote_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
+.ico-promote-btn{height: 14px;width:14px;overflow: hidden;background:url("../img/promote_btn_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
+
 .ico-profile{height: 16px;width:17px;overflow: hidden;background:url("../img/ico_profile.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 
 .bg-prof{height: 25px;width:25px;overflow: hidden;background:url("../img/prof.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 .bg-prof-large{height: 90px;width:90px;overflow: hidden;background:url("../img/prof-large.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 
-.ico-search{width:15px; height:15px; overflow: hidden;background:url("../img/search_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;opacity:0.6;cursor:pointer}
+.ico-search{width:15px; height:15px; overflow: hidden;background:url("../img/search_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;opacity:0.6;cursor:pointer;
+border:none;}
 .ico-search:hover{opacity:0.9}
 
-.ico-challenge{width:41px; height:42px; overflow: hidden;background:url("../img/challenge_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
+.ico-challenge{width:23px; height:30px; overflow: hidden;background:url("../img/challenge_icon.png") -0px 3px no-repeat;display: inline-block;vertical-align: middle;}
 
 .ico-tick{width:12px; height:12px; overflow: hidden;background:url("../img/ico-tick.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;opacity:0.5;margin:15px 0 0 0;}
 .ico-time{width:12px; height:12px; overflow: hidden;background:url("../img/ico-clock.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;opacity:0.5;margin:4px 6px 0 0;}
@@ -245,8 +319,7 @@ height: 66px;width:32px;overflow: hidden;background:url("../img/logo-t.png") -0p
 
 /* ------------------------------- */
 
-.created{color:#777;font-size:12px;font-weight:normal;padding-top:10px;border-top:1px dashed #ddd}
-.created *{padding-top:10px}
+.created{color:#777;font-size:11px;font-weight:normal;padding-top:5px;}
 
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .hidden { display: none; visibility: hidden; }
@@ -254,6 +327,17 @@ height: 66px;width:32px;overflow: hidden;background:url("../img/logo-t.png") -0p
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 .invisible { visibility: hidden; }
+
+.tright{text-align:right}
+.tleft{text-align:left}
+.tcenter{text-align:center}
+
+@-moz-document url-prefix(http://) {
+    button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner {
+        padding: 0 !important;
+        border: 0 none !important;
+    }
+}
 
 
 @media all and (orientation:portrait) {

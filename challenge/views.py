@@ -51,7 +51,7 @@ def with_tag(request, tag, sortOrder, object_id=None, page=1):
         tagged_challenges = tagged_challenges.filter(first_completed__isnull=True).order_by('create_date')
     elif sortOrder == "library":
         tagged_challenges = tagged_challenges.filter(sponsor__user__username='tygerlibrary').order_by('-create_date')
-    return render_to_response('challenges_with_tag.html',
+    return render_to_response('challenge_with_tag.html',
                               dict(tag=tag, tagged_challenges=tagged_challenges, sortOrder=sortOrder),
                               context_instance=RequestContext(request))
 
