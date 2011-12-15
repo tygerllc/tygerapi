@@ -45,7 +45,7 @@
                             <div class="challenge-rewards"> 
                                 <div class="row clearfix">
                                     <div class="column last" style="padding:0 20px">
-                                        {%  if c.bounty_avail %}
+                                        {%  if c.bounty_avail %}    
                                             <span class="bounty"><span class="ico-bounty"></span>{{c.bounty}}</span>
                                         {% else %}
                                             ${{ c.bounty }} bounty claimed by userid.
@@ -114,8 +114,8 @@
                 </li>
             {% endfor %}
         {%  else %}
-            <span class="clearfix" style="width:100%;text-align:center;color:#888">
-                No challenges available
+            <span class="clearfix" style="width:100%;text-align:center;color:#888;padding:30px 0">
+                No matching challenges found.
             </span>
         {% endif %}
     </ul>

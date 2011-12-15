@@ -10,6 +10,7 @@
                 <li><a class="{% ifequal request.path "/challenge/" %}current{% endifequal %}" href="/challenge/">Challenges</a></li>
                 <li><a class="{% ifequal request.path "/bench/" %}current{% endifequal %}" href="/bench/">Bench</a></li>
                 <li><a class="{% ifequal request.path "/tutorial/" %}current{% endifequal %}" href="/tutorial/">Tutorial</a></li>
+                <li class="divider"></li>
                 {% if request.user.first_name %}
                     {% include "user_menu.html" %}
                 {% endif %}

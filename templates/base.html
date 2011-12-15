@@ -53,17 +53,6 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script src="{{ STATIC_URL }}js/plugins.js"></script>
   <script src="{{ STATIC_URL }}js/script.js"></script>
-  <script type="text/javascript">
-    $(".drop-down-container").click(function(){
-      if($(this).find('.drop-down-menu').is(":visible")){
-        $(this).find('.drop-down-menu').fadeOut('fast');
-      }
-      else{
-        $(this).find('.drop-down-menu').fadeIn('fast');
-      }
-    });
-
-  </script>
   <!-- end scripts-->
 
   <!--[if lt IE 7 ]>
