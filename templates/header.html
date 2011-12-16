@@ -1,3 +1,4 @@
+{% load tags %}
 <div class="container">
     <div class="span-8 append-1">
         <div id="title">
@@ -7,9 +8,9 @@
     <div class="span-15 last">
         <div id="nav">
             <ul class="side">
-                <li><a class="{% ifequal request.path "/challenge/" %}current{% endifequal %}" href="/challenge/">Challenges</a></li>
-                <li><a class="{% ifequal request.path "/bench/" %}current{% endifequal %}" href="/bench/">Bench</a></li>
-                <li><a class="{% ifequal request.path "/tutorial/" %}current{% endifequal %}" href="/tutorial/">Tutorial</a></li>
+                <li><a class="{% current request "^/challenge/" %}" href="/challenge/">Challenges</a></li>
+                <li><a class="{% current request "^/bench/" %}" href="/bench/">Bench</a></li>
+                <li><a class="{% current request "^/tutorial/" %}" href="/tutorial/">Tutorial</a></li>
                 <li class="divider"></li>
                 {% if request.user.first_name %}
                     {% include "user_menu.html" %}
