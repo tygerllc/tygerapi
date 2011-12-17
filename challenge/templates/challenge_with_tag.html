@@ -4,31 +4,19 @@
 
 {% block sort-header %}
     <ul id="tabs">
-        {% if sortOrder == "most-recent" %}
-            <li class="current"><a href="/challenge/">Most Recent</a></li>
-        {% else %}
-            <li><a href="/challenge/">Most Recent</a></li>
-        {% endif %}
-        {% if sortOrder == "top-bounty" %}
-            <li class="current"><a href="/challenge/top-bounty/">Top Bounty</a></li>
-        {% else %}
-            <li><a href="/challenge/top-bounty/">Top Bounty</a></li>
-        {% endif %}
-        {% if sortOrder == "top-votes" %}
-            <li class="current"><a href="/challenge/top-votes/">Top Votes</a></li>
-        {% else %}
-            <li><a href="/challenge/top-votes/">Top Votes</a></li>
-        {% endif %}
-        {% if sortOrder == "oldest-unsolved" %}
-            <li class="current"><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
-        {% else %}
-            <li><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
-        {% endif %}
-        {% if sortOrder == "library" %}
-            <li class="current"><a href="/challenge/library/">Library</a></li>
-        {% else %}
-            <li><a href="/challenge/library/">Library</a></li>
-        {% endif %}
+        <li class="{% if sortOrder == "most-recent" %}current{% endif %}"><a href="/challenge/">Most Recent</a></li>
+
+        <li class="{% if sortOrder == "top-bounty" %}current{% endif %}"><a href="/challenge/top-bounty/">Top Bounty</a></li>
+
+        
+        <li class="{% if sortOrder == "top-votes" %}current{% endif %}"><a href="/challenge/top-votes/">Top Votes</a></li>
+
+        
+        <li class="{% if sortOrder == "oldest-unsolved" %}current{% endif %}"><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
+        
+        
+        <li class="{% if sortOrder == "library" %}current{% endif %}"><a href="/challenge/library/">Library</a></li>
+        
     </ul>
 {% endblock sort-header %}
 
@@ -59,20 +47,6 @@
                                     <div class="votecount">{{ c.votes }}</div>
                                     <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
                                 </div>
-                                <!--
-                                <div class="span-3 last">
-                                    <div class="column challenge-side-icon-container">
-                                        <span class="ico-promote"></span>
-                                    </div>
-                                    <div style="position:relative;left:50%;margin:0 auto">
-                                        <div style="position:relative;right:50%">
-                                            <div class="column">
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                -->
                             </div>
                         </div>
                         <div class="column last" style="width:496px"> 
@@ -101,18 +75,6 @@
                                 </div>                               
                             </div>
                         </div>
-                        <!--
-                        <div class="column last" style="width:100px">
-                            <div class="challenge-details clearfix">
-                                <div class="tags">
-                                    {% for t in c.get_tags %}
-                                        <a class="tag">{{t}}</a>
-                                    {% endfor %}
-                                </div>
-                                
-                            </div>
-                        </div>
-                        -->
                     </div>
                 </li>
             {% endfor %}
@@ -123,3 +85,16 @@
         {% endif %}
     </ul>
 {% endblock listings%}
+
+{% block sidebar %}
+    <div id="search-challenges"> 
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="input">
+                <input type="text" placeholder="Find a Challenge" style="width:230px"/>
+                <input type="submit" class="ico-search" value=""/>
+            </div>
+        </form>
+    </div>
+    {% include 'tag_cloud.html' %}
+{% endblock sidebar %}

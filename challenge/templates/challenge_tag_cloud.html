@@ -9,8 +9,8 @@
 {% load tag_cloud %}
 {% tag_cloud_for_model challenge.Challenge as tags with steps=6 distribution=log %}
 {% for tag in tags %}
-<span class="tag-{{tag.font_size|add:"2"}}">
-<a href="/challenge/tag/{{tag.name|slugify}}/">{{tag.name}}</a>
+	<span class="tag-{{tag.font_size|add:"2"}}">
+	<a href="/challenge/tag/{{tag.name|slugify}}/">{{tag.name}}</a>
 </span>
 {% endfor %}
 </div><!-- tag-cloud end -->
