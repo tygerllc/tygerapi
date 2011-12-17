@@ -21,93 +21,95 @@
 {% endblock sort-header %}
 
 
-{% block listings %}
-    <ul id="recent-listings">
-        {% load date_diff %}
-        {% if top25_challenge_list %}
-            {% for c in top25_challenge_list %}
-                <li class="list-item">
+{% block challenge_content %}
+    <div class="challenge-listing">
+        <ul id="recent-listings">
+            {% load date_diff %}
+            {% if top25_challenge_list %}
+                {% for c in top25_challenge_list %}
+                    <li class="list-item">
 
-                    <div class="span-17 last"> 
-                        <div class="column" style="width:130px"> 
-                            <div class="challenge-rewards"> 
-                                <div class="row clearfix">
-                                    <div class="column last" style="padding:0 20px">
-                                        {%  if c.bounty_avail %}    
-                                            <span class="bounty"><span class="ico-bounty"></span>{{c.bounty}}</span>
-                                        {% else %}
-                                            ${{ c.bounty }} bounty claimed by userid.
-                                        {% endif %}
+                        <div class="span-17 last"> 
+                            <div class="column" style="width:130px"> 
+                                <div class="challenge-list-rewards"> 
+                                    <div class="row clearfix">
+                                        <div class="column last" style="padding:0 20px">
+                                            {%  if c.bounty_avail %}    
+                                                <span class="bounty"><span class="ico-bounty"></span>{{c.bounty}}</span>
+                                            {% else %}
+                                                ${{ c.bounty }} bounty claimed by userid.
+                                            {% endif %}
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="votecount">{{ c.votes }}</div>
-                                    <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
-                                </div>
-                                <!--
-                                <div class="span-3 last">
-                                    <div class="column challenge-side-icon-container">
-                                        <span class="ico-promote"></span>
+                                    <div class="row clearfix">
+                                        <div class="votecount">{{ c.votes }}</div>
+                                        <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
                                     </div>
-                                    <div style="position:relative;left:50%;margin:0 auto">
-                                        <div style="position:relative;right:50%">
-                                            <div class="column">
+                                    <!--
+                                    <div class="span-3 last">
+                                        <div class="column challenge-side-icon-container">
+                                            <span class="ico-promote"></span>
+                                        </div>
+                                        <div style="position:relative;left:50%;margin:0 auto">
+                                            <div style="position:relative;right:50%">
+                                                <div class="column">
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    -->
                                 </div>
-                                -->
                             </div>
-                        </div>
-                        <div class="column last" style="width:496px"> 
-                            <div class="row clearfix">
-                                <div class="column" style="width:366px">
-                                    {% block challenge_title %} 
-                                        <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
-                                    {% endblock %} 
-                                </div>
-                                <div class="column last tright" style="width:120px">
-                                    <div class="created clearfix"> 
-                                        created <strong>{{ c.create_date|date_diff }}</strong>
+                            <div class="column last" style="width:496px"> 
+                                <div class="row clearfix">
+                                    <div class="column" style="width:366px">
+                                        {% block challenge_title %} 
+                                            <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
+                                        {% endblock %} 
+                                    </div>
+                                    <div class="column last tright" style="width:120px">
+                                        <div class="created clearfix"> 
+                                            created <strong>{{ c.create_date|date_diff }}</strong>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="challenge-description">
-                                    {{ c.descrip|truncatewords:30 }}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="sponsor-details">
-                                    <div class="sponsors">
-                                        Sponsored by <a href="/profile/{{ c.sponsor }}/"><strong>{{ c.sponsor }}</strong></a>
+                                <div class="row">
+                                    <div class="challenge-list-description">
+                                        {{ c.descrip|truncatewords:30 }}
                                     </div>
-                                </div>                               
-                            </div>
-                        </div>
-                        <!--
-                        <div class="column last" style="width:100px">
-                            <div class="challenge-details clearfix">
-                                <div class="tags">
-                                    {% for t in c.get_tags %}
-                                        <a class="tag">{{t}}</a>
-                                    {% endfor %}
                                 </div>
-                                
+                                <div class="row">
+                                    <div class="sponsor-details">
+                                        <div class="sponsors">
+                                            Sponsored by <a href="/profile/{{ c.sponsor }}/"><strong>{{ c.sponsor }}</strong></a>
+                                        </div>
+                                    </div>                               
+                                </div>
                             </div>
+                            <!--
+                            <div class="column last" style="width:100px">
+                                <div class="challenge-details clearfix">
+                                    <div class="tags">
+                                        {% for t in c.get_tags %}
+                                            <a class="tag">{{t}}</a>
+                                        {% endfor %}
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            -->
                         </div>
-                        -->
-                    </div>
-                </li>
-            {% endfor %}
-        {%  else %}
-            <span class="clearfix" style="width:100%;text-align:center;color:#888;padding:30px 0">
-                No matching challenges found.
-            </span>
-        {% endif %}
-    </ul>
-{% endblock listings%}
+                    </li>
+                {% endfor %}
+            {%  else %}
+                <span class="clearfix" style="width:100%;text-align:center;color:#888;padding:30px 0">
+                    No matching challenges found.
+                </span>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock challenge_content%}
 
 {% block sidebar %}
     <div id="search-challenges"> 

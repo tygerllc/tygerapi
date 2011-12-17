@@ -8,7 +8,7 @@
             <div class="content-box clearfix">
                 <div class="span-17 last"> 
                     <div class="challenge-title column last" style="">
-                        <span class="column">
+                        <span class="row">
                             {% block sub-header %}
                                 <span class="column">
                                     <span class="ico-challenge"></span>
@@ -25,18 +25,18 @@
                     </div>
                 </div>
 
-                <div id="challenge-listings" class="span-17 last">
-                    <div id="listings">
-                        {% block listings %}
-                        {% endblock listings%}
-                    </div>
+                <div id="challenge-content" class="span-17 last">
+                    {% block challenge_content %}
+                    {% endblock challenge_content %}
                 </div>
             </div>
         </div>
 
         <div id="sidebar-wrapper" class="span-7 last" style="float:right"> 
-            {% block sidebar %}
-            {% endblock sidebar %}
+            <div class="sidebar">
+                {% block sidebar %}
+                {% endblock sidebar %}
+            </div>
         </div>
     </div>
 

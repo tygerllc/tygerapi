@@ -1,104 +1,141 @@
-{% extends 'base.html' %}
+{% extends 'challenge_base.html' %}
 
-{% block title %} {{ challenge.name|capfirst} | Tyger {% endblock title %}
+{% block title %} {{ challenge.name|capfirst}} | Tyger {% endblock title %}
 
-{% block content %}
-<div class="container">
-    <div class="spam-17">
-        <div class="row clearfix">
-            <div class="column">
-                <div class="challenge-thumbnail">
-                    <div class="challenge-thumbnail-container">
-                        
-                    </div>
-                </div>
+
+{% block sub-header %}
+    <span class="column" style="max-width:320px;padding:5px 0 15px"> 
+        <h1>{{ challenge.name|capfirst}}</h1>
+    </span>    
+    <span class="column last right tright">
+        <button class="btn primary">Submit Solution</button>
+        <button class="btn">Edit Existing Solution</button>
+    </span>
+{% endblock sub-header %}
+
+
+{% block challenge_content %}
+    <div class="challenge-detail">
+        <div class="challenge-tags tright">
+            <span class="ico-tag"></span>
+            <span style="margin-left:10px">
+                {% for t in challenge.get_tags %}
+                    <a class="tag">{{t}}</a>
+                {% endfor %}
+            </span>
+        </div>
+
+        <div class="challenge-description">
+            <h3>Description </h3>
+            <p>{{ challenge.descrip }} </p>
+        </div>
+
+        <div class="row clearfix" style="border-bottom:1px dashed #ddd;margin-bottom:10px">
+            <div class="challenge-winconditions">
+                <h3> Winning conditions </h3>
+                <ul>
+                    {% for condition in challenge.criteria_set.all %}
+                        <li class="{% if condition.status == "True" %} complete {% endif %}">{{ condition.desc }}</li>
+                    {% endfor %}
+                </ul>      
             </div>
-            <div class="column last">
-                <div class="challenge-title">
-                    <h2>{{ challenge.name }}</h2>
-                </div>  
+        </div>
+        <div class="row clearfix" style="border-bottom:1px dashed #ddd;margin-bottom:10px">
+            <div class="challenge-environment">
+                <h3>Environment </h3>
+                    <div class="table">
+                        <div class="row clearfix">
+                            <div class="column key">Chassis</div>
+                            <div class="column value last">{{ challenge.chassis }}</div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="column key">Environment</div>
+                            <div class="column value last">{{ challenge.environment.name }}</div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="column key">Temperature</div>
+                            <div class="column value last">{{ challenge.environment.temp }}</div>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="column key">pH</div>
+                            <div class="column value last">{{ challenge.environment.pH }}</div>
+                        </div>
+                    </div> 
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="challenge-components column" style="width:50%">
+                <h3> Useful components </h3>
+                <ul>
+                    {% for link in challenge.useful_component_set.all %}
+                        <li><a href="{{ link.url }}">{{ link.desc }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+            <div class="challenge-references column last">
+                <h3> References</h3>
+                <ul>
+                    {% for ref in challenge.useful_link_set.all %}
+                        <li><a href="{{ ref.url }}">{{ ref.desc }}</a></li>
+                    {% endfor %}
+                </ul>       
+            </div>
+        </div>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'tyger';
+        var disqus_developer = 1;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">synthetic bio comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+{% endblock challenge_content %}
+
+{% block sidebar %}
+    {% load date_diff %}
+
+    <div class="challenge-rewards">
+        <div class="challenge-bounty">
+            {% if challenge.bounty_avail %}
+                <div class="count">
+                    ${{ challenge.bounty }}
+                </div>
+                <h4>BOUNTY</h4>
+            {% else %} 
+                <h4>BOUNTY CLAIMED</h4>
+            {% endif %}
+        </div>
+        <div class="challenge-votes">
+            <div class="clearfix">
+                <div class="column">
+                    <div class="count">{{ challenge.votes }}</div>
+                    <div style="font-size:12px;color:#999">VOTES</div>
+                </div>
                 <div class="column last">
-                    <div class="challenge-info">
-                        <div class="challenge-created">
-                            created <strong>2 days ago</strong>
-                        </div>
-                        <div class="challenge-tags">
-                            {% for t in challenge.get_tags %}
-                                <a class="tag">{{t}}</a>
-                            {% endfor %}
-                        </div>
-                        <div class="challenge-description">
-                            {{ challenge.descrip }}
-                        </div>
-                    </div>
+                    <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="span-7 last"></div>
-</div>
-{% endblock content %}
-
-
-{% block listings %}
-
-    <p>Tags:
-    {% for t in challenge.get_tags %}
-        <a class="tag">{{t}}</a>
-    {% endfor %}
-    </p>
-    <h3>Description: </h3>
-    <p>{{ challenge.descrip }} </p>
-    <h3> Winning conditions: </h3>
-    <p>{% for condition in challenge.criteria_set.all %}
-        {{ condition.desc }}, {{ condition.status}} <br>
-    {% endfor %}
-    </p>
-    <h3>Environment </h3>
-    <p>
-        Chassis: {{ challenge.chassis }} <br>
-        Environment: {{ challenge.environment.name }} <br>
-        Temp: {{ challenge.environment.temp }}<br>
-        pH: {{ challenge.environment.pH }}<br>
-    </p>
-
-    <h3> Useful components </h3>
-    <p>
-        {% for link in challenge.useful_component_set.all %}
-            <a href="{{ link.url }}">{{ link.desc }}</a><br>
-        {% endfor %}
-    </p>
-
-    <h3> References:</h3>
-    <p>
-        {% for ref in challenge.useful_link_set.all %}
-            <a href="{{ ref.url }}">{{ ref.desc }}</a><br>
-        {% endfor %}
-    </p>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    var disqus_shortname = 'tyger';
-    var disqus_developer = 1;
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">synthetic bio comments powered by <span class="logo-disqus">Disqus</span></a>
-    
-{% endblock listings %}
-
-{% block sidebar %}
-    {% load date_diff %}
-    Sponsored by: {{ challenge.sponsor.user.username }} {{ challenge.create_date|date_diff }}<br>
-<h4> Available rewards</h4>
-{% if challenge.bounty_avail %} Bounty: ${{ challenge.bounty }} <br>
-{% else %} Bounty claimed. <br>
-{% endif %}
-<br>
-Votes: {{ challenge.votes }}
+    <div class="challenge-info">
+        <div class="row" style="margin-bottom:10px">
+            <h4>SPONSORED BY</h4>
+            <div>{{ challenge.sponsor.user.username }}</div>
+        </div>
+        <div class="row">
+            <h4>CREATED</h4>
+            <div>{{ challenge.create_date|date_diff }}</div>
+        </div>
+    </div>
 {%  endblock sidebar %}
 
