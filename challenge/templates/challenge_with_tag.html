@@ -21,7 +21,7 @@
 {% endblock sort-header %}
 
 
-{% block listings %}
+{% block challenge_content %}
     <ul id="recent-listings">
         {% load date_diff %}
         {% if tagged_challenges %}
@@ -33,7 +33,7 @@
 
                     <div class="span-17 last"> 
                         <div class="column" style="width:130px"> 
-                            <div class="challenge-rewards"> 
+                            <div class="challenge-list-rewards"> 
                                 <div class="row clearfix">
                                     <div class="column last" style="padding:0 20px">
                                         {%  if c.bounty_avail %}    
@@ -47,6 +47,20 @@
                                     <div class="votecount">{{ c.votes }}</div>
                                     <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
                                 </div>
+                                <!--
+                                <div class="span-3 last">
+                                    <div class="column challenge-side-icon-container">
+                                        <span class="ico-promote"></span>
+                                    </div>
+                                    <div style="position:relative;left:50%;margin:0 auto">
+                                        <div style="position:relative;right:50%">
+                                            <div class="column">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
                             </div>
                         </div>
                         <div class="column last" style="width:496px"> 
@@ -63,7 +77,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="challenge-description">
+                                <div class="challenge-list-description">
                                     {{ c.descrip|truncatewords:30 }}
                                 </div>
                             </div>
@@ -75,6 +89,18 @@
                                 </div>                               
                             </div>
                         </div>
+                        <!--
+                        <div class="column last" style="width:100px">
+                            <div class="challenge-details clearfix">
+                                <div class="tags">
+                                    {% for t in c.get_tags %}
+                                        <a class="tag">{{t}}</a>
+                                    {% endfor %}
+                                </div>
+                                
+                            </div>
+                        </div>
+                        -->
                     </div>
                 </li>
             {% endfor %}
@@ -84,7 +110,7 @@
             </span>
         {% endif %}
     </ul>
-{% endblock listings%}
+{% endblock challenge_content %}
 
 {% block sidebar %}
     <div id="search-challenges"> 
