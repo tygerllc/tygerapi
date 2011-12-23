@@ -1,6 +1,4 @@
 from django.conf.urls.defaults import *
-from django.views.generic import DetailView, ListView
-from bench.models import Bench, CodingRegion
 from bench.views import BenchListView, BenchDetailView
 from django.contrib.auth.decorators import login_required
 
