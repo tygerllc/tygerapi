@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class CriteriaHandler(BaseHandler):
     model = Criteria
+    fields = ('desc', 'status')
 
 class SourceSinkHandler(BaseHandler):
     model = SourceSink
@@ -26,7 +27,7 @@ class ChallengeHandler(BaseHandler):
       fields = ('id', 'name', 'tags', 'descrip', 'votes', 'bounty', 'chassis',
                 ('environment', ()),
                 ('sponsor', ()),
-                ('Challenge.criteria_set.all', ()),
+                ('winning_conditions', ()),
                 )
 
 class BenchHandler( BaseHandler ):
