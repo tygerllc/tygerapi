@@ -1,6 +1,10 @@
 from piston.handler import BaseHandler
 from bench.models import Bench
-from challenge.models import Challenge, Criteria, Environment, SourceSink
+from challenge.models import Challenge, Criteria, Environment, SourceSink, UserProfile
+from django.contrib.auth.models import User
+
+class CriteriaHandler(BaseHandler):
+    model = Criteria
 
 class SourceSinkHandler(BaseHandler):
     model = SourceSink
@@ -9,10 +13,20 @@ class EnvironmentHandler(BaseHandler):
     model = Environment
     fields = ('id', 'name', 'temp', 'pH', ('sources_and_sinks', ()))
 
+class UserHandler(BaseHandler):
+    model = User
+    fields = ('username',)
+
+class UserProfileHandler(BaseHandler):
+    model = UserProfile
+    fields = ('id', ('user', ()),)
+
 class ChallengeHandler(BaseHandler):
       model = Challenge
       fields = ('id', 'name', 'tags', 'descrip', 'votes', 'bounty', 'chassis',
                 ('environment', ()),
+                ('sponsor', ()),
+                ('Challenge.criteria_set.all', ()),
                 )
 
 class BenchHandler( BaseHandler ):

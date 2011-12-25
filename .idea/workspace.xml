@@ -4,6 +4,8 @@
     <list default="true" id="66f675d1-b85d-43dc-a0bb-c677e3bdfada" name="Default" comment="Added API and simple handler for bench">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/handlers.py" afterPath="$PROJECT_DIR$/api/handlers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge/models.py" afterPath="$PROJECT_DIR$/challenge/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.html" afterPath="$PROJECT_DIR$/templates/footer.html" />
     </list>
     <ignored path="tygerapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="handlers.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="handlers.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/handlers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="21" column="32" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -42,7 +44,43 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challenge/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="4" selection-start="1389" selection-end="1406" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="1460" selection-end="1460" vertical-scroll-proportion="-2.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="26" selection-start="370" selection-end="370" vertical-scroll-proportion="0.4157044">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="0" selection-start="5737" selection-end="5737" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="challenge_detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
@@ -51,16 +89,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bench/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+            <state line="31" column="0" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/profiles/profile_detail.html" />
         <option value="$PROJECT_DIR$/profiles/base_profile.html" />
         <option value="$PROJECT_DIR$/profiles/edit_profile.html" />
         <option value="$PROJECT_DIR$/challenge/views.py" />
@@ -88,14 +116,15 @@
         <option value="$PROJECT_DIR$/profiles/user_insert.html" />
         <option value="$PROJECT_DIR$/challenge/templates/challenges_with_tag.html" />
         <option value="$PROJECT_DIR$/bench/templates/base_bench.html" />
-        <option value="$PROJECT_DIR$/challenge/models.py" />
         <option value="$PROJECT_DIR$/profiles/auth.html" />
         <option value="$PROJECT_DIR$/bench/templates/bench_add_view.html" />
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/bench/urls.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/api/urls.py" />
+        <option value="$PROJECT_DIR$/challenge/models.py" />
         <option value="$PROJECT_DIR$/api/handlers.py" />
+        <option value="$PROJECT_DIR$/templates/footer.html" />
       </list>
     </option>
   </component>
@@ -177,7 +206,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="misc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="challenge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tygerapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bench" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,10 +552,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25611326" sideWeight="0.21459228" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41226414" sideWeight="0.6225166" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41226414" sideWeight="0.6701987" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37748346" sideWeight="0.9990575" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37748346" sideWeight="0.9990575" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -532,35 +621,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/profiles/profile_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.11363637" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bench/templates/bench_add_view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="394" selection-end="394" vertical-scroll-proportion="-5.0">
-          <folding>
-            <marker date="1324659066000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1324659066000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profiles/auth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="22" selection-start="845" selection-end="845" vertical-scroll-proportion="0.765625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1418" selection-end="1418" vertical-scroll-proportion="0.0390625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="0.20408164">
@@ -578,13 +638,6 @@
     <entry file="file://$PROJECT_DIR$/bench/templates/bench_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="198" column="0" selection-start="8354" selection-end="8354" vertical-scroll-proportion="-2.015625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="8" selection-start="692" selection-end="692" vertical-scroll-proportion="0.6617647">
           <folding />
         </state>
       </provider>
@@ -610,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="517" selection-end="517" vertical-scroll-proportion="0.8598131">
@@ -624,23 +670,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bench/models.py">
+    <entry file="file://$PROJECT_DIR$/challenge/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+        <state line="136" column="0" selection-start="5737" selection-end="5737" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/challenge/models.py">
+    <entry file="file://$PROJECT_DIR$/challenge/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="4" selection-start="1389" selection-end="1406" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.40441176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/templates/challenge_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bench/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="21" column="32" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/challenge/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1460" selection-end="1460" vertical-scroll-proportion="-2.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="370" selection-end="370" vertical-scroll-proportion="0.4157044">
           <folding />
         </state>
       </provider>

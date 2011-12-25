@@ -67,12 +67,13 @@ class Challenge(models.Model):
 #                super(Challenge, self).save()
 
 
+    #TODO: Add type to Criteria [Max bps, No changes to environment, Tyger-Verified]
+
 class Criteria(models.Model):
     challenge = models.ForeignKey(Challenge)
     desc = models.CharField(max_length=200)
     status = models.BooleanField()
-    #TODO: Add type to Criteria [Max bps, No changes to environment, Tyger-Verified]
-    #TODO: Add boolean logic for contests [If X, THEN GFP; IF _X, THEN GFP]
+
     def __unicode__(self):
         return self.desc
 
@@ -80,6 +81,7 @@ class Useful_Link(models.Model):
     challenge = models.ForeignKey(Challenge)
     desc = models.CharField(max_length=100)
     url = models.URLField()
+
     def __unicode__(self):
         return self.desc
 
@@ -87,5 +89,6 @@ class Useful_Component(models.Model):
     challenge = models.ForeignKey(Challenge)
     desc = models.CharField(max_length=100)
     url = models.URLField()
+
     def __unicode__(self):
         return self.desc
