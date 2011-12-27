@@ -6,11 +6,11 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^challenge/', include('challenge.urls')),
+    (r'^challenge/?', include('challenge.urls')),
     (r'^api/', include('api.urls')),
     (r'^profiles/', include('profiles.urls')),
-    (r'^bench/', include('bench.urls')),
-    (r'^tutorial/', redirect_to, {'url': '/challenge/tag/tutorial/'}),
+    (r'^bench/?', include('bench.urls')),
+    (r'^tutorial/?', redirect_to, {'url': '/challenge/tag/tutorial/'}),
     (r'^logout/', 'challenge.views.logout_view'),
     (r'^login/', 'challenge.views.login_view'),
     url(r'^admin/', include(admin.site.urls)),

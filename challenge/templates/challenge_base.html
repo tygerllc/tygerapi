@@ -3,40 +3,42 @@
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
 {% block content %}
-    <div class="container">
-        <div id="main-wrapper" class="span-17"> 
-            <div class="content-box clearfix">
-                <div class="span-17 last"> 
-                    <div class="challenge-title column last" style="">
-                        <span class="row">
-                            {% block sub-header %}
-                                <span class="column">
-                                    <span class="ico-challenge"></span>
-                                </span>
-                                <span class="column last">
-                                    <h1>Challenges</h1> 
-                                </span>
-                            {% endblock sub-header %}
-                        </span>
-                        <span class="column last" style="float:right">
-                            {% block sort-header %}
-                            {% endblock sort-header %}
-                        </span>
-                    </div>
-                </div>
-
-                <div id="challenge-content" class="span-17 last">
-                    {% block challenge_content %}
-                    {% endblock challenge_content %}
-                </div>
-            </div>
+    <div id="sub-header">
+        <div class="container">
+        {% block sub_header %}
+            <span class="column">
+                <span class="ico-challenge"></span>
+            </span>
+            <span class="column last">
+                <h1>Challenges</h1> 
+                <h2>Explore Biology's Most Important Challenges.</h2>
+            </span>
+            <span id="challenges-metrics" class="column right last">
+                <span class="column">
+                    28
+                    <div class="label">Open Challenges</div>
+                </span>
+                <span class="column last">
+                    $18,300
+                    <div class="label">Bounty on Offer</div>
+                </span>
+            </span>
+        {% endblock sub_header %}
         </div>
+    </div>
 
-        <div id="sidebar-wrapper" class="span-7 last" style="float:right"> 
+    <div class="container">
+        <div id="content-wrapper" class="span-20">
+            <div id="content-header">
+                {% block content_header %}{% endblock content_header %}
+            </div>
+            {% block challenge_content %}{% endblock challenge_content %}
+        </div>
+        <div id="sidebar-wrapper" class="span-4 last">
             <div class="sidebar">
                 {% block sidebar %}
                 {% endblock sidebar %}
-            </div>
+            </div>           
         </div>
     </div>
 

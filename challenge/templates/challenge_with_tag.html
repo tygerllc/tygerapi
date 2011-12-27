@@ -2,105 +2,66 @@
 
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
-{% block sort-header %}
-    <ul id="tabs">
-        <li class="{% if sortOrder == "most-recent" %}current{% endif %}"><a href="/challenge/">Most Recent</a></li>
+{% block content_header %}
+<h2><a href="">Tags</a> <span class="sep">/</span> {{tag}}</h3>
+<!--<span>{{ tagged_challenges.count }}</span>-->
+{% endblock content_header %}
 
-        <li class="{% if sortOrder == "top-bounty" %}current{% endif %}"><a href="/challenge/top-bounty/">Top Bounty</a></li>
-
-        
-        <li class="{% if sortOrder == "top-votes" %}current{% endif %}"><a href="/challenge/top-votes/">Top Votes</a></li>
-
-        
-        <li class="{% if sortOrder == "oldest-unsolved" %}current{% endif %}"><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
-        
-        
-        <li class="{% if sortOrder == "library" %}current{% endif %}"><a href="/challenge/library/">Library</a></li>
-        
-    </ul>
-{% endblock sort-header %}
-
-
+{% load tags %}
 {% block challenge_content %}
-    <ul id="recent-listings">
+<div class="challenge-listing">
+    <ul class="grid-listing">
         {% load date_diff %}
         {% if tagged_challenges %}
-            <div style="padding:10px 20px">
-            Displaying <strong>{{ tagged_challenges.count }}</strong> match{{ tagged_challenges.count|pluralize:"es" }} tagged as &nbsp;<a class="tag">{{tag}}</a>
-            </div>
             {% for c in tagged_challenges %}
-                <li class="list-item">
-
-                    <div class="span-17 last"> 
-                        <div class="column" style="width:130px"> 
-                            <div class="challenge-list-rewards"> 
-                                <div class="row clearfix">
-                                    <div class="column last" style="padding:0 20px">
-                                        {%  if c.bounty_avail %}    
-                                            <span class="bounty"><span class="ico-bounty"></span>{{c.bounty}}</span>
-                                        {% else %}
-                                            ${{ c.bounty }} bounty claimed by userid.
-                                        {% endif %}
-                                    </div>
+                {% if forloop.counter0|divisibleby:3 %}
+                    {%if forloop.counter0 > 0 %}
+                        </div>
+                    {% endif %}
+                    <div class="grid-row clearfix">
+                {% endif %}
+                <li class="challenge-item">
+                    <div class="challenge-item-title">
+                        <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
+                    </div>
+                    <div class="challenge-item-graphic">
+                        <img src="/static/img/challange_default_graphic.png" alt="Challenge Graphic"/>    
+                    </div>
+                    <div class="challenge-item-desc">
+                        <p>{{ c.descrip|truncchars:100 }}</p>
+                    </div>
+                    <div class="challenge-item-info">
+                        <div class="challenge-item-sponsor">
+                            <div class="clearfix">
+                                <div class="column right last">
+                                    <a href="/profile/{{ c.sponsor }}/">{{ c.sponsor }}</a>
                                 </div>
-                                <div class="row clearfix">
-                                    <div class="votecount">{{ c.votes }}</div>
-                                    <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
+                                <div class="column right">
+                                    <img src="/static/img/prof_18.png" alt=":)">
                                 </div>
-                                <!--
-                                <div class="span-3 last">
-                                    <div class="column challenge-side-icon-container">
-                                        <span class="ico-promote"></span>
-                                    </div>
-                                    <div style="position:relative;left:50%;margin:0 auto">
-                                        <div style="position:relative;right:50%">
-                                            <div class="column">
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="column right">
+                                    by
                                 </div>
-                                -->
                             </div>
                         </div>
-                        <div class="column last" style="width:496px"> 
-                            <div class="row clearfix">
-                                <div class="column" style="width:366px">
-                                    {% block challenge_title %} 
-                                        <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
-                                    {% endblock %} 
+                        <div class="challenge-item-metrics">
+                            <div class="column">
+                                <div class="column challenge-item-bounty">
+                                    <div class="bounty">${{c.bounty}}</div>
+                                    <div class="label">Bounty</div>
                                 </div>
-                                <div class="column last tright" style="width:120px">
-                                    <div class="created clearfix"> 
-                                        created <strong>{{ c.create_date|date_diff }}</strong>
-                                    </div>
+                                <div class="column last challenge-item-votes">
+                                    <div>{{c.votes}}</div>
+                                    <div class="label">Votes</div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="challenge-list-description">
-                                    {{ c.descrip|truncatewords:30 }}
+                            <div class="column right last">
+                                <div class="challenge-item-created">
+                                    <div class="label">Created</div>
+                                    <div>{{ c.create_date|date_diff }}</div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="sponsor-details">
-                                    <div class="sponsors">
-                                        Sponsored by <a href="/profile/{{ c.sponsor }}/"><strong>{{ c.sponsor }}</strong></a>
-                                    </div>
-                                </div>                               
                             </div>
                         </div>
-                        <!--
-                        <div class="column last" style="width:100px">
-                            <div class="challenge-details clearfix">
-                                <div class="tags">
-                                    {% for t in c.get_tags %}
-                                        <a class="tag">{{t}}</a>
-                                    {% endfor %}
-                                </div>
-                                
-                            </div>
-                        </div>
-                        -->
                     </div>
                 </li>
             {% endfor %}
@@ -109,18 +70,11 @@
                 No matching challenges found.
             </span>
         {% endif %}
+             
     </ul>
-{% endblock challenge_content %}
+</div>
+{% endblock challenge_content%}
 
 {% block sidebar %}
-    <div id="search-challenges"> 
-        <form method="post" action="">
-            {% csrf_token %}
-            <div class="input">
-                <input type="text" placeholder="Find a Challenge" style="width:230px"/>
-                <input type="submit" class="ico-search" value=""/>
-            </div>
-        </form>
-    </div>
     {% include 'tag_cloud.html' %}
 {% endblock sidebar %}

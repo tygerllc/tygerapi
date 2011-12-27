@@ -56,13 +56,13 @@ def with_tag(request, tag, sortOrder, object_id=None, page=1):
                               context_instance=RequestContext(request))
 
 #TODO: Hacked this into multiple views to handle sorting. Should be slicker
-class ChallengeListView(ListView):
+class ChallengeListViewRecent(ListView):
     context_object_name = "top25_challenge_list"
     template_name='challenge_list.html'
     queryset = Challenge.objects.order_by('-create_date')[:25]
 
     def get_context_data(self, **kwargs):
-        context = super(ChallengeListView, self).get_context_data(**kwargs)
+        context = super(ChallengeListViewRecent, self).get_context_data(**kwargs)
         context['sortOrder'] = "most-recent"
         context['request'] = self.request
         return context

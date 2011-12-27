@@ -14,3 +14,11 @@ def active_tag(request, tag_name):
 	if re.search(pattern, request.path):
 		return 'active'
 	return ''
+
+@register.filter
+# truncate after a certain number of characters
+def truncchars(value, arg):
+    if len(value) < arg:
+        return value
+    else:
+        return value[:arg] + '...'

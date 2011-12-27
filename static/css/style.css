@@ -3,8 +3,6 @@
  *
  * Author: Jugal Manjeshwar
 **/
-a:link, a:visited{color:#0048ff;text-decoration:none}
-a:hover{color:#06c; text-decoration:underline;}
 body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 
 .right{float:right}
@@ -13,15 +11,14 @@ body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 .tleft{text-align:left}
 .tcenter{text-align:center}
 
-.wrapper{
-background:#eee;
+#main-wrapper{
+background:#fff;
 border-bottom:1px solid #ccc;	
 }
 
-.wrapper-inner{
-background:url("../img/fade.png") repeat-x 0 0;	
-padding-bottom:20px;
-}
+#content-wrapper{
+position:relative;z-index:1;}
+
 
 #header{
 background: #6db712; /* Old browsers */
@@ -34,6 +31,23 @@ background-image: -ms-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
 box-shadow:0 2px 2px rgba(0,0,0,0.1);
 position:relative;z-index:10;
 border-bottom:1px solid #5ea514}
+
+#sub-header{
+background:#f4f5f6;
+padding:15px 0;
+}
+#sub-header h1{
+	font-size:18px;
+	margin-bottom:5px;
+	color:#333;
+	font-weight:bold;
+}
+
+#sub-header h2{
+	font-size:14px;
+	color:#777;
+	margin-bottom:0
+}
 
 /*------- TOP-BAR -------*/
 h1#logo{margin:0;line-height:32px;font-size:32px}
@@ -149,125 +163,32 @@ border-color:#162E58;
 	Styles for the Challenges Page
 */
 .bold{font-weight:bold}
-#main-wrapper{
-position:relative;z-index:1;}
 
 #viewtabs{border-bottom:1px solid #ccc;}
 #viewtabs::after{clear:both}
-.challenge-title{width:628px;
-background:#f4f5f6;
-background-image: linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
-background-image: -o-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
-background-image: -moz-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
-background-image: -webkit-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
-background-image: -ms-linear-gradient(bottom, #E3E3E3 0%, #F4F5F6 60%);
-padding:10px 20px 5px;border-bottom:1px solid #ccc}
-.challenge-title h1{font-size:18px;text-shadow:0 1px 0 #fff;line-height:30px;margin:0;color:#555;}
 .challenge-title .btn{margin:2px}
 #viewtabs h2{float:left;margin-bottom:0}
-#tabs{float:right;padding-left:10px;}
-#tabs li{display:inline-block}
-#tabs li{padding: 6px 0;font-size:12px;line-height:20px}
-#tabs li a{color:#777;padding:18px 10px 15px;
-	border-radius:2px;
--webkit-transition: 0.1s linear all;
--moz-transition: 0.1s linear all;
--ms-transition: 0.1s linear all;
--o-transition: 0.1s linear all;
-transition: 0.1s linear all;
-text-shadow:0 1px 0 #fff;}
-#tabs li a:hover{color:#333}
-#tabs li.current{font-size:12px;font-weight:bold;font-size:13px}
-#tabs li.current a{
-box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);
-background-color:#fff;color:#444;border:1px solid #ccc;border-bottom-color:#fff}
-#tabs li.current a:hover{text-decoration:none}
-
-#challenge-listings{}
-#challenge-sidebar{}
-
-.list-item{position:relative;
-padding:20px 20px 20px 0;
-border-top:1px solid #ddd;
-display:block;
-overflow:hidden;
+.tabs{
 }
-.list-item:first-child{border:none;}
-.list-item:hover{
-background:#f7f8f9;
-background-image: linear-gradient(bottom, #F4F5F6 0%, #FFFFFF 60%);
-background-image: -o-linear-gradient(bottom, #F4F5F6 0%, #FFFFFF 60%);
-background-image: -moz-linear-gradient(bottom, #F4F5F6 0%, #FFFFFF 60%);
-background-image: -webkit-linear-gradient(bottom, #F4F5F6 0%, #FFFFFF 60%);
-background-image: -ms-linear-gradient(bottom, #F4F5F6 0%, #FFFFFF 60%);
-width:648px}
-.list-item h3{margin-bottom:-0;padding:0}
-.list-item h3 a{font-size:18px;line-height:22px;color:#555;text-transform:capitalize;font-weight:bold}
-.list-item h3 a:hover{color:#000}
-.challenge-list-rewards{text-align:center;font-size:18px;color:#555;font-weight:bold;}
-.challenge-info{
+.tabs li{display:inline-block}
+.tabs li{padding: 6px 0;}
+.tabs li a{
+color:#333;
+font-size:14px;
+font-weight:bold;
+padding:18px 10px 15px;
+text-decoration:none;
 }
-.challenge-list-description{
-padding:10px 0;color:#666;
-}
-.challenge-details{margin-top:5px;font-size:12px}
+.tabs li:first-child a{padding-left:0}
+.tabs li a:hover{color:#0c68da}
+.tabs li.current{}
+.tabs li.current a{
+color:#aaa;}
+.tabs li.current a:hover{cursor:default}
 
+.sidebar{padding: 35px 0  0 10px}
+.sidebar h3{font-size:14px;color:#333;margin-bottom:15px;font-weight:normal}
 
-.challenge-title h2{
-	text-transform:capitalize;
-	margin:0;
-	padding-bottom:10px;
-	font-size:22px;
-	font-weight:bold;
-	line-height:18px;
-	color:#444;
-}
-
-.challenge-thumbnail{margin-right:10px}
-
-.challenge-thumbnail-container{
-	width:120px;
-	height:120px;
-	background:#fff;
-	box-shadow:0 2px 2px rgba(0,0,0,0.05);
-	border:1px solid #ddd;
-}
-
-.challenge-side-icon-container{
-padding:0px 6px 10px 18px;	
-}
-
-.challenge-detail>*{
-	padding: 10px 20px;
-	width:628px
-}
-.challenge-tags{border-bottom:1px dashed #ddd;background:#f6f7f8}
-#challenge-content{font-size:14px;padding-bottom:20px}
-.challenge-detail h3{font-size:16px;padding:2px 0 6px;font-weight:bold;margin-bottom:2px}
-.challenge-description{border-bottom:1px dashed #ccc;margin-bottom:10px}
-.challenge-description p{padding-left:20px}
-.challenge-detail li{padding: 5px 0 5px 20px;}
-.challenge-winconditions li{padding:15px 0 15px 20px ;font-weight:bold;font-size:14px;color:#5f9d11;border-top:1px solid #eee}
-.challenge-winconditions li:first-child{border:none}
-.challenge-winconditions li.complete{color:#888;font-weight:normal}
-.challenge-rewards{padding:10px;border-bottom:1px dashed #ddd;}
-.challenge-rewards .count{font-size:28px;font-weight:bold}
-.challenge-info{padding:10px;}
-.sidebar h4{font-size:12px;color:#999;margin-bottom:5px;}
-
-
-
-.bounty{
-	font-size:20px;
-	line-height:18px;
-	text-align:center;
-	width:85px;
-color:#81c749;
-display:inline-block;overflow:hidden;
-margin-bottom:8px;
-}
-
-.bounty>span{position:relative;top:-2px}
 
 .tooltip, .arrow:after {
   background: black;
@@ -311,7 +232,7 @@ text-align:center;display:inline-block;overflow:visible;color:#555;}
 .sponsors{margin-bottom:10px}
 .co-sponsors h5{color:#666}
 
-#footer{font-size:11px;color:#aaa;font-family: "lucida grande",tahoma,verdana,arial,sans-serif;}
+#footer{font-size:11px;color:#aaa;}
 #footer .container{padding:20px 0;}
 #footer a{color:#555;padding:0 20px;}
 #footer a:hover{color:#222}
@@ -328,22 +249,24 @@ li.divider{height:1px;border-bottom:1px solid #e5e5e5;padding:0;margin:4px 0}
 .tags{float:right;text-align:right}
 
 a.tag{
-background-color:#FFCE47;
+background-color:#ffde79;
+/*
 background-repeat:no-repeat;
 background-image: linear-gradient(bottom, #FFCE47 0%, #FED870 50%);
 background-image: -o-linear-gradient(bottom, #FFCE47 0%, #FED870 50%);
 background-image: -moz-linear-gradient(bottom, #FFCE47 0%, #FED870 50%);
 background-image: -webkit-linear-gradient(bottom, #FFCE47 0%, #FED870 50%);
 background-image: -ms-linear-gradient(bottom, #FFCE47 0%, #FED870 50%);
+*/
 color:#82572d; 
-text-shadow:0 1px 0 rgba(255,255,255,0.6);
+font-weight:normal;
 padding:2px 6px;border-radius:2px;display:inline-block;cursor:pointer;margin:0 0 3px 0;font-size:12px;
 -webkit-transition: 0.05s linear all;
 -moz-transition: 0.05s linear all;
 -ms-transition: 0.05s linear all;
 -o-transition: 0.05s linear all;
 transition: 0.05s linear all;
-border:1px solid #cc9940;
+border:1px solid #e7bf43;
 }
 a.tag.active{
 background-image:none;
@@ -353,7 +276,8 @@ text-shadow:none;
 border-color:#82572d;
 }
 a.tag:first-child{margin-left:0}
-a.tag:hover{background-position:0 -15px;}
+a.tag:hover{background-color:#ffecb1;color:#82572d}
+a.tag.active:hover{background:#82572d;border-color:#82572d;color:#fff;cursor:default}
 
 .arrow-up {
 width: 0;
@@ -405,7 +329,7 @@ height: 66px;width:32px;overflow: hidden;background:url("../img/logo-t.png") -0p
 border:none;}
 .ico-search:hover{opacity:0.9}
 
-.ico-challenge{width:23px; height:30px; overflow: hidden;background:url("../img/challenge_icon.png") -0px 3px no-repeat;display: inline-block;vertical-align: middle;}
+.ico-challenge{width:39px; height:45px; overflow: hidden;background:url("../img/challenge_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 
 .ico-tag{width:12px; height:12px; overflow: hidden;background:url("../img/tag_icon.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
 
@@ -447,3 +371,108 @@ border:none;}
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
 
+
+
+
+/*
+================================
+ UPDATE CHALLENGE LISTING STYLES
+================================
+*/
+
+a{
+	color:#0f7acc;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#0c68da;
+}
+
+#content-header{
+	margin:20px 0 0;
+}
+
+#content-header h2{font-size:14px;font-weight:bold;color:#333;padding: 6px 0;margin:0}
+#content-header span.sep{color:#999;font-weight:normal}
+#challenges-metrics{font-size:18px;font-weight:bold;text-align:right}
+#challenges-metrics .column{margin-right:30px}#challenges-metrics .column.last{margin:0}
+.challenge-listing ul.grid-listing{
+	border-top:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+
+ul.grid-listing{margin:0;padding:0}
+ul.grid-listing div.grid-row{
+	padding:30px 0;
+	margin-bottom:20px;
+	clear:both;
+	border-top:1px solid #ddd;
+}
+
+ul.grid-listing div.grid-row:first-child{border:none;}
+ul.grid-listing div.grid-row:last-child{margin:0;padding-bottom:80px}
+
+ul.grid-listing li.challenge-item{
+	float:left;
+	width:230px;
+	margin-right:35px;
+	position:relative;
+	height:320px;
+}
+
+div.grid-row li.challenge-item:last-child{
+	margin-right:29px;
+}
+
+li.challenge-item .challenge-item-title a{
+	font-size:14px;
+	text-transform:capitalize;
+}
+
+
+li.challenge-item .challenge-item-graphic{
+	width:100%;
+	height:100px;
+	background:#f2f3f4;
+}
+
+li.challenge-item .challenge-item-desc p{
+	padding:5px 0;
+	color:#555;
+	margin-bottom:10px;
+}
+
+li.challenge-item .challenge-item-info{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+li.challenge-item .challenge-item-metrics{
+	padding: 10px 0;
+	border-top:1px solid #ddd;
+}
+
+li.challenge-item .challenge-item-metrics, li.challenge-item .challenge-item-sponsor{
+	font-size:12px;
+	color:#333;
+}
+
+li.challenge-item .challenge-item-metrics{font-weight:bold}
+
+li.challenge-item .challenge-item-metrics div.bounty{
+	color:#73c111;
+}
+
+li.challenge-item .challenge-item-metrics div.label, #challenges-metrics div.label{
+	font-size:10px;
+	color:#777;
+	text-transform:uppercase;
+}
+
+li.challenge-item .challenge-item-sponsor{
+	padding:5px 0;
+}

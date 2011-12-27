@@ -1,20 +1,20 @@
 from django.conf.urls.defaults import *
 from django.views.generic import DetailView, ListView
 from challenge.models import Challenge
-from challenge.views import ChallengeListView, ChallengeListViewBounty, ChallengeListViewVotes, ChallengeListViewOldestUnsolved, ChallengeListViewLibrary
+from challenge.views import ChallengeListViewRecent, ChallengeListViewBounty, ChallengeListViewVotes, ChallengeListViewOldestUnsolved, ChallengeListViewLibrary
 from django.contrib.auth.decorators import login_required
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
-    (r'^$',
-     login_required(ChallengeListView.as_view())),
-    (r'^top-bounty/$',
-     login_required(ChallengeListViewBounty.as_view())),
-    (r'^top-votes/$',
+    (r'^$|^popular/?$',
      login_required(ChallengeListViewVotes.as_view())),
-    (r'^oldest-unsolved/$',
+    (r'^top-bounty/?$',
+     login_required(ChallengeListViewBounty.as_view())),
+    (r'^recent/?$',
+     login_required(ChallengeListViewRecent.as_view())),
+    (r'^oldest-unsolved/?$',
      login_required(ChallengeListViewOldestUnsolved.as_view())),
-    (r'^library/$',
+    (r'^library/?$',
      login_required(ChallengeListViewLibrary.as_view())),
     url(r'^(?P<pk>\d+)/results/$',
         DetailView.as_view(
