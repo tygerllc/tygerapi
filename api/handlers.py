@@ -61,7 +61,7 @@ class BenchHandler( BaseHandler ):
     model = Bench
     fields = ('id', 'name', 'desc', 'slug', 'privacy_option',
               ('challenge', ()),
-              ('author', ('id', 'username')),
+              ('author', ()),
               ('device', ()),
         )
 
