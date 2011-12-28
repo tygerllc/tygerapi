@@ -136,6 +136,7 @@ INSTALLED_APPS = (
     'profiles',
     'misc',
     'south',
+    'device',
     'api'
 )
 
