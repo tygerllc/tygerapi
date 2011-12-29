@@ -3,17 +3,31 @@
 {% block title %} {{ challenge.name|capfirst}} | Tyger {% endblock title %}
 
 
-{% block sub-header %}
-    <span class="column" style="max-width:320px;padding:5px 0 15px"> 
-        <h1>{{ challenge.name|capfirst}}</h1>
-    </span>    
-    <span class="column last right tright">
-        <button class="btn primary">Submit Solution</button>
-        <button class="btn">Edit Existing Solution</button>
-    </span>
-{% endblock sub-header %}
+{% block sub_header %}
+    <div class="clearfix">
+        <span class="column" style=""> 
+            <h1 style="font-size:20px;line-height:40px">{{ challenge.name|capfirst}}</h1>
+        </span>    
+    </div>
 
+    <div class="column clearfix">
+        <ul class="tabs">
+            <li class="current"><a href="#">Summary</a></li>
+            <li><a href="#">References</a></li>
+            <li><a href="#">Discussion</a></li>
+            <li><a href="#">Solutions</a></li>
+        </ul>
+    </div>
+    <div class="column last right clearfix">
+        <span class="column last right tright">
+            <button class="btn primary no-margin">Submit Solution</button>
+            <button class="btn no-margin">Watch</button>
+        </span>
+    </div>
+{% endblock sub_header %}
 
+{% block content_span %}18{% endblock content_span %}
+{% block sidebar_span %}6{% endblock sidebar_span %}
 {% block challenge_content %}
     <div class="challenge-detail">
         <div class="challenge-tags tright">
@@ -107,19 +121,19 @@
     <div class="challenge-rewards">
         <div class="challenge-bounty">
             {% if challenge.bounty_avail %}
-                <div class="count">
+                <div class="bounty thick">
                     ${{ challenge.bounty }}
                 </div>
-                <h4>BOUNTY</h4>
+                <div class="label">Bounty</div>
             {% else %} 
-                <h4>BOUNTY CLAIMED</h4>
+                <h4>Bounty Claimed</h4>
             {% endif %}
         </div>
         <div class="challenge-votes">
             <div class="clearfix">
                 <div class="column">
-                    <div class="count">{{ challenge.votes }}</div>
-                    <div style="font-size:12px;color:#999">VOTES</div>
+                    <div class="thick">{{ challenge.votes }}</div>
+                    <div class="label">Votes</div>
                 </div>
                 <div class="column last">
                     <button class="btn" style="margin:0;padding:8px"><span class="ico-promote-btn"></span> &nbsp;Promote</button>
@@ -129,11 +143,11 @@
     </div>
     <div class="challenge-info">
         <div class="row" style="margin-bottom:10px">
-            <h4>SPONSORED BY</h4>
+            <div class="label">Sponsored By</div>
             <div>{{ challenge.sponsor.user.username }}</div>
         </div>
         <div class="row">
-            <h4>CREATED</h4>
+            <div class="label">Created</div>
             <div>{{ challenge.create_date|date_diff }}</div>
         </div>
     </div>

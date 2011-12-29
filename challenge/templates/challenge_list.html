@@ -2,24 +2,6 @@
 
 {% block title %} Tyger | Challenges - Explore Synthetic Biology's Most Important Challenges{% endblock title %}
 
-{% block sort-header %}
-    <ul id="tabs">
-        <li class="{% if sortOrder == "most-recent" %}current{% endif %}"><a href="/challenge/">Most Recent</a></li>
-
-        <li class="{% if sortOrder == "top-bounty" %}current{% endif %}"><a href="/challenge/top-bounty/">Top Bounty</a></li>
-
-        
-        <li class="{% if sortOrder == "top-votes" %}current{% endif %}"><a href="/challenge/top-votes/">Top Votes</a></li>
-
-        
-        <li class="{% if sortOrder == "oldest-unsolved" %}current{% endif %}"><a href="/challenge/oldest-unsolved/">Oldest Unsolved</a></li>
-        
-        
-        <li class="{% if sortOrder == "library" %}current{% endif %}"><a href="/challenge/library/">Library</a></li>
-        
-    </ul>
-{% endblock sort-header %}
-
 {% load tags %}
 {% block content_header %}
 <div id="challenge-list-tabs">
@@ -48,7 +30,7 @@
                         <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
                     </div>
                     <div class="challenge-item-graphic">
-                        <img src="/static/img/challange_default_graphic.png" alt="Challenge Graphic"/>   
+                        <img src="/static/img/challenge_default_graphic.png" alt="Challenge Graphic"/>   
                     </div>
                     <div class="challenge-item-desc">
                         <p>{{ c.descrip|truncchars:100 }}</p>

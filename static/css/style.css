@@ -10,6 +10,7 @@ body{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 .tright{text-align:right}
 .tleft{text-align:left}
 .tcenter{text-align:center}
+.no-margin{margin:0 !important}
 
 #main-wrapper{
 background:#fff;
@@ -94,9 +95,9 @@ margin: 0 0 0 10px;
 .profpic{border-radius:2px; box-shadow: 0 1px 2px rgba(0,0,0,0.2);cursor:pointer;position:relative;top:-2px}
 
 #search-challenges{padding:6px 0 20px 0;border-bottom:1px dashed #ddd}
-.input{border:1px solid #ccc;box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);background:#fff;padding:3px 8px;border-radius:2px}
+.input{border:1px solid #ccc;box-shadow:inset 0 2px 2px rgba(0,0,0,0.1);background:#fff;padding:8px 10px;border-radius:2px;font-size:18px;width:200px;}
 .input input[type="text"]{border:none;color:#777}
-label{color:#555;text-shadow:0 1px 0 #fff;margin:0 10px}
+label{color:#555;display:block}
 .input:focus{box-shadow:0 0 5px #5f9d12}
 
 h2{
@@ -168,8 +169,12 @@ border-color:#162E58;
 #viewtabs::after{clear:both}
 .challenge-title .btn{margin:2px}
 #viewtabs h2{float:left;margin-bottom:0}
-.tabs{
-}
+
+#sub-header .tabs{margin:20px 0 -15px}
+#sub-header .tabs li{padding:10px;margin:0 2px;background:#eee}
+#sub-header .tabs li:first-child a{padding-left:10px}
+#sub-header .tabs li.current{background:#fff}
+#sub-header .tabs li.current a{color:#888}
 .tabs li{display:inline-block}
 .tabs li{padding: 6px 0;}
 .tabs li a{
@@ -181,7 +186,6 @@ text-decoration:none;
 }
 .tabs li:first-child a{padding-left:0}
 .tabs li a:hover{color:#0c68da}
-.tabs li.current{}
 .tabs li.current a{
 color:#aaa;}
 .tabs li.current a:hover{cursor:default}
@@ -463,11 +467,14 @@ li.challenge-item .challenge-item-metrics, li.challenge-item .challenge-item-spo
 
 li.challenge-item .challenge-item-metrics{font-weight:bold}
 
-li.challenge-item .challenge-item-metrics div.bounty{
+div.bounty{
 	color:#73c111;
 }
 
-li.challenge-item .challenge-item-metrics div.label, #challenges-metrics div.label{
+.thick{font-size:32px;
+font-weight:bold;}
+
+div.label{
 	font-size:10px;
 	color:#777;
 	text-transform:uppercase;

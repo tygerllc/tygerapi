@@ -117,7 +117,7 @@ def logout_view(request):
     return redirect('/login/')
 
 def login_view(request):
-    state = "Please log in below..."
+    state = "Sign In"
     username = password = ''
     if request.POST:
         username = request.POST.get('username')

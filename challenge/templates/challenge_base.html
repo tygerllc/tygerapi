@@ -28,13 +28,13 @@
     </div>
 
     <div class="container">
-        <div id="content-wrapper" class="span-20">
+        <div id="content-wrapper" class="span-{% block content_span %}20{% endblock content_span %}">
             <div id="content-header">
                 {% block content_header %}{% endblock content_header %}
             </div>
             {% block challenge_content %}{% endblock challenge_content %}
         </div>
-        <div id="sidebar-wrapper" class="span-4 last">
+        <div id="sidebar-wrapper" class="span-{% block sidebar_span %}4{% endblock sidebar_span %} last">
             <div class="sidebar">
                 {% block sidebar %}
                 {% endblock sidebar %}
