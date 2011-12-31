@@ -1,12 +1,11 @@
 from django.db import models
 from challenge.models import Challenge, UserProfile
 from device.models import Device
-from django.contrib.auth.models import User
 
 PRIVACY_CHOICES = (
     ('PUBLIC', 'Publicly available'),
     ('LIMITED', 'You and challenge sponsor'),
-    ('PRIVATE', 'Only you can see'),
+    ('PRIVATE', 'Only you'),
 )
 
 class Bench(models.Model):

@@ -74,8 +74,7 @@ class Challenge(models.Model):
 #                super(Challenge, self).save()
 
 
-    #TODO: Add type to Criteria [Max bps, No changes to environment, Tyger-Verified]
-
+    #TODO: Define Criteria as a testable assertion
 class Criteria(models.Model):
     challenge = models.ForeignKey(Challenge, related_name='winning_conditions')
     desc = models.CharField(max_length=200)
