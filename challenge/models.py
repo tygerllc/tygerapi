@@ -42,6 +42,12 @@ class Environment(models.Model):
     def __unicode__(self):
         return self.name
 
+LICENSING_CHOICES = (
+    ('ATNC', 'Attribution-NonCommercial'),
+    ('ATTR', 'Attribution'),
+    ('ALL', 'All-Rights-Reserved'),
+)
+
 class Challenge(models.Model):
         name = models.CharField(max_length=200)
         slug = models.SlugField(max_length=200)
@@ -54,6 +60,7 @@ class Challenge(models.Model):
         bounty = models.DecimalField(max_digits = 10, decimal_places=2)
         chassis = models.CharField(max_length=50, default="e coli")
         environment = models.ForeignKey(Environment, default='2')
+        sharing_choice = models.CharField(max_length=24, choices=LICENSING_CHOICES, default='ATNC')
 
         def __unicode__(self):
             return self.name
@@ -67,10 +74,9 @@ class Challenge(models.Model):
 #                super(Challenge, self).save()
 
 
-    #TODO: Add type to Criteria [Max bps, No changes to environment, Tyger-Verified]
-
+    #TODO: Define Criteria as a testable assertion
 class Criteria(models.Model):
-    challenge = models.ForeignKey(Challenge)
+    challenge = models.ForeignKey(Challenge, related_name='winning_conditions')
     desc = models.CharField(max_length=200)
     status = models.BooleanField()
 
