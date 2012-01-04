@@ -94,6 +94,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'api.middleware.ContentTypeMiddleware',
 )
 
 ROOT_URLCONF = 'tygerapi.urls'
@@ -170,6 +171,7 @@ FORCE_LOWERCASE_TAGS = True
 AUTH_PROFILE_MODULE = 'challenge.UserProfile'
 LOGIN_REDIRECT_URL = '/challenge/'
 LOGIN_URL = '/login/'
+PISTON_DISPLAY_ERRORS = True
 
 try:
     from local_settings import *

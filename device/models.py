@@ -46,4 +46,5 @@ class Device(models.Model):
     rbs = models.ForeignKey(RBS, blank=True, null=True)
     protein = models.ForeignKey(Protein, blank=True, null=True)
     terminator = models.ForeignKey(Terminator)
+#TODO: Add author to device
 
