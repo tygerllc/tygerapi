@@ -4,7 +4,7 @@ from bench.models import Bench
 
 class BenchListView(ListView):
     model = Bench
-    template_name = 'bench_list.html'
+    template_name = 'bench.html'
     context_object_name = 'open_challenge_list'
 
     def get_queryset(self):

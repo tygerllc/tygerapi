@@ -1,0 +1,186 @@
+.right{float:right}
+.left{float:left}
+.tright{text-align:right}
+.tleft{text-align:left}
+.tcenter{text-align:center}
+.no-margin{margin:0 !important}
+
+#header{
+font-family: Helvetica, Arial, Sans-Serif;
+font-size: 12px;
+position: absolute;
+padding: 0px;
+margin: 0px;
+left: 0px;
+right: 0px;
+top: 0px;
+color: #A0A0A0;
+background: #6db712;
+background-image: linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -o-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -moz-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -webkit-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+background-image: -ms-linear-gradient(bottom, #6DB712 0%, #7BCD10 80%);
+box-shadow:0 2px 2px rgba(0,0,0,0.1);
+border-bottom:1px solid #5ea514
+z-index: 1600;
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+min-width:600px;
+}
+
+h1#logo{margin:0;line-height:32px;font-size:32px}
+h1#logo > a{margin:0;text-indent:-9999px;
+width:66px;height: 32px;overflow: hidden;background:url("../img/logo-t.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;	}
+h1#logo{padding:6px 0}
+.green{color:#73c81a;font-weight:bold;}
+
+ul.side>li{display:inline-block;}
+#nav{text-align:right;}
+ul{margin:0;padding:0;list-style:none;}
+#nav li:last-child{margin-right:0;padding-right:0}
+
+
+#nav>ul>li>a{padding:8px 15px;margin:0;color:#fff;font-weight:bold;
+text-shadow: rgba(0,0,0,0.1) 0 2px 2px;line-height:32px;display:block}
+#nav li.drop-down-container>a{padding:0 15px}
+#nav>ul>li>a:hover{text-shadow:0 0 20px rgba(255,255,255,0.9)}
+#nav li>a.current{
+background:#548c0f;
+background-image: linear-gradient(bottom, #6CB512 20%, #548C0F 72%);
+background-image: -o-linear-gradient(bottom, #6CB512 20%, #548C0F 72%);
+background-image: -moz-linear-gradient(bottom, #6CB512 20%, #548C0F 72%);
+background-image: -webkit-linear-gradient(bottom, #6CB512 20%, #548C0F 72%);
+background-image: -ms-linear-gradient(bottom, #6CB512 20%, #548C0F 72%);
+color:#fff;
+box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+border-left:1px solid #8fcd41;
+border-right:1px solid #8fcd41;
+}
+
+#nav>ul>li.divider{
+width:0px;
+border-right:1px solid #87e013;
+border-left:1px solid #60a20f;
+height:20px;
+position:relative;
+top:7px;
+margin: 0 0 0 10px;
+}
+
+#nav a, #tabs a, a.tag, .list-item h3 a{text-decoration:none}
+
+.menutip-arrow{
+	background:url("../img/tip.png");
+	width:18px;
+	height:8px;
+	position:absolute;
+	right:14px;
+	top:-8px;
+}
+.menutip{
+	position:absolute;
+	background:#f6f6f6;
+	right:0;
+	top:41px;
+}
+
+.menutip-content{
+background:#f6f6f6;
+width:188px;
+padding:5px 0;
+background-image: linear-gradient(bottom, #FFFFFF 92%, #F6F6F6 100%);
+background-image: -o-linear-gradient(bottom, #FFFFFF 92%, #F6F6F6 100%);
+background-image: -moz-linear-gradient(bottom, #FFFFFF 92%, #F6F6F6 100%);
+background-image: -webkit-linear-gradient(bottom, #FFFFFF 92%, #F6F6F6 100%);
+background-image: -ms-linear-gradient(bottom, #FFFFFF 92%, #F6F6F6 100%);
+box-shadow:0 2px 3px rgba(0,0,0,0.3);
+border-radius:2px;
+}
+
+.drop-down-menu{
+	display:none;
+}
+.drop-down-menu li{display:block;overflow:hidden;padding:5px 15px}
+.drop-down-menu li a{color:#666}
+.drop-down-menu li a:hover{background:white;color:#222}
+.prof-large{margin:15px;padding:5px;border:1px solid #ddd;box-shadow:0 2px 2px rgba(0,0,0,0.1)}
+li.divider{height:1px;border-bottom:1px solid #e5e5e5;padding:0;margin:4px 0}
+
+
+/*
+---------------------------------
+	CANVAS SPECIFIC STYLES
+---------------------------------
+*/
+
+html, body {
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: 100%;
+min-height: 100%;
+background-color: #fff;
+overflow: hidden;
+}
+body{background-image:url("../img/canvasGrid.png")}
+#appView, #canvasContainer{
+	width:100%;
+	height:100%;
+	margin:0;padding:0;
+	overflow:hidden;
+	display:block;
+}
+
+#benchCanvas{display:block}
+
+#toolPanel{
+	position:absolute;
+	left:23px;
+	top:117px;
+	background:#fff;
+	box-shadow:0 2px 1px rgba(0,0,0,0.05);
+}
+
+#toolPanel div.toolItem{
+	padding:10px;
+	border:1px solid #ddd;
+	margin-top:-1px;
+	position:relative;
+}
+#toolPanel div.toolItem div{opacity:0.6}
+#toolPanel div.toolItem:hover div{opacity:1}
+
+#toolPanel div.toolItem:hover{
+background-image: linear-gradient(bottom, #FFF9E6 0%, #FFFFFF 100%);
+background-image: -o-linear-gradient(bottom, #FFF9E6 0%, #FFFFFF 100%);
+background-image: -moz-linear-gradient(bottom, #FFF9E6 0%, #FFFFFF 100%);
+background-image: -webkit-linear-gradient(bottom, #FFF9E6 0%, #FFFFFF 100%);
+background-image: -ms-linear-gradient(bottom, #FFF9E6 0%, #FFFFFF 100%);
+	cursor:default;
+	border-color:#ccc;
+	z-index:2;
+}
+
+#toolPanel div.toolItem:first-child{
+}
+
+.tool-sources{
+height: 34px;width:34px;overflow: hidden;background:url("../img/tool_sources.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;
+}
+.tool-generator{
+height: 34px;width:34px;overflow: hidden;background:url("../img/tool_generator.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;
+}
+.tool-reporter{
+height: 34px;width:34px;overflow: hidden;background:url("../img/tool_reporter.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;
+}
+.tool-measurement{
+height: 34px;width:34px;overflow: hidden;background:url("../img/tool_measurement.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;
+}
+.tool-signalling{
+height: 34px;width:34px;overflow: hidden;background:url("../img/tool_signalling.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;
+}
+
+
+.ico-profile{height: 16px;width:17px;overflow: hidden;background:url("../img/ico_profile.png") -0px -0px no-repeat;display: inline-block;vertical-align: middle;}
