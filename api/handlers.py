@@ -66,7 +66,7 @@ class TerminatorHandler(BaseHandler):
     fields =('id', 'name', 'type', 'sequence', 'external_URL', 'fwd_efficiency', 'rev_efficiency',)
 
 class DeviceHandler (BaseHandler):
-    allowed_methods = ('GET',)
+    allowed_methods = ('GET','PUT','POST')
     model = Device
     fields = ('id', 'name',
               ('promoter', ()),
@@ -86,6 +86,29 @@ class DeviceHandler (BaseHandler):
     def sequence_length(self, device):
         length = len(device.promoter.sequence) + len(device.rbs.sequence) + len(device.protein.sequence) + len(device.terminator.sequence)
         return length
+
+    def update(self, request, dev_id):
+        '''
+        Updates the specified device.  Returns rc.NOT_FOUND if the model doesn't exist, rc.BAD_REQUEST for other errors (e.g. multiple objects returned)
+        '''
+        if not hasattr(request, "data"):
+            request.data = request.POST
+        try:
+            instance = Device.objects.get(id=dev_id)
+        except self.model.DoesNotExist:
+            return rc.NOT_FOUND
+        except self.model.MultipleObjectsReturned:
+            return rc.BAD_REQUEST
+        except:
+            return rc.BAD_REQUEST
+
+        attrs = self.flatten_dict(request.data)
+        for k,v in attrs.iteritems():
+            setattr(instance, k, v)
+
+        instance.save()
+
+        return instance
 
 class BenchHandler( BaseHandler ):
     allowed_methods = ('GET','DELETE')
