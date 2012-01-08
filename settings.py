@@ -128,9 +128,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'challenge',
     'bench',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django.contrib.markup',
     'tagging',
@@ -167,7 +165,6 @@ LOGGING = {
 
 # Forces use of lowercase tags in tagging application
 FORCE_LOWERCASE_TAGS = True
-
 AUTH_PROFILE_MODULE = 'challenge.UserProfile'
 LOGIN_REDIRECT_URL = '/challenge/'
 LOGIN_URL = '/login/'

@@ -13,5 +13,8 @@ urlpatterns = patterns('',
     (r'^tutorial/?', redirect_to, {'url': '/challenge/tag/tutorial/'}),
     (r'^logout/', 'challenge.views.logout_view'),
     (r'^login/', 'challenge.views.login_view'),
+    (r'^about/', 'challenge.views.about_view'),
+    (r'^contact/', 'challenge.views.contact_view'),
+    (r'^blog/', 'challenge.views.blog_view'),
     url(r'^admin/', include(admin.site.urls)),
 )
