@@ -30,7 +30,7 @@ class UserProfileHandler(BaseHandler):
     fields = ('id', ('user', ()),)
 
 class ChallengeHandler(BaseHandler):
-    allowed_methods = ('GET',)
+    allowed_methods = ('GET','PUT', 'POST')
     model = Challenge
     fields = ('id', 'name', 'tags', 'descrip', 'votes', 'bounty', 'chassis', 'sharing_choice',
               ('environment', ()),
@@ -44,6 +44,29 @@ class ChallengeHandler(BaseHandler):
         '''
         challenge = Challenge.objects.get(id=challenge_id)
         return challenge
+
+    def update(self, request, challenge_id):
+        '''
+        Updates the specified challenge.  Returns rc.NOT_FOUND if the model doesn't exist, rc.BAD_REQUEST for other errors (e.g. multiple objects returned)
+        '''
+        if not hasattr(request, "data"):
+            request.data = request.POST
+        try:
+            instance = Challenge.objects.get(id=challenge_id)
+        except self.model.DoesNotExist:
+            return rc.NOT_FOUND
+        except self.model.MultipleObjectsReturned:
+            return rc.BAD_REQUEST
+        except:
+            return rc.BAD_REQUEST
+
+        attrs = self.flatten_dict(request.data)
+        for k,v in attrs.iteritems():
+            setattr(instance, k, v)
+
+        instance.save()
+        return instance
+
 
 class PromoterHandler(BaseHandler):
     allowed_methods = ('GET',)
@@ -107,11 +130,10 @@ class DeviceHandler (BaseHandler):
             setattr(instance, k, v)
 
         instance.save()
-
         return instance
 
 class BenchHandler( BaseHandler ):
-    allowed_methods = ('GET','DELETE')
+    allowed_methods = ('GET','PUT', 'POST', 'DELETE')
     model = Bench
     fields = ('id', 'name', 'desc', 'slug', 'privacy_option',
               ('challenge', ()),
@@ -130,6 +152,30 @@ class BenchHandler( BaseHandler ):
             return base.get(slug=slug)
         else:
             return base.all() # Or base.filter(...)
+
+    def update(self, request, slug):
+        '''
+        Updates the specified bench.  Returns rc.NOT_FOUND if the model doesn't exist, rc.BAD_REQUEST for other errors (e.g. multiple objects returned)
+        '''
+        if not hasattr(request, "data"):
+            request.data = request.POST
+        try:
+            instance = Bench.objects.get(slug=slug)
+        except self.model.DoesNotExist:
+            return rc.NOT_FOUND
+        except self.model.MultipleObjectsReturned:
+            return rc.BAD_REQUEST
+        except:
+            return rc.BAD_REQUEST
+
+        attrs = self.flatten_dict(request.data)
+        for k,v in attrs.iteritems():
+            setattr(instance, k, v)
+
+        instance.save()
+        return instance
+
+
 
     def delete(self, request, slug):
         '''

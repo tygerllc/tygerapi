@@ -1,6 +1,5 @@
 from django.db import models
-from challenge.models import SourceSink
-
+from challenge.models import SourceSink, UserProfile
 
 PART_CHOICES = (
     ('CHASSIS', 'Chassis'),
@@ -46,5 +45,4 @@ class Device(models.Model):
     rbs = models.ForeignKey(RBS, blank=True, null=True)
     protein = models.ForeignKey(Protein, blank=True, null=True)
     terminator = models.ForeignKey(Terminator)
-#TODO: Add author to device
-
+    owner = models.ForeignKey(UserProfile)
