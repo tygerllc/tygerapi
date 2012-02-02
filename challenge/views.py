@@ -4,6 +4,8 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from challenge.models import Challenge
+from challenge.forms import ContactForm
+from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from tagging.models import Tag, TaggedItem
 from django.views.generic import ListView
@@ -134,3 +136,32 @@ def login_view(request):
             state = "Username and/or password were incorrect."
 
     return render_to_response('auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))
+
+@login_required()
+def about_view(request):
+    
+        return render_to_response('about.html',context_instance=RequestContext(request))
+
+@login_required()
+def contact_view(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            name = form.cleaned_data['name']
+            sender = form.cleaned_data['sender']
+            recipients = ['me@timogilvie.com']
+            send_mail(subject, message, name, sender, recipients)
+            return HttpResponseRedirect('/thanks/') # Redirect after valid POST
+    else:
+        form = ContactForm() # Display empty form
+
+    return render_to_response('contact.html', {
+        'form': form,
+    }, context_instance=RequestContext(request))
+
+@login_required()
+def thanks_view(request):
+    
+        return render_to_response('thanks.html',context_instance=RequestContext(request))

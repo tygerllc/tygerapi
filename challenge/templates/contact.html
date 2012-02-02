@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact Tyger {% endblock %}
+
+    {% block content %}
+
+   <h2>Please Contact Us!</h2>
+
+   <div>
+        <p>We love to hear from our users, potential partners, and other people who get excited about what we're doing. Tell us how we're doing, what we're doing well, what we're not doing well, or how we can do something together. Reach out below.</p>
+
+        <h3> Your details </h3>
+        <form action="/contact/" method="post">{% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper">
+                {{ form.name.errors }}
+                <label for="id_name">Your name:</label>
+                {{ form.name }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.sender.errors }}
+                <label for="id_sender">Your email address:</label>
+                {{ form.sender }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.subject.errors }}
+                <label for="id_subject">Email subject:</label>
+                {{ form.subject }}
+            </div>
+            <div class="fieldWrapper">
+                {{ form.message.errors }}
+                <label for="id_message">Your message:</label>
+                {{ form.message }}
+            </div>
+            <p><input type="submit" value="Send message" /></p>
+    </form>
+   </div>
+
+{% endblock content %}
