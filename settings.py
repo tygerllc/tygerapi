@@ -94,7 +94,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'api.middleware.ContentTypeMiddleware',
+#    'api.middleware.ContentTypeMiddleware',
 )
 
 ROOT_URLCONF = 'tygerapi.urls'

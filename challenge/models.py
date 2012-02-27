@@ -48,10 +48,22 @@ LICENSING_CHOICES = (
     ('ALL', 'All-Rights-Reserved'),
 )
 
+CHALLENGE_TYPE_CHOICES = (
+    ('Energy', 'Renewable energy'),
+    ('Food', 'Better food'),
+    ('Health', 'Saving lives'),
+    ('Environmental', 'Environmental'),
+    ('Industrial', 'Industrial'),
+    ('Basics', 'Foundational techniques'),
+    ('Tutorial', 'Tutorial'),
+)
+
 class Challenge(models.Model):
         name = models.CharField(max_length=200)
+        challenge_type = models.CharField(max_length=50, choices=CHALLENGE_TYPE_CHOICES, default='Basics')
+        image = models.ImageField(upload_to="uploads/", default='biofuel.png')
         slug = models.SlugField(max_length=200)
-        descrip = models.CharField(max_length=1000)
+        descrip = models.TextField()
         tags = TagField()
         sponsor = models.ForeignKey(UserProfile)
         create_date = models.DateTimeField(editable=False)

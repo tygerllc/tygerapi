@@ -11,10 +11,6 @@ from tagging.models import Tag, TaggedItem
 from django.views.generic import ListView
 import models
 
-
-#TODO change solution view to list all solutions
-#TODO Add view that selects a solution by a specific user.
-
 @login_required()
 def submit(request, challenge_id):
     c = get_object_or_404(Challenge, pk=challenge_id)

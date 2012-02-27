@@ -13,21 +13,19 @@ class UserProfileAdmin(UserAdmin):
 
 class CriteriaInline(admin.TabularInline):
     model = Criteria
-    extra = 2
 
 class ComponentInline(admin.TabularInline):
     model = Useful_Component
-    extra = 2
 
 class RefInline(admin.TabularInline):
     model = Useful_Link
-    extra = 2
-    
+
 class ChallengeAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'votes', 'bounty', 'bounty_avail')
     prepopulated_fields = {'slug': ('name',)}
     fieldsets = [
-        ('General', {'fields': ['name', 'slug', 'tags', 'descrip', 'sponsor']}),
+        ('General', {'fields': ['name', 'image', 'slug', 'tags', 'sponsor']}),
+        ('Description', {'fields': ['descrip',]}),
         ('Rewards', {'fields': ['votes', 'bounty']})
     ]
     inlines = [CriteriaInline, ComponentInline, RefInline,]

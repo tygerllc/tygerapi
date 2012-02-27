@@ -1,6 +1,7 @@
 # This also imports the include function
 from django.conf.urls.defaults import patterns, include, url
 from django.views.generic.simple import redirect_to
+from django.conf import settings
 
 from django.contrib import admin
 admin.autodiscover()
@@ -18,4 +19,12 @@ urlpatterns = patterns('',
     (r'^thanks/', 'challenge.views.thanks_view'),
 #    (r'^blog/', redirect_to, {'url': 'http://www.google.com'}),
     url(r'^admin/', include(admin.site.urls)),
+
 )
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+   )
