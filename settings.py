@@ -13,16 +13,29 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
+#MYSQL database settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'dev.db',                       # sqlite3 path.
-        'USER': '',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tyger',                       # Database name
+        'USER': 'tygerdb',
+        'PASSWORD': 'tygerdb',
         'HOST': '',
         'PORT': ''
     }
 }
+
+#SQLite3 database settings
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'dev.db',                       # Database name
+#        'USER': '',
+#        'PASSWORD': '',
+#        'HOST': '',
+#        'PORT': ''
+#    }
+#}
 
 TIME_ZONE = 'America/New_York'
 LANGUAGE_CODE = 'en-us'

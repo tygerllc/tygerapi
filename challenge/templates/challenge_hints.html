@@ -1,0 +1,53 @@
+{% extends 'challenge_detail.html' %}
+
+{% block title %} Hints for {{ challenge.name|capfirst}} {% endblock title %}
+
+{% block sub_header %}
+<div id="sub-header">
+    <div class="container">
+        <span class="column">
+            <span class="ico-challenge"></span>
+        </span>
+        <span class="column last">
+            <h1>Hints for {{ challenge.name|capfirst}}</h1>
+            <div class="column clearfix">
+                <ul class="tabs">
+                    <li><a href=".">Description</a></li>
+                    <li class="current"><a href="">Helpful Hints</a></li>
+                    <li><a href="talk">Discussion</a></li>
+                    <li><a href="solved">Solutions</a></li>
+                </ul>
+            </div>
+        </span>
+        <span id="challenges-metrics" class="column right last">
+            <span class="column last right tright">
+                <button class="btn primary no-margin">Submit Solution</button>
+                <button class="btn no-margin">Watch</button>
+            </span>
+        </span>
+    </div>
+</div>
+{% endblock sub_header %}
+
+{% block content_span %}18{% endblock content_span %}
+{% block sidebar_span %}6{% endblock sidebar_span %}
+{% block challenge_content %}
+        <div class="row clearfix">
+            <div class="challenge-components column" style="width:50%">
+                <h3> Recommended components </h3>
+                <ul>
+                    {% for link in challenge.useful_component_set.all %}
+                        <li><a href="{{ link.url }}">{{ link.desc }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="challenge-references column last">
+                <h3> Recommended references</h3>
+                <ul>
+                    {% for ref in challenge.useful_link_set.all %}
+                        <li><a href="{{ ref.url }}">{{ ref.desc }}</a></li>
+                    {% endfor %}
+                </ul>       
+            </div>
+        </div>
+{% endblock challenge_content %}

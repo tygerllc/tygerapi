@@ -1,24 +1,38 @@
 {% extends 'challenge_base.html' %}
 
-{% block title %} Challenges - Synthetic Biology's Most Important Challenges{% endblock title %}
+{% block title %} Tutorials - How to use Tyger{% endblock title %}
+
+{% block sub_header %}
+<div id="sub-header">
+    <div class="container">
+        <span class="column">
+            <span class="ico-challenge"></span>
+        </span>
+        <span class="column last">
+            <h1>Tutorials</h1>
+            <h2>Learn How to Create Novel Forms of Life</h2>
+        </span>
+        <span id="challenges-metrics" class="column right last">
+            <span class="column">
+                0 of {{ tagged_challenges.count }}
+                <div class="label">complete</div>
+            </span>
+        </span>
+    </div>
+</div>
+{% endblock sub_header %}
+{% block container %}
+<div class="container">
+    <div id="content-wrapper" class="span-{% block content_span %}24{% endblock content_span %}">
+
 
 {% load tags %}
-{% block content_header %}
-<div id="challenge-list-tabs">
-    <ul class="tabs">
-        <li class="{% current request "^/challenge/?$|^/challenge/popular/?" %}"><a href="/challenge/popular">Popular</a></li>
-        <li class="{% current request "^/challenge/recent/?" %}"><a href="/challenge/recent">Recent</a></li>
-        <li class="{% current request "^/challenge/top-bounty/?" %}"><a href="/challenge/top-bounty">Top Bounty</a></li>
-    </ul>
-</div>
-{% endblock content_header %}
-
 {% block challenge_content %}
 <div class="challenge-listing">
     <ul class="grid-listing">
         {% load date_diff %}
-        {% if top25_challenge_list %}
-            {% for c in top25_challenge_list %}
+        {% if tagged_challenges %}
+            {% for c in tagged_challenges %}
                 {% if forloop.counter0|divisibleby:3 %}
                     {%if forloop.counter0 > 0 %}
                         </div>
@@ -30,8 +44,7 @@
                         <h3><a href="/challenge/{{ c.slug }}/">{{ c.name }}</a></h3>
                     </div>
                     <div class="challenge-item-graphic">
-                        <img src={{ MEDIA_URL }}{{ c.image }} alt="Challenge Graphic"/>
-                    </div>
+                        <img src={{ MEDIA_URL }}{{ c.image }} alt="Challenge Graphic"/>                    </div>
                     <div class="challenge-item-desc">
                         <p>{{ c.descrip|truncchars:200 }}</p>
                     </div>
@@ -42,7 +55,7 @@
                                     <a href="/profile/{{ c.sponsor }}/">{{ c.sponsor }}</a>
                                 </div>
                                 <div class="column right">
-                                    <img src="/static/img/prof_18.png" alt="">
+                                    <img src="/static/img/prof_18.png" alt=":)">
                                 </div>
                                 <div class="column right">
                                     by
@@ -72,7 +85,7 @@
             {% endfor %}
         {%  else %}
             <span class="clearfix" style="width:100%;text-align:center;color:#888;padding:30px 0">
-                No matching challenges found.
+                No tutorials found.
             </span>
         {% endif %}
              
@@ -80,7 +93,6 @@
 </div>
 {% endblock challenge_content%}
 
-{% block sidebar %}
-    {% include 'tag_cloud.html' %}
-{% endblock sidebar %}
-
+        </div>
+    </div>
+ {% endblock container %}

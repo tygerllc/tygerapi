@@ -1,6 +1,6 @@
 {% extends 'challenge_base.html' %}
 
-{% block title %} {{ challenge.name|capfirst}} | Tyger {% endblock title %}
+{% block title %} Solutions for {{ challenge.name|capfirst}} {% endblock title %}
 
 {% block sub_header %}
 <div id="sub-header">
@@ -9,13 +9,13 @@
             <span class="ico-challenge"></span>
         </span>
         <span class="column last">
-            <h1>{{ challenge.name|capfirst}}</h1>
+            <h1>Solutions for {{ challenge.name|capfirst}}</h1>
             <div class="column clearfix">
                 <ul class="tabs">
-                    <li class="current"><a href="">Description</a></li>
+                    <li><a href=".">Description</a></li>
                     <li><a href="hints">Helpful Hints</a></li>
                     <li><a href="talk">Discussion</a></li>
-                    <li><a href="solved">Solutions</a></li>
+                    <li class="current"><a href="">Solutions</a></li>
                 </ul>
             </div>
         </span>
@@ -29,48 +29,13 @@
 </div>
 {% endblock sub_header %}
 
-{% block content_span %}18{% endblock content_span %}
-{% block sidebar_span %}6{% endblock sidebar_span %}
 {% block challenge_content %}
     <div class="challenge-detail">
-        <div class="challenge-description">
-            <p>{{ challenge.descrip }} </p>
-        </div>
+        <div class="row clearfix" style="border-bottom:1px dashed #ddd;margin-bottom:10px">
+            <div class="challenge-bountywinner">
+                <h3> Bounty winner </h3>
 
-        <div class="row clearfix" style="border-bottom:1px dashed #ddd;margin-bottom:10px">
-            <div class="challenge-winconditions">
-                <h3> Winning conditions </h3>
-                <ul>
-                    {% for condition in challenge.winning_conditions.all %}
-                        <li class="{% if condition.status == "True" %} complete {% endif %}">{{ condition.desc }}</li>
-                    {% endfor %}
-                </ul>      
-            </div>
-        </div>
-        <div class="row clearfix" style="border-bottom:1px dashed #ddd;margin-bottom:10px">
-            <div class="challenge-environment">
-                <h3>Environment </h3>
-                    <div class="table">
-                        <div class="row clearfix">
-                            <div class="column key">Chassis</div>
-                            <div class="column value last">{{ challenge.chassis }}</div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="column key">Environment</div>
-                            <div class="column value last">{{ challenge.environment.name }}</div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="column key">Temperature</div>
-                            <div class="column value last">{{ challenge.environment.temp }}</div>
-                        </div>
-                        <div class="row clearfix">
-                            <div class="column key">pH</div>
-                            <div class="column value last">{{ challenge.environment.pH }}</div>
-                        </div>
-                    </div> 
-            </div>
-        </div>
-    </div>
+    <h3> Other finishers </h3>
 {% endblock challenge_content %}
 
 {% block sidebar %}

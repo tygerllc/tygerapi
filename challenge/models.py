@@ -66,7 +66,7 @@ class Challenge(models.Model):
         descrip = models.TextField()
         tags = TagField()
         sponsor = models.ForeignKey(UserProfile)
-        create_date = models.DateTimeField(editable=False)
+        create_date = models.DateTimeField(auto_now=True)
         first_completed = models.DateTimeField('First solved', null=True)
         votes = models.IntegerField()
         bounty = models.DecimalField(max_digits = 10, decimal_places=2)

@@ -1,0 +1,53 @@
+{% extends 'challenge_detail.html' %}
+
+{% block title %} Discuss solving {{ challenge.name|capfirst}}{% endblock title %}
+
+{% block sub_header %}
+<div id="sub-header">
+    <div class="container">
+        <span class="column">
+            <span class="ico-challenge"></span>
+        </span>
+        <span class="column last">
+            <h1>Discussion for {{ challenge.name|capfirst}}</h1>
+            <div class="column clearfix">
+                <ul class="tabs">
+                    <li><a href=".">Description</a></li>
+                    <li><a href="hints">Helpful Hints</a></li>
+                    <li class="current"><a href="">Discussion</a></li>
+                    <li><a href="solved">Solutions</a></li>
+                </ul>
+            </div>
+        </span>
+        <span id="challenges-metrics" class="column right last">
+            <span class="column last right tright">
+                <button class="btn primary no-margin">Submit Solution</button>
+                <button class="btn no-margin">Watch</button>
+            </span>
+        </span>
+    </div>
+</div>
+{% endblock sub_header %}
+
+{% block content_span %}18{% endblock content_span %}
+{% block sidebar_span %}6{% endblock sidebar_span %}
+{% block challenge_content %}
+
+        <div class="row clearfix" style="border-bottom:1px dashed #ddd;margin-bottom:10px">
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname = 'tyger';
+        var disqus_developer = 1;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">synthetic bio comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+{% endblock challenge_content %}
+

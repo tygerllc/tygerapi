@@ -2,12 +2,23 @@
 
 {% block title %} Tyger profile - {{ profile.user.username }} {% endblock title %}
 
-{% block content %}
-    <h1>{{ profile.user.username }} profile page</h1>
+{% block sub-header %}
+    <div id="sub-header">
+        <div class="container">
+            <span class="column">
+                <span class="ico-profile"></span>
+            </span>
+            <span class="column last">
+                <h1>{{ profile.user.username }} profile page</h1>
+                <h2>{{ profile.user.first_name }} {{ profile.user.last_name }}</h2>
+            </span>
+        </div>
+    </div>
+{% endblock sub-header %}
+
+{% block container %}
     <ul>
         <li> Name:
-            {{ profile.user.first_name }}
-            {{ profile.user.last_name }}
         </li>
         <li> Homepage:
             {{ profile.url }}
@@ -25,4 +36,4 @@
 
     <p><a href="/profiles/edit/">Edit your profile</a> </p>
 
-{% endblock content %}
+{% endblock container %}

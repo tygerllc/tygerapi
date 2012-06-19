@@ -3,9 +3,9 @@
 {% block title %} Tyger | Solving Synthetic Biology's Most Important Challenges{% endblock title %}
 
 {% block content %}
+    {% block sub_header %}
     <div id="sub-header">
         <div class="container">
-        {% block sub_header %}
             <span class="column">
                 <span class="ico-challenge"></span>
             </span>
@@ -23,23 +23,23 @@
                     <div class="label">Available bounties</div>
                 </span>
             </span>
-        {% endblock sub_header %}
         </div>
     </div>
+    {% endblock sub_header %}
 
+    {% block container %}
     <div class="container">
         <div id="content-wrapper" class="span-{% block content_span %}20{% endblock content_span %}">
-            <div id="content-header">
-                {% block content_header %}{% endblock content_header %}
-            </div>
-            {% block challenge_content %}{% endblock challenge_content %}
+            {% block content_header %} {% endblock %}
+            {% block challenge_content %} {% endblock %}
         </div>
+        {% block sidebar %}
         <div id="sidebar-wrapper" class="span-{% block sidebar_span %}4{% endblock sidebar_span %} last">
             <div class="sidebar">
-                {% block sidebar %}
-                {% endblock sidebar %}
-            </div>           
+            </div>
         </div>
+        {% endblock sidebar %}
     </div>
+    {% endblock container %}
 
 {% endblock content %}

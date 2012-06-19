@@ -53,6 +53,16 @@ def with_tag(request, tag, sortOrder, object_id=None, page=1):
                               dict(tag=tag, tagged_challenges=tagged_challenges, sortOrder=sortOrder),
                               context_instance=RequestContext(request))
 
+# Tutorial view looks for all challenges tagged with "tutorial"
+@login_required()
+def tutorial(request):
+    tag = "tutorial"
+    tagged_challenges = TaggedItem.objects.get_by_model(models.Challenge, tag)
+    tagged_challenges = tagged_challenges.order_by('create_date')
+    return render_to_response('challenge_tutorial.html',
+                              dict(tag=tag, tagged_challenges=tagged_challenges),
+                              context_instance=RequestContext(request))
+
 #TODO: Hacked this into multiple views to handle sorting. Should be slicker
 class ChallengeListViewRecent(ListView):
     context_object_name = "top25_challenge_list"
