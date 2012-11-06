@@ -64,7 +64,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    join(ROOT_PATH, 'static/'),
+    # join(ROOT_PATH, 'static/'),
     # "/Users/me/Dropbox/Tyger/tygerapi/static",
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.

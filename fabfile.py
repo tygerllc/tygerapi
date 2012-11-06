@@ -18,31 +18,6 @@ CODE_DIR = '/home/ec2-user/tygerapi/'
 
 env.hosts = ['tyger.us']
 
-def test():
-    with settings(warn_only=True):
-        result = local('./manage.py test tygerapi', capture=True)
-    if result.failed and not confirm("Tests failed. Continue anyway?"):
-        abort("Aborting at user request.")
-
-def commit():
-    local("git add -p && git commit")
-
-def push():
-    local("git push")
-
-def prepare_deploy():
-    test()
-    commit()
-    push()
-
-def deploy():
-    with settings(warn_only=True):
-        if run("test -d %s" % CODE_DIR).failed:
-            run("git clone user@vcshost:/path/to/repo/.git %s" % CODE_DIR)
-    with cd(CODE_DIR):
-        run("git pull")
-        run("touch app.wsgi")
-
 # import creds from non version controlled file
 # try:
 #     from creds import *
@@ -142,13 +117,6 @@ def sub_config_nginx():
     put("config/tyger.us", "/etc/nginx/sites-available/tygerus.conf",use_sudo=True)
     sudo("chmod -R 755 /home/ec2-user/; ")
     sudo("ln -f -s /etc/nginx/sites-available/tygerus.conf /etc/nginx/sites-enabled/tygerus.conf")
-    # Change permissions on /home/ec2-user/ and /home/ dirs to 771
-
-#    put("config/nginx/backends.conf","/etc/nginx/backends.conf",use_sudo=True)
-#    put("config/nginx/tyger.us","/etc/nginx/sites-available/",use_sudo=True)
-#    if env.dev_mode:
-#        put("config/nginx/dev.tyger.us","/etc/nginx/sites-available/",use_sudo=True)
-#        sudo("ln -f -s /etc/nginx/sites-available/dev.tyger.us /etc/nginx/sites-enabled/dev.tyger.us")
 
 def sub_config_django():
     # "Install & configure django"
@@ -173,20 +141,6 @@ def sub_setup_ssh():
     """
     Copy ssh id_rsa and id_rsa.pub keys if they do not exist and add to github as a deploy key
     """
-    # check for and create if necessary the RSA_lOCATION
-#    if not os.path.exists(RSA_LOCATION):
-#        os.makedirs(RSA_LOCATION)
-
-    # check to see if the ssh keys are created
-#    if not os.path.exists(RSA_LOCATION + "id_rsa"):
-#        bashcommand = "cd %s; ssh-keygen -f id_rsa -t rsa -N ''" % RSA_LOCATION
-#        os.system(bashcommand)
-        # add the id_rsa.pub to github for deploy keys
-#        with open(os.path.expanduser(RSA_LOCATION + "id_rsa.pub")) as fd:
-#            pub = fd.readline().strip()
-#        deploy_key = """curl -X POST -F "login=%s" -F "token=%s" https://github.com/api/v2/json/repos/key/%s/%s/add -F "title=TygerFabricDeploy" -F "key=%s" """ % (GIT_ACCOUNT, GIT_API_TOKEN, GIT_ACCOUNT, "tygerapi", pub)
-#        os.system(deploy_key)
-
     # create the deploy host .ssh folder
     run("mkdir -p ~/.ssh/")
 
@@ -241,15 +195,38 @@ def sub_stop_processes():
 
 #### Deploying new version
 
+def test():
+    with settings(warn_only=True):
+        result = local('./manage.py test tygerapi', capture=True)
+    if result.failed and not confirm("Tests failed. Continue anyway?"):
+        abort("Aborting at user request.")
+
+def commit():
+    local("git add -p && git commit")
+
+def push():
+    local("git push")
+
+def prepare_deploy():
+    test()
+    commit()
+    push()
+
 def syncdb():
     "Does a synbdb and a migrate"
     require('hosts', provided_by=[dev])
     run("cd ~/tygerapi; python manage.py syncdb --noinput; python manage.py migrate --noinput;" % env)
+    run("cd ~/tygerapi; python manage.py collectstatic")
 
 def pull():
     "Does a git pull on all the repositories"
     require('hosts', provided_by=[dev])
-    run("cd %(base)s/%(virtualenv)s/tygerapi; git pull %(parent)s %(branch)s" % env)
+    run("cd %(base)s/%(virtualenv)s; git pull %(parent)s %(branch)s" % env)
+
+def deploy():
+    pull()
+    syncdb()
+    reload()
 
 #### End Deploy new version
 
