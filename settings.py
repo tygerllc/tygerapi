@@ -25,18 +25,6 @@ DATABASES = {
     }
 }
 
-#SQLite3 database settings
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': 'dev.db',                       # Database name
-#        'USER': '',
-#        'PASSWORD': '',
-#        'HOST': '',
-#        'PORT': ''
-#    }
-#}
-
 TIME_ZONE = 'America/New_York'
 LANGUAGE_CODE = 'en-us'
 
@@ -63,7 +51,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/static/static.lawrence.com/static/"
-#STATIC_ROOT = join(ROOT_PATH, 'static_files')
+STATIC_ROOT = "/home/ec2-user/tygerapi/static/"
 
 # URL prefix for static files.
 # Example: "http://static.lawrence.com/static/"

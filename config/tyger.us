@@ -1,0 +1,29 @@
+# Redirect all requests on the www subdomain to the root domain
+server {
+  listen        80;
+  server_name   www.tyger.us *.tyger.us;
+  rewrite ^/(.*)/$ /$1 permanent;
+  rewrite ^     http://tyger.us/$request_uri permanent;
+}
+
+# Serve static files and redirect any other request to Django
+server {
+  listen       80;
+  server_name  tyger.us;
+  root        /home/ec2-user/tygerapi/;
+  access_log  /var/log/nginx/tyger.us.access.log;
+  error_log  /var/log/nginx/tyger.us.error.log;
+
+  # Check if a file exists at /home/ec2-user/tygerapi/ for the incoming request.
+  # If it doesn't proxy to Gunicorn/Django.
+  try_files $uri @django;
+
+  # Setup named location for Django requests and handle proxy details
+  location @django {
+    proxy_pass         http://127.0.0.1:8000;
+    proxy_redirect     off;
+    proxy_set_header   Host             $host;
+    proxy_set_header   X-Real-IP        $remote_addr;
+    proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+  }
+}

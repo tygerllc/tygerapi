@@ -1,0 +1,938 @@
+-- MySQL dump 10.13  Distrib 5.1.61, for apple-darwin10.8.0 (i386)
+--
+-- Host: localhost    Database: tyger
+-- ------------------------------------------------------
+-- Server version	5.1.61
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `auth_group`
+--
+
+DROP TABLE IF EXISTS `auth_group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group`
+--
+
+LOCK TABLES `auth_group` WRITE;
+/*!40000 ALTER TABLE `auth_group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_group_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_group_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_group_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `group_id` (`group_id`,`permission_id`),
+  KEY `auth_group_permissions_bda51c3c` (`group_id`),
+  KEY `auth_group_permissions_1e014c8f` (`permission_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_group_permissions`
+--
+
+LOCK TABLES `auth_group_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_group_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_group_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_message`
+--
+
+DROP TABLE IF EXISTS `auth_message`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `message` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `auth_message_fbfc09f1` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_message`
+--
+
+LOCK TABLES `auth_message` WRITE;
+/*!40000 ALTER TABLE `auth_message` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_message` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_permission`
+--
+
+DROP TABLE IF EXISTS `auth_permission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_permission` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `content_type_id` int(11) NOT NULL,
+  `codename` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `content_type_id` (`content_type_id`,`codename`),
+  KEY `auth_permission_e4470c6e` (`content_type_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=106 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_permission`
+--
+
+LOCK TABLES `auth_permission` WRITE;
+/*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
+INSERT INTO `auth_permission` VALUES (28,'Can add log entry',10,'add_logentry'),(29,'Can change log entry',10,'change_logentry'),(30,'Can delete log entry',10,'delete_logentry'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(10,'Can add message',4,'add_message'),(11,'Can change message',4,'change_message'),(12,'Can delete message',4,'delete_message'),(1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(88,'Can add bench',30,'add_bench'),(89,'Can change bench',30,'change_bench'),(90,'Can delete bench',30,'delete_bench'),(73,'Can add chassis',25,'add_chassis'),(74,'Can change chassis',25,'change_chassis'),(75,'Can delete chassis',25,'delete_chassis'),(76,'Can add promoter',26,'add_promoter'),(77,'Can change promoter',26,'change_promoter'),(78,'Can delete promoter',26,'delete_promoter'),(79,'Can add protein',27,'add_protein'),(80,'Can change protein',27,'change_protein'),(81,'Can delete protein',27,'delete_protein'),(82,'Can add rbs',28,'add_rbs'),(83,'Can change rbs',28,'change_rbs'),(84,'Can delete rbs',28,'delete_rbs'),(85,'Can add terminator',29,'add_terminator'),(86,'Can change terminator',29,'change_terminator'),(87,'Can delete terminator',29,'delete_terminator'),(22,'Can add challenge',8,'add_challenge'),(23,'Can change challenge',8,'change_challenge'),(24,'Can delete challenge',8,'delete_challenge'),(25,'Can add criteria',9,'add_criteria'),(26,'Can change criteria',9,'change_criteria'),(27,'Can delete criteria',9,'delete_criteria'),(31,'Can add challenge',11,'add_challenge'),(32,'Can change challenge',11,'change_challenge'),(33,'Can delete challenge',11,'delete_challenge'),(34,'Can add criteria',12,'add_criteria'),(35,'Can change criteria',12,'change_criteria'),(36,'Can delete criteria',12,'delete_criteria'),(70,'Can add environment',24,'add_environment'),(71,'Can change environment',24,'change_environment'),(72,'Can delete environment',24,'delete_environment'),(67,'Can add source sink',23,'add_sourcesink'),(68,'Can change source sink',23,'change_sourcesink'),(69,'Can delete source sink',23,'delete_sourcesink'),(61,'Can add useful_ component',21,'add_useful_component'),(62,'Can change useful_ component',21,'change_useful_component'),(63,'Can delete useful_ component',21,'delete_useful_component'),(58,'Can add useful_ link',20,'add_useful_link'),(59,'Can change useful_ link',20,'change_useful_link'),(60,'Can delete useful_ link',20,'delete_useful_link'),(55,'Can add user profile',19,'add_userprofile'),(56,'Can change user profile',19,'change_userprofile'),(57,'Can delete user profile',19,'delete_userprofile'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(103,'Can add device',35,'add_device'),(104,'Can change device',35,'change_device'),(105,'Can delete device',35,'delete_device'),(91,'Can add promoter',31,'add_promoter'),(92,'Can change promoter',31,'change_promoter'),(93,'Can delete promoter',31,'delete_promoter'),(94,'Can add protein',32,'add_protein'),(95,'Can change protein',32,'change_protein'),(96,'Can delete protein',32,'delete_protein'),(100,'Can add rbs',34,'add_rbs'),(101,'Can change rbs',34,'change_rbs'),(102,'Can delete rbs',34,'delete_rbs'),(97,'Can add terminator',33,'add_terminator'),(98,'Can change terminator',33,'change_terminator'),(99,'Can delete terminator',33,'delete_terminator'),(43,'Can add consumer',15,'add_consumer'),(44,'Can change consumer',15,'change_consumer'),(45,'Can delete consumer',15,'delete_consumer'),(37,'Can add nonce',13,'add_nonce'),(38,'Can change nonce',13,'change_nonce'),(39,'Can delete nonce',13,'delete_nonce'),(40,'Can add resource',14,'add_resource'),(41,'Can change resource',14,'change_resource'),(42,'Can delete resource',14,'delete_resource'),(46,'Can add token',16,'add_token'),(47,'Can change token',16,'change_token'),(48,'Can delete token',16,'delete_token'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add site',7,'add_site'),(20,'Can change site',7,'change_site'),(21,'Can delete site',7,'delete_site'),(64,'Can add migration history',22,'add_migrationhistory'),(65,'Can change migration history',22,'change_migrationhistory'),(66,'Can delete migration history',22,'delete_migrationhistory'),(49,'Can add tag',17,'add_tag'),(50,'Can change tag',17,'change_tag'),(51,'Can delete tag',17,'delete_tag'),(52,'Can add tagged item',18,'add_taggeditem'),(53,'Can change tagged item',18,'change_taggeditem'),(54,'Can delete tagged item',18,'delete_taggeditem');
+/*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user`
+--
+
+DROP TABLE IF EXISTS `auth_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(75) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `is_staff` tinyint(1) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `is_superuser` tinyint(1) NOT NULL,
+  `last_login` datetime NOT NULL,
+  `date_joined` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user`
+--
+
+LOCK TABLES `auth_user` WRITE;
+/*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
+INSERT INTO `auth_user` VALUES (1,'me','Tim','Ogilvie','me@timogilvie.com','sha1$04f23$4a28a59c31e906571069fef9a2d21f722ea84457',1,1,1,'2012-02-25 17:36:25','2011-07-12 09:06:48'),(2,'root','','','root@root.com','sha1$e9e30$8505d3c6126dc9be63238e05f02ff0aea60a3b9a',1,1,1,'2011-10-26 18:57:32','2011-10-26 18:56:39'),(3,'tygerlibrary','Tim','Ogilvie','togilvie@tyger.us','sha1$028da$bfa075f46ef83e9f8d1c1a27e6854dc6e8aa2b8b',1,1,1,'2012-01-02 23:11:32','2011-11-08 08:08:47'),(4,'togilvie','Tim','Ogilvie','me@timogilvie.com','sha1$16cfd$f6b222084d575c88113035508bddeaeed856a15c',1,1,1,'2012-10-26 11:45:24','2011-12-03 20:18:54'),(5,'biobricks','Biobricks','Foundation','contact@biobricks.org','sha1$e85e3$167a2a8026bcc2b762fac838c9a3bb0262f848c4',0,1,0,'2012-03-04 18:53:08','2012-03-04 18:53:08');
+/*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_groups`
+--
+
+DROP TABLE IF EXISTS `auth_user_groups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`,`group_id`),
+  KEY `auth_user_groups_fbfc09f1` (`user_id`),
+  KEY `auth_user_groups_bda51c3c` (`group_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_groups`
+--
+
+LOCK TABLES `auth_user_groups` WRITE;
+/*!40000 ALTER TABLE `auth_user_groups` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `auth_user_user_permissions`
+--
+
+DROP TABLE IF EXISTS `auth_user_user_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `auth_user_user_permissions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`,`permission_id`),
+  KEY `auth_user_user_permissions_fbfc09f1` (`user_id`),
+  KEY `auth_user_user_permissions_1e014c8f` (`permission_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `auth_user_user_permissions`
+--
+
+LOCK TABLES `auth_user_user_permissions` WRITE;
+/*!40000 ALTER TABLE `auth_user_user_permissions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `auth_user_user_permissions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `bench_bench`
+--
+
+DROP TABLE IF EXISTS `bench_bench`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `bench_bench` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `slug` varchar(200) NOT NULL,
+  `desc` varchar(2000) NOT NULL,
+  `author_id` int(11) NOT NULL,
+  `challenge_id` int(11) NOT NULL,
+  `device_id` int(11) NOT NULL,
+  `privacy_option` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `bench_bench_a951d5d6` (`slug`),
+  KEY `bench_bench_cc846901` (`author_id`),
+  KEY `bench_bench_dd8bebce` (`challenge_id`),
+  KEY `bench_bench_5b7abc50` (`device_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bench_bench`
+--
+
+LOCK TABLES `bench_bench` WRITE;
+/*!40000 ALTER TABLE `bench_bench` DISABLE KEYS */;
+INSERT INTO `bench_bench` VALUES (1,'My solution to your challenge','my-solution-your-challenge','This is my solution',3,2,1,'PUBLIC'),(2,'My second solution','my-second-solution','This is my second solution',3,2,1,'PUBLIC'),(3,'My third solution2','my-third-solution','Description of the third solution by tyger library',1,2,1,'PUBLIC'),(4,'togilvie\'s solution to Tutorial 1','togilvies-solution-tutorial-1','togilvie\'s solution to the first tutorial',3,4,1,'PUBLIC');
+/*!40000 ALTER TABLE `bench_bench` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_challenge`
+--
+
+DROP TABLE IF EXISTS `challenge_challenge`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_challenge` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `challenge_type` varchar(50) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `slug` varchar(200) NOT NULL,
+  `descrip` longtext NOT NULL,
+  `tags` varchar(255) NOT NULL,
+  `sponsor_id` int(11) NOT NULL,
+  `create_date` datetime NOT NULL,
+  `first_completed` datetime DEFAULT NULL,
+  `votes` int(11) NOT NULL,
+  `bounty` decimal(10,2) NOT NULL,
+  `chassis` varchar(50) NOT NULL,
+  `environment_id` int(11) NOT NULL,
+  `sharing_choice` varchar(24) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `challenge_challenge_a951d5d6` (`slug`),
+  KEY `challenge_challenge_7373e9db` (`sponsor_id`),
+  KEY `challenge_challenge_25ab32ac` (`environment_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_challenge`
+--
+
+LOCK TABLES `challenge_challenge` WRITE;
+/*!40000 ALTER TABLE `challenge_challenge` DISABLE KEYS */;
+INSERT INTO `challenge_challenge` VALUES (1,'Detect arsenic in ground water','Basics','uploads/vegetables_1.png','e-coli-glows-blue-when-arsenic-present','Arsenic is a deadly poison that exists in groundwater in many third world nations. Design living tools that will test for the presence of arsenic. This needs to be very inexpensive. ','health, arsenic, gfp',4,'2012-03-04 19:24:05',NULL,1000,'10000.00','e coli',2,'ATNC'),(2,'Detect when arsenic and lead are present','Basics','uploads/medicine_1.png','e-coli-glows-blue-when-arsenic-present-and-green-when-lead-present','Arsenic and lead poison groundwater in many third world nations. We want to be able to quickly detect arsenic in the groundwater. \r\n\r\n','arsenic, gfp, health',2,'2012-03-05 07:47:29',NULL,75,'50.00','e coli',2,'ATNC'),(4,'Tutorial 1: Hello, World!','Basics','uploads/gradcap_1.jpg','tutorial-1-hello-world','In this tutorial, we\'re going to build a simple genetic device and teach you the basics of working with Tyger\'s bench. We\'ll give you a very high level overview of how a genetic device can be created and a tour of Tyger\'s key features.  ','tutorial, gfp',3,'2012-07-29 15:09:01',NULL,1,'0.00','e coli',2,'ATNC'),(5,'Tutorial 2: Using promoters','Basics','uploads/environment.png','tutorial-2-using-promoters','The glowing e coli we created in Tutorial One is neat, but it isn\'t very useful. This tutorial will create an organism that detects the presence of arsenic. Arsenic is a toxic chemical that affects millions of people annually by poisoning their groundwater. We will create a simple biosensor that will glow green when arsenic is present.   To do this, we\'ll use a Promoter, which allows us to express green fluorescent protein only when arsenic is present. Promoters are a fragment of DNA that \"turns on\" the creation of new proteins (transcription). Think of Promoters like \"IF\" statements from programming.   Promoters are required for every new device, so we automatically create one for every new solution. In Tutorial One, we used a promoter that is always on (called constituitive). For this solution, we\'ll need to edit  Follow three steps to complete this challenge: 1) Create a new device and add the Reporter - GFP to the Bench.   2) Edit the Promoter. Click on the Constituitive promoter, ','gfp, promoters, tutorial, biosensor',3,'2012-03-11 17:17:51',NULL,2,'0.00','e coli',2,'ATNC'),(6,'Tutorial 3: Inhibiting expression with promoters','Basics','uploads/legos.png','tutorial-3-inhibiting-expression-promoters','In Tutorial 2, we learned how to use a promoter to turn on gene expression when specific conditions are met. Some promoters can also inhibit (or turn off) gene expression. In this tutorial, we\'ll create an organism that generates tryptophan (as essential amino acid) but turns itself off when there is plenty around. To do this, we\'ll need a repressor trpR. When tryptophan is plentiful, trpR prevents expression of the genes to create more. Your solution should glow green when tryptophan is plentiful. If there isn\'t enough tryptophan, your repressor will allow expression of tryptophan and glow red. ','tutorial, tryptophan',3,'2012-03-11 17:18:05',NULL,3,'0.00','e coli',2,'ATNC'),(7,'Design cellular antifreeze','Basics','uploads/industrial.png','antifreeze-e-coli','Create cellular antifreeze that allows e coli to survive and thrive at much lower temperatures than ordinarily possible. ','e-coli, antifreeze, library',4,'2012-03-04 18:55:20',NULL,100,'250.00','e coli',2,'ATNC'),(8,'Living mosquito killer','Basics','uploads/mosquito_1.png','mosquito-killing-e-coli','Mosquitos are a nuisance to humans and livestock, they spread disease, and they kill people. Design e coli that will kill mosquitoes. \r\n\r\nThis will express a protein that will kill mosquitoes. \r\n\r\nSee a related mosquito task for a non-violent approach that simply repels mosquitoes. \r\n\r\n','mosquito, botany, pests, disease, malaria',2,'2012-03-04 21:06:07',NULL,5000,'10000.00','e coli',2,'ATNC'),(9,'Living mosquito repellents','Basics','uploads/mosquito.png','living-mosquito-repellents','Repels mosquitoes instead of killing them. We will design a living organism that will express mosquito repellent. \r\n\r\nThe repellent will express wax on the surface of plants, making it harder for the insect to take hold of the plant. This makes it unappealing. \r\n\r\nHigher plants produce sterols and non-steroidal triterpenoids from a common biosynthetic pathway which starts with 2,3-oxidosqualene. Triterpenoids are the basis of cuticular and glaucous (epicuticular) wax. One particular triterpenoid, known as lupeol, constitutes almost 60% of the glaucous wax – as opposed to a mere 12% in glossy wax – thus making it an intriguing compound especially with regards to the enzyme which synthesizes it.\r\n','mosquito, botany, pests, disease, malaria, repellent',2,'2012-03-04 21:21:30',NULL,250,'1000.00','e coli',2,'ATNC'),(10,'Replace gut flora','Basics','uploads/medicine.png','replace-gut-flora','Design replacement bacteria for the gastrointestinal tract. ','health, medicine, gastroitestinal',2,'2012-03-04 19:28:16',NULL,1000,'1000.00','e coli',2,'ATNC'),(11,'Living biodiesel pumps','Basics','uploads/biofuel_1.png','living-biodiesel-pumps','Renewable sources of energy will allow us to satisfy our energy needs without destroying the atmosphere and will not threaten our natural resources, water, or health. \r\n\r\nDesign e coli that turns sugar into biodiesel. The typical chain is as follows: \r\n\r\n','biofuel, diesel, botany, algae, ',2,'2012-03-04 19:31:27',NULL,1000,'5000.00','e coli',2,'ATNC'),(12,'Bioplastic to reduce fossil fuel usage','Basics','uploads/industrial_1.png','bioplastic-reduce-fossil-fuel-usage','Bioplastic are plastics that are created by a living organism. They can be designed to meet specific functions and typically use less fossil fuel to be created. Estimates of fuel efficiency range from 25-75%. \r\n\r\nWe want to go further! \r\n\r\nWe should have a proxy for the economic value. \r\n\r\nNeed to determine: \r\n-biggest markets\r\n-fragmentation / concentration\r\n-What\'s doable\r\n\r\n','bioplastic, tensile, biodegradable',3,'2012-03-04 19:45:24',NULL,1000,'5000.00','e coli',2,'ATNC'),(13,'Create industrial vegetable oil','Basics','uploads/industrial_2.png','create-industrial-vegetable-oil','Vegetable oil is used as an ingredient in a wide variety of manufactured products, including soaps, cosmetics, candles and perfumes. Design living organisms that express vegetable oils as well as the hexane that will break them down.','industrial, oil, vegetable, food',2,'2012-03-04 19:53:51',NULL,400,'4000.00','e coli',2,'ATNC'),(14,'Bioleaching removes metal from ore','Basics','uploads/smelter.jpg','bioleaching-removes-metal-ore','Traditional methods for extracting ore from metal use smelting and roasting. These emit sulfur dioxide into the environment and are expensive. \r\n\r\nDesign a bioleaching organism that will remove copper from ore. \r\n\r\nAvoid generating the toxic chemicals associated with the solution, or remove them as well. \r\n\r\n','bioleaching, copper, ore',2,'2012-03-04 21:19:04',NULL,1200,'750.00','e coli',2,'ATNC');
+/*!40000 ALTER TABLE `challenge_challenge` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_criteria`
+--
+
+DROP TABLE IF EXISTS `challenge_criteria`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_criteria` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `challenge_id` int(11) NOT NULL,
+  `desc` varchar(200) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `challenge_criteria_dd8bebce` (`challenge_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_criteria`
+--
+
+LOCK TABLES `challenge_criteria` WRITE;
+/*!40000 ALTER TABLE `challenge_criteria` DISABLE KEYS */;
+INSERT INTO `challenge_criteria` VALUES (1,1,'Glows blue when arsenic is present',0),(2,1,'Nothing toxic to e coli',0),(3,1,'Glows green when lead is present',0),(4,2,'Glows blue when arsenic is present',1),(5,2,'Nothing toxic to e coli',1),(6,2,'Glows blue with arsenic',0),(7,4,'Glows - green fluorescent light',0),(8,4,'Nothing toxic to e coli',1),(9,5,'Glows green when arsenic is present',0),(10,5,'Nothing toxic to e coli',0),(11,6,'Glows green when tryptophan is present',0),(12,6,'Glows red when tryptophan is absent',0),(13,6,'Produces tryptophan when it is absent',0),(14,7,'Survive at 0 celsius',0),(15,7,'No changes to environment',0),(16,8,'Nothing toxic to e coli',1),(17,8,'No changes to environment',1),(18,8,'Mosquito killer',0),(19,9,'Nothing toxic to e coli',1),(20,9,'No changes to environment',1),(21,9,'Expresses mosquito repellent',0),(22,10,'Nothing toxic to e coli',1),(23,10,'No changes to environment',1),(24,10,'Survives human gastrointestinal tract',0),(25,10,'Replaces gut flora functionality',0),(26,10,'Requires wetlab confirmation',0),(27,11,'Nothing toxic to e coli',0),(28,11,'No changes to environment',0),(29,11,'Expresses biodiesel',0),(30,12,'Nothing toxic to e coli',1),(31,12,'No changes to environment',1),(32,12,'Expresses bioplastic',0),(33,4,'No changes to environment',1),(34,13,'Nothing toxic to e coli',1),(35,13,'No changes to environment',1),(36,13,'Express vegetable oils',0),(37,13,'Express hexane when vegetable oils > 10',0),(38,14,'Nothing toxic to e coli',1),(39,14,'No changes to environment',1),(40,14,'Extract copper from copper ore',0),(41,14,'Remove toxic chemicals > 10',0);
+/*!40000 ALTER TABLE `challenge_criteria` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_environment`
+--
+
+DROP TABLE IF EXISTS `challenge_environment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_environment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `temp` double NOT NULL,
+  `pH` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_environment`
+--
+
+LOCK TABLES `challenge_environment` WRITE;
+/*!40000 ALTER TABLE `challenge_environment` DISABLE KEYS */;
+INSERT INTO `challenge_environment` VALUES (1,'Incubated agar plate (with arsenic)',37,7),(2,'Incubated agar plate with antibiotic',37,7);
+/*!40000 ALTER TABLE `challenge_environment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_environment_sources_and_sinks`
+--
+
+DROP TABLE IF EXISTS `challenge_environment_sources_and_sinks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_environment_sources_and_sinks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `environment_id` int(11) NOT NULL,
+  `sourcesink_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `environment_id` (`environment_id`,`sourcesink_id`),
+  KEY `challenge_environment_sources_and_sinks_25ab32ac` (`environment_id`),
+  KEY `challenge_environment_sources_and_sinks_9dc99a8c` (`sourcesink_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_environment_sources_and_sinks`
+--
+
+LOCK TABLES `challenge_environment_sources_and_sinks` WRITE;
+/*!40000 ALTER TABLE `challenge_environment_sources_and_sinks` DISABLE KEYS */;
+INSERT INTO `challenge_environment_sources_and_sinks` VALUES (1,1,1),(2,2,3);
+/*!40000 ALTER TABLE `challenge_environment_sources_and_sinks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_sourcesink`
+--
+
+DROP TABLE IF EXISTS `challenge_sourcesink`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_sourcesink` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `quantity` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_sourcesink`
+--
+
+LOCK TABLES `challenge_sourcesink` WRITE;
+/*!40000 ALTER TABLE `challenge_sourcesink` DISABLE KEYS */;
+INSERT INTO `challenge_sourcesink` VALUES (1,'Arsenic',40),(2,'Lead',100),(3,'Antibiotic',100),(4,'Green fluorescent light',50);
+/*!40000 ALTER TABLE `challenge_sourcesink` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_useful_component`
+--
+
+DROP TABLE IF EXISTS `challenge_useful_component`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_useful_component` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `challenge_id` int(11) NOT NULL,
+  `desc` varchar(100) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `challenge_useful_component_dd8bebce` (`challenge_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_useful_component`
+--
+
+LOCK TABLES `challenge_useful_component` WRITE;
+/*!40000 ALTER TABLE `challenge_useful_component` DISABLE KEYS */;
+INSERT INTO `challenge_useful_component` VALUES (1,2,'Standard constituitive promoter','http://partsregistry.org/wiki/index.php/Part:BBa_J23119'),(2,2,'Lead sensitive promoter','http://partsregistry.org/wiki/index.php?title=Part:BBa_I721001'),(3,2,'Green fluorescent protein','http://partsregistry.org/Part:BBa_E0040:Design'),(4,1,'Standard constituitive promoter','http://partsregistry.org/wiki/index.php/Part:BBa_J23119'),(5,1,'Lead sensitive promoter','http://partsregistry.org/wiki/index.php?title=Part:BBa_I721001'),(6,4,'Standard constituitive promoter','http://partsregistry.org/wiki/index.php/Part:BBa_J23119'),(7,4,'Green fluorescent protein','http://partsregistry.org/wiki/index.php?title=Part:BBa_I721001'),(8,5,'Arsenic promoter','http://partsregistry.org/Part:BBa_K190015'),(9,5,'Green fluorescent protein','http://partsregistry.org/wiki/index.php?title=Part:BBa_I721001'),(10,6,'Tryptophan repressor','http://partsregistry.org/wiki/index.php/Part:BBa_J23119'),(11,6,'RFP','http://partsregistry.org/wiki/index.php?title=Part:BBa_I721001'),(12,9,'Stem wax','http://web.expasy.org/spotlight/');
+/*!40000 ALTER TABLE `challenge_useful_component` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_useful_link`
+--
+
+DROP TABLE IF EXISTS `challenge_useful_link`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_useful_link` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `challenge_id` int(11) NOT NULL,
+  `desc` varchar(100) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `challenge_useful_link_dd8bebce` (`challenge_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_useful_link`
+--
+
+LOCK TABLES `challenge_useful_link` WRITE;
+/*!40000 ALTER TABLE `challenge_useful_link` DISABLE KEYS */;
+INSERT INTO `challenge_useful_link` VALUES (1,2,'Parts registry','http://partsregistry.org/'),(2,1,'Parts registry','http://partsregistry.org/');
+/*!40000 ALTER TABLE `challenge_useful_link` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `challenge_userprofile`
+--
+
+DROP TABLE IF EXISTS `challenge_userprofile`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenge_userprofile` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `url` varchar(200) NOT NULL,
+  `active_user` tinyint(1) NOT NULL,
+  `profile_desc` varchar(500) NOT NULL,
+  `cumulative_votes` int(11) NOT NULL,
+  `cumulative_bounty` int(11) NOT NULL,
+  `current_votes` int(11) NOT NULL,
+  `current_bounty` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenge_userprofile`
+--
+
+LOCK TABLES `challenge_userprofile` WRITE;
+/*!40000 ALTER TABLE `challenge_userprofile` DISABLE KEYS */;
+INSERT INTO `challenge_userprofile` VALUES (1,1,'http://www.timogilvie.com/',1,'Tim is the founder of Tyger. ',0,100,0,0),(2,3,'http://www.tyger.us/',1,'Not every worthwhile project will have commercial sponsors. That\'s where the Tyger Library comes in. We\'re sponsoring development of the most worthy components to help make the world a better place. Every week, we will select the challenges with the most votes and Tyger Library will sponsor them, encouraging the community to complete them. These will be freely available to the community. ',0,0,0,0),(3,4,'http://www.timogilvie.com/',1,'Tim Ogilvie is the founder of Tyger.',2000,100,0,0),(4,5,'http://biobricks.org/',1,'The BioBricks Foundation works to ensure that the engineering of biology is conducted in an open and ethical manner to benefit all people and the planet.  We are dedicated to advancing synthetic biology to benefit all people and the planet. To achieve this, we must make engineering biology easier, safer, equitable, and more open. We do this in the following ways: by ensuring that the fundamental building blocks of synthetic biology are freely available for open innovation; by creating community,',0,0,0,0);
+/*!40000 ALTER TABLE `challenge_userprofile` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `device_device`
+--
+
+DROP TABLE IF EXISTS `device_device`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `device_device` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `promoter_id` int(11) NOT NULL,
+  `rbs_id` int(11) DEFAULT NULL,
+  `protein_id` int(11) DEFAULT NULL,
+  `terminator_id` int(11) NOT NULL,
+  `owner_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `device_device_2541c9d2` (`promoter_id`),
+  KEY `device_device_b2be1bd0` (`rbs_id`),
+  KEY `device_device_a2a814f6` (`protein_id`),
+  KEY `device_device_681a0d8f` (`terminator_id`),
+  KEY `device_device_5d52dd10` (`owner_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `device_device`
+--
+
+LOCK TABLES `device_device` WRITE;
+/*!40000 ALTER TABLE `device_device` DISABLE KEYS */;
+INSERT INTO `device_device` VALUES (1,'Constituitive promoter - terminator envelope',1,NULL,NULL,1,1);
+/*!40000 ALTER TABLE `device_device` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `device_promoter`
+--
+
+DROP TABLE IF EXISTS `device_promoter`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `device_promoter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `sequence` varchar(4000) NOT NULL,
+  `external_URL` varchar(200) NOT NULL,
+  `PoPS` double NOT NULL,
+  `induced_by_id` int(11) DEFAULT NULL,
+  `repressed_by_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `device_promoter_83ef9d8e` (`induced_by_id`),
+  KEY `device_promoter_9679d371` (`repressed_by_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `device_promoter`
+--
+
+LOCK TABLES `device_promoter` WRITE;
+/*!40000 ALTER TABLE `device_promoter` DISABLE KEYS */;
+INSERT INTO `device_promoter` VALUES (1,'Constituitive promoter (BBa_J23119)','PROMOTER','ttgacagctagctcagtcctaggtataatgctagc','http://partsregistry.org/wiki/index.php?title=Part:BBa_J23119',1,NULL,NULL);
+/*!40000 ALTER TABLE `device_promoter` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `device_protein`
+--
+
+DROP TABLE IF EXISTS `device_protein`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `device_protein` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `sequence` varchar(4000) NOT NULL,
+  `external_URL` varchar(200) NOT NULL,
+  `protein_output_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `device_protein_9cf31c7d` (`protein_output_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `device_protein`
+--
+
+LOCK TABLES `device_protein` WRITE;
+/*!40000 ALTER TABLE `device_protein` DISABLE KEYS */;
+INSERT INTO `device_protein` VALUES (1,'GFP - Green fluorescent protein (BBa_E0040)','PROTEIN','atgcgtaaaggagaagaacttttcactggagttgtcccaattcttgttgaattagatggtgatgttaatgggcacaaattttctgtcagtggagagggtg aaggtgatgcaacatacggaaaacttacccttaaatttatttgcactactggaaaactacctgttccatggccaacacttgtcactactttcggttatgg tgttcaatgctttgcgagatacccagatcatatgaaacagcatgactttttcaagagtgccatgcccgaaggttatgtacaggaaagaactatatttttc aaagatgacgggaactacaagacacgtgctgaagtcaagtttgaaggtgatacccttgttaatagaatcgagttaaaaggtattgattttaaagaagatg gaaacattcttggacacaaattggaatacaactataactcacacaatgtatacatcatggcagacaaacaaaagaatggaatcaaagttaacttcaaaat tagacacaacattgaagatggaagcgttcaactagcagaccattatcaacaaaatactccaattggcgatggccctgtccttttaccagacaaccattac ctgtccacacaatctgccctttcgaaagatcccaacgaaaagagagaccacatggtccttcttgagtttgtaacagctgctgggattacacatggcatgg atgaactatacaaataataa','http://partsregistry.org/Part:BBa_E0040',4);
+/*!40000 ALTER TABLE `device_protein` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `device_rbs`
+--
+
+DROP TABLE IF EXISTS `device_rbs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `device_rbs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `sequence` varchar(4000) NOT NULL,
+  `external_URL` varchar(200) NOT NULL,
+  `RiPS` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `device_rbs`
+--
+
+LOCK TABLES `device_rbs` WRITE;
+/*!40000 ALTER TABLE `device_rbs` DISABLE KEYS */;
+INSERT INTO `device_rbs` VALUES (1,'RBS from Elowitz (BBa_B0034)','RBS','aaagaggagaaa','http://partsregistry.org/Part:BBa_B0034',1);
+/*!40000 ALTER TABLE `device_rbs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `device_terminator`
+--
+
+DROP TABLE IF EXISTS `device_terminator`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `device_terminator` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `sequence` varchar(4000) NOT NULL,
+  `external_URL` varchar(200) NOT NULL,
+  `fwd_efficiency` double NOT NULL,
+  `rev_efficiency` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `device_terminator`
+--
+
+LOCK TABLES `device_terminator` WRITE;
+/*!40000 ALTER TABLE `device_terminator` DISABLE KEYS */;
+INSERT INTO `device_terminator` VALUES (1,'Double terminator - forward (BBa_B0015)','TERMINATOR','ccaggcatcaaataaaacgaaaggctcagtcgaaagactgggcctttcgttttatctgttgtttgtcggtgaacgctctctactagagtcacactggctc accttcgggtgggcctttctgcgtttata','http://partsregistry.org/wiki/index.php?title=Part:BBa_B0015',0.984,0.295),(2,'Double terminator - bi-directional (BBa_B0014)','TERMINATOR','tcacactggctcaccttcgggtgggcctttctgcgtttatatactagagagagaatataaaaagccagattattaatccggcttttttattattt','http://partsregistry.org/Part:BBa_B0014',0.75,0.86);
+/*!40000 ALTER TABLE `device_terminator` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_admin_log`
+--
+
+DROP TABLE IF EXISTS `django_admin_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_admin_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `action_time` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `content_type_id` int(11) DEFAULT NULL,
+  `object_id` longtext,
+  `object_repr` varchar(200) NOT NULL,
+  `action_flag` smallint(5) unsigned NOT NULL,
+  `change_message` longtext NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `django_admin_log_fbfc09f1` (`user_id`),
+  KEY `django_admin_log_e4470c6e` (`content_type_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_admin_log`
+--
+
+LOCK TABLES `django_admin_log` WRITE;
+/*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+INSERT INTO `django_admin_log` VALUES (121,'2012-02-26 19:08:24',1,11,'1','Detect arsenic in ground water',2,'Changed name and bounty.'),(120,'2012-02-26 18:59:25',1,11,'2','Detect when arsenic and lead are present',2,'Changed name and image.'),(119,'2012-02-26 18:52:00',1,11,'5','Tutorial 2: Using promoters',2,'Changed image.'),(118,'2012-02-26 18:48:13',1,11,'4','Tutorial 1: Hello, World!',2,'Changed image.'),(117,'2012-02-26 18:47:57',1,11,'5','Tutorial 2: Using promoters',2,'Changed image.'),(116,'2012-02-26 18:45:07',1,11,'6','Tutorial 3: Inhibiting expression with promoters',2,'Changed image.'),(115,'2012-02-26 18:36:45',1,11,'7','Design cellular antifreeze',2,'Changed name.'),(114,'2012-02-26 18:35:09',1,11,'7','Antifreeze for e coli',2,'Changed image.'),(113,'2012-02-26 18:06:08',1,11,'4','Tutorial 1: Hello, World!',2,'Changed image.'),(112,'2012-02-26 17:01:03',1,11,'1','e coli that glows blue when arsenic is present',2,'Changed image.'),(111,'2012-02-26 17:00:49',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',2,'Changed image.'),(110,'2012-02-26 17:00:34',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',2,'Changed image.'),(109,'2012-02-26 17:00:18',1,11,'5','Tutorial 2: Using promoters',2,'Changed image.'),(108,'2012-02-26 17:00:02',1,11,'6','Tutorial 3: Inhibiting expression with promoters',2,'Changed image.'),(107,'2012-02-26 16:59:50',1,11,'7','Antifreeze for e coli',2,'Changed image.'),(106,'2012-02-25 18:07:14',1,11,'7','Antifreeze for e coli',2,'Changed descrip.'),(105,'2012-02-25 18:06:49',1,11,'5','Tutorial 2: Using promoters',2,'No fields changed.'),(104,'2011-12-28 18:15:36',3,35,'1','Device object',1,''),(103,'2011-12-28 18:13:05',3,32,'1','GFP - Green fluorescent protein (BBa_E0040)',1,''),(102,'2011-12-28 18:10:28',3,31,'1','Constituitive promoter (BBa_J23119)',1,''),(101,'2011-12-28 18:06:19',3,34,'1','RBS from Elowitz (BBa_B0034)',1,''),(100,'2011-12-28 16:47:17',3,33,'2','Double terminator - bi-directional (BBa_B0014)',1,''),(99,'2011-12-28 16:38:46',3,33,'1','Double terminator - forward (BBa_B0015)',1,''),(98,'2011-12-03 20:19:33',1,3,'4','togilvie',2,'Changed first_name, last_name, email, is_staff and is_superuser. Changed cumulative_votes and cumulative_bounty for user profile \"togilvie\".'),(97,'2011-12-03 20:18:55',1,3,'4','togilvie',1,''),(96,'2011-11-24 13:35:37',3,3,'3','tygerlibrary',2,'Changed username.'),(95,'2011-11-24 12:39:36',3,30,'2','Bench object',2,'Changed slug.'),(94,'2011-11-24 12:39:27',3,30,'3','Bench object',2,'Changed slug.'),(93,'2011-11-24 12:39:17',3,30,'1','Bench object',2,'Changed slug.'),(92,'2011-11-24 08:49:03',3,30,'1','Bench object',2,'Changed author.'),(91,'2011-11-24 08:48:48',3,30,'3','Bench object',2,'Changed author.'),(90,'2011-11-23 21:58:48',3,29,'1','Double terminator',1,''),(89,'2011-11-23 21:56:32',3,27,'1','Green fluorescent glow',1,''),(88,'2011-11-23 21:50:41',3,23,'4','Green fluorescent light',1,''),(87,'2011-11-23 21:43:21',3,28,'2','RBS - Strong',1,''),(86,'2011-11-23 21:42:23',3,28,'1','Elowitz standard',1,''),(85,'2011-11-23 21:30:03',3,26,'1','Constituitive promoter',1,''),(84,'2011-11-23 21:07:26',3,30,'3','Bench object',1,''),(83,'2011-11-23 21:07:11',3,30,'2','Bench object',1,''),(82,'2011-11-23 21:06:47',3,30,'1','Bench object',1,''),(81,'2011-11-22 07:31:48',3,11,'5','Tutorial 2: Using promoters',2,'Changed descrip.'),(80,'2011-11-16 21:51:05',3,24,'2','Incubated agar plate with antibiotic',2,'No fields changed.'),(79,'2011-11-16 21:38:33',3,11,'4','Tutorial 1: Hello, World!',2,'No fields changed.'),(78,'2011-11-16 21:36:13',3,24,'2','Incubated agar plate with antibiotic',1,''),(77,'2011-11-16 21:36:11',3,23,'3','Antibiotic',1,''),(76,'2011-11-16 21:35:21',3,24,'1','Incubated agar plate (with arsenic)',2,'Changed name.'),(75,'2011-11-16 21:34:59',3,24,'1','Incubated agar plate',1,''),(74,'2011-11-16 21:34:36',3,23,'2','Lead',1,''),(73,'2011-11-16 21:34:28',3,23,'1','Arsenic',1,''),(72,'2011-11-16 21:01:12',3,11,'6','Tutorial 3: Inhibiting expression with promoters',2,'Changed descrip and sponsor.'),(71,'2011-11-16 21:00:53',3,11,'7','Antifreeze for e coli',2,'No fields changed.'),(70,'2011-11-10 21:49:47',3,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip.'),(69,'2011-11-10 21:49:19',3,11,'4','Tutorial 1: Hello, World!',2,'Changed name.'),(68,'2011-11-10 21:49:03',3,11,'4','Tutorial 1: Hello, World',2,'Changed name.'),(67,'2011-11-10 21:40:02',3,11,'4','Tutorial 1: Hello, World!',2,'Changed sponsor.'),(66,'2011-11-10 21:39:47',3,11,'4','Tutorial 1: Hello, World',2,'Changed name.'),(65,'2011-11-10 08:06:50',3,11,'4','Tutorial 1: Hello, World',2,'Changed name.'),(64,'2011-11-08 08:15:05',3,11,'7','Antifreeze for e coli',1,''),(63,'2011-11-08 08:12:57',1,3,'3','tyger-library',2,'Changed is_superuser.'),(62,'2011-11-08 08:12:12',1,3,'3','tyger-library',2,'Changed is_staff.'),(61,'2011-11-08 08:10:19',1,11,'4','Tutorial 1: Hello, World',2,'Changed name.'),(60,'2011-11-08 08:10:01',1,3,'3','tyger-library',2,'Changed email.'),(59,'2011-11-08 08:09:49',1,3,'3','tyger-library',2,'Changed email.'),(58,'2011-11-08 08:09:17',1,3,'3','tyger-library',2,'Changed first_name, last_name and email.'),(57,'2011-11-08 08:08:48',1,3,'3','tyger-library',1,''),(56,'2011-11-08 08:05:54',1,11,'4','Tutorial 1: Hello, World',2,'Changed name.'),(55,'2011-11-08 07:55:23',1,11,'4','Tutorial 1: Hello, World',2,'Changed name.'),(54,'2011-11-08 07:52:31',1,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip.'),(53,'2011-11-08 07:52:04',1,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip.'),(52,'2011-11-08 07:44:24',1,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip.'),(51,'2011-11-08 07:43:12',1,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip.'),(50,'2011-11-06 08:36:26',1,11,'6','Tutorial 3: Inhibiting expression with promoters',1,''),(49,'2011-11-06 08:06:38',1,11,'5','Tutorial 2: Using promoters',1,''),(48,'2011-11-06 07:50:38',1,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip. Added criteria \"Glows green\". Added criteria \"Nothing toxic to e coli\". Added useful_ component \"Standard constituitive promoter\". Added useful_ component \"Green fluorescent protein\".'),(47,'2011-11-06 07:44:15',1,11,'3','Tutorial 1: Hello, World!',3,''),(46,'2011-11-06 07:44:02',1,11,'4','Tutorial 1: Hello, World!',1,''),(45,'2011-11-06 07:44:01',1,11,'3','Tutorial 1: Hello, World!',1,''),(44,'2011-10-31 08:00:27',1,11,'1','e coli that glows blue when arsenic is present',2,'Added useful_ component \"Standard constituitive promoter\". Added useful_ component \"Lead sensitive promoter\". Added useful_ link \"Parts registry\".'),(43,'2011-10-31 07:59:54',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',2,'Added useful_ component \"Standard constituitive promoter\". Added useful_ component \"Lead sensitive promoter\". Added useful_ component \"Green fluorescent protein\". Added useful_ link \"Parts registry\".'),(42,'2011-10-26 21:02:41',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',1,''),(41,'2011-10-26 21:02:15',1,11,'1','e coli that glows blue when arsenic is present',1,''),(40,'2011-10-26 21:01:30',1,3,'1','me',2,'Added user profile \"me\".'),(39,'2011-10-19 08:10:25',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',1,''),(38,'2011-10-18 20:29:32',1,11,'1','e coli that glows blue when arsenic is present',2,'No fields changed.'),(37,'2011-10-18 20:16:15',1,11,'1','e coli that glows blue when arsenic is present',1,''),(36,'2011-10-18 20:07:50',1,3,'1','me',2,'Added user profile \"UserProfile object\".'),(35,'2011-10-10 21:10:56',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',1,''),(34,'2011-10-10 21:10:24',1,11,'1','e coli that glows blue when arsenic is present',1,''),(33,'2011-10-10 21:03:41',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',1,''),(32,'2011-10-10 21:02:57',1,11,'1','e coli that glows blue when arsenic is present',1,''),(31,'2011-10-10 09:41:20',1,17,'4','Lead',3,''),(30,'2011-10-08 17:35:53',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',1,''),(29,'2011-10-08 17:35:16',1,11,'1','e coli that glows blue when arsenic is present',1,''),(28,'2011-10-07 10:06:39',1,11,'2','e coli that glows blue when arsenic is present and green when lead is present',1,''),(27,'2011-10-07 10:05:54',1,11,'1','e coli that glows blue when arsenic is present',1,''),(26,'2011-10-06 19:45:05',1,11,'3','e coli that glows blue when arsenic is present and green when lead is present',1,''),(25,'2011-10-06 19:43:55',1,11,'1','e coli that glows blue when arsenic is present',3,''),(24,'2011-10-06 19:43:43',1,11,'2','e coli that glows blue when arsenic is present',2,'Added criteria \"Glows blue when arsenic is present\". Added criteria \"No changes to environment\". Added criteria \"Nothing toxic to chassis\".'),(22,'2011-10-06 19:43:15',1,11,'1','e coli that glows blue when arsenic is present',1,''),(23,'2011-10-06 19:43:15',1,11,'2','e coli that glows blue when arsenic is present',1,''),(21,'2011-10-05 22:54:03',1,7,'1','tyger.us',2,'Changed domain and name.'),(20,'2011-07-23 18:16:56',1,3,'1','me',2,'Changed first_name and last_name.'),(19,'2011-07-18 16:55:08',1,11,'1','Glows blue when arsenic is present',2,'Changed descrip.'),(18,'2011-07-18 16:18:56',1,11,'2','e coli that glows blue when arsenic is present',2,'Changed descrip.'),(17,'2011-07-17 17:44:44',1,11,'2','e coli that glows blue when arsenic is present',1,''),(16,'2011-07-17 17:44:14',1,11,'1','Glows blue when arsenic is present',1,''),(15,'2011-07-17 10:27:53',1,8,'1','Glows blue when arsenic is present',2,'Changed name.'),(14,'2011-07-17 09:28:06',1,8,'1','e coli that glows blue when arsenic is present',1,''),(13,'2011-07-16 19:00:20',1,8,'1','e coli that glows green when arsenic is present',2,'Added criteria \"No changes to environment\". Added criteria \"Nothing toxic to chassis\". Changed desc for criteria \"Glows green when arsenic is present\".'),(12,'2011-07-16 18:59:48',1,8,'2','e coli that glows blue when arsenic is present',2,'Changed desc for criteria \"Nothing toxic to chassis\".'),(11,'2011-07-16 18:59:40',1,8,'2','e coli that glows blue when arsenic is present',2,'Added criteria \"Glows blue when arsenic is present\". Added criteria \"No changes to environment\". Added criteria \"Nothing toxic to e coli\".'),(10,'2011-07-16 18:59:04',1,8,'3','e coli that glows blue when arsenic is present and green when lead is present',2,'Changed desc for criteria \"Nothing toxic to e coli\". Changed desc for criteria \"Glows blue when arsenic is present\".'),(9,'2011-07-16 18:45:06',1,8,'3','e coli that glows blue when arsenic is present and green when lead is present',2,'Added criteria \"No changes to environment\". Added criteria \"Glows blue when arsenic is present\". Added criteria \"Glows green when lead is present\". Added criteria \"Nothing toxic to e coli\".'),(8,'2011-07-16 18:30:43',1,8,'3','e coli that glows blue when arsenic is present and green when lead is present',2,'No fields changed.'),(7,'2011-07-16 18:27:47',1,8,'3','e coli that glows blue when arsenic is present and green when lead is present',2,'Changed name.'),(6,'2011-07-16 18:27:23',1,8,'1','e coli that glows green when arsenic is present',2,'Changed name.'),(5,'2011-07-16 18:27:07',1,8,'2','e coli that glows blue when arsenic is present',2,'Changed name.'),(4,'2011-07-16 18:26:45',1,8,'3','Third one',1,''),(3,'2011-07-16 18:26:33',1,8,'1','Second one',2,'Changed name.'),(2,'2011-07-16 18:26:20',1,8,'2','First one',2,'No fields changed.'),(1,'2011-07-16 18:16:42',1,8,'2','First one',2,'Changed name and first_completed.'),(122,'2012-03-04 18:01:44',4,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip.'),(123,'2012-03-04 18:38:25',4,11,'8','Mosquito killing e coli',1,''),(124,'2012-03-04 18:38:36',4,11,'7','Design cellular antifreeze',2,'No fields changed.'),(125,'2012-03-04 18:45:01',4,11,'9','Living mosquito repellents',1,''),(126,'2012-03-04 18:47:28',4,11,'4','Tutorial 1: Hello, World!',2,'Changed sponsor.'),(127,'2012-03-04 18:47:41',4,11,'5','Tutorial 2: Using promoters',2,'Changed sponsor.'),(128,'2012-03-04 18:47:59',4,11,'6','Tutorial 3: Inhibiting expression with promoters',2,'Changed sponsor.'),(129,'2012-03-04 18:53:09',4,3,'5','biobricks',1,''),(130,'2012-03-04 18:54:46',4,3,'5','biobricks',2,'Changed first_name, last_name and email.'),(131,'2012-03-04 18:55:20',4,11,'7','Design cellular antifreeze',2,'Changed sponsor.'),(132,'2012-03-04 18:58:59',4,11,'9','Living mosquito repellents',2,'Changed descrip.'),(133,'2012-03-04 19:03:16',4,11,'1','Detect arsenic in ground water',2,'Changed sponsor and descrip.'),(134,'2012-03-04 19:24:05',4,11,'1','Detect arsenic in ground water',2,'Changed image.'),(135,'2012-03-04 19:28:16',4,11,'10','Replace gut flora',1,''),(136,'2012-03-04 19:31:27',4,11,'11','Living biodiesel pumps',1,''),(137,'2012-03-04 19:32:53',4,11,'2','Detect when arsenic and lead are present',2,'Changed votes and bounty.'),(138,'2012-03-04 19:45:24',4,11,'12','Bioplastic to reduce fossil fuel usage',1,''),(139,'2012-03-04 19:45:49',4,11,'4','Tutorial 1: Hello, World!',2,'Added criteria \"No changes to environment\". Changed status for criteria \"Nothing toxic to e coli\".'),(140,'2012-03-04 19:47:30',4,11,'2','Detect when arsenic and lead are present',2,'Changed image, sponsor and descrip.'),(141,'2012-03-04 19:53:51',4,11,'13','Create industrial vegetable oil',1,''),(142,'2012-03-04 20:00:23',4,11,'14','Bioleaching removes metal from ore',1,''),(143,'2012-03-04 21:05:08',4,11,'9','Living mosquito repellents',2,'Changed image.'),(144,'2012-03-04 21:06:07',4,11,'8','Living mosquito killer',2,'Changed name, image and descrip.'),(145,'2012-03-04 21:19:04',4,11,'14','Bioleaching removes metal from ore',2,'Changed image.'),(146,'2012-03-04 21:20:05',4,11,'9','Living mosquito repellents',2,'Changed votes.'),(147,'2012-03-04 21:21:30',4,11,'9','Living mosquito repellents',2,'Changed bounty.'),(148,'2012-03-04 21:23:13',4,11,'2','Detect when arsenic and lead are present',2,'Changed tags.'),(149,'2012-03-05 07:47:29',4,11,'2','Detect when arsenic and lead are present',2,'Changed status for criteria \"Glows blue when arsenic is present\". Changed status for criteria \"Nothing toxic to e coli\".'),(150,'2012-03-11 17:17:40',4,11,'4','Tutorial 1: Hello, World!',2,'Changed votes.'),(151,'2012-03-11 17:17:51',4,11,'5','Tutorial 2: Using promoters',2,'Changed votes.'),(152,'2012-03-11 17:18:05',4,11,'6','Tutorial 3: Inhibiting expression with promoters',2,'Changed votes.'),(153,'2012-07-29 15:07:03',4,30,'4','Bench object',1,''),(154,'2012-07-29 15:09:01',4,11,'4','Tutorial 1: Hello, World!',2,'Changed descrip. Changed desc for criteria \"Glows - green fluorescent light\".');
+/*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_content_type`
+--
+
+DROP TABLE IF EXISTS `django_content_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_content_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `app_label` varchar(100) NOT NULL,
+  `model` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `app_label` (`app_label`,`model`)
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_content_type`
+--
+
+LOCK TABLES `django_content_type` WRITE;
+/*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
+INSERT INTO `django_content_type` VALUES (30,'bench','bench','bench'),(8,'challenge','canvas','challenge'),(11,'challenge','challenge','challenge'),(25,'chassis','bench','chassis'),(15,'consumer','piston','consumer'),(5,'content type','contenttypes','contenttype'),(9,'criteria','canvas','criteria'),(12,'criteria','challenge','criteria'),(35,'device','device','device'),(24,'environment','challenge','environment'),(2,'group','auth','group'),(10,'log entry','admin','logentry'),(4,'message','auth','message'),(22,'migration history','south','migrationhistory'),(13,'nonce','piston','nonce'),(1,'permission','auth','permission'),(26,'promoter','bench','promoter'),(31,'promoter','device','promoter'),(27,'protein','bench','protein'),(32,'protein','device','protein'),(28,'rbs','bench','rbs'),(34,'rbs','device','rbs'),(14,'resource','piston','resource'),(6,'session','sessions','session'),(7,'site','sites','site'),(23,'source sink','challenge','sourcesink'),(17,'tag','tagging','tag'),(18,'tagged item','tagging','taggeditem'),(29,'terminator','bench','terminator'),(33,'terminator','device','terminator'),(16,'token','piston','token'),(21,'useful_ component','challenge','useful_component'),(20,'useful_ link','challenge','useful_link'),(3,'user','auth','user'),(19,'user profile','challenge','userprofile');
+/*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_session`
+--
+
+DROP TABLE IF EXISTS `django_session`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_session` (
+  `session_key` varchar(40) NOT NULL,
+  `session_data` longtext NOT NULL,
+  `expire_date` datetime NOT NULL,
+  PRIMARY KEY (`session_key`),
+  KEY `django_session_c25c2c28` (`expire_date`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_session`
+--
+
+LOCK TABLES `django_session` WRITE;
+/*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
+INSERT INTO `django_session` VALUES ('67ad060683883febc8e931de4af92f9b','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2011-07-30 18:13:34'),('8976187b4bfd2b9d5522f56e37a7198f','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2011-07-31 15:42:26'),('46132034057ec3f093394f4211c64858','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2011-10-19 22:53:07'),('72cfac7c4bef55710214fb7c48013c1e','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2011-11-03 08:44:27'),('2efb38a1bc9675bad8e0246f5f878062','OWZhZTM1NzgwYTU4NTE4Y2NjNTBjY2MwY2ZiN2EyZTA3NWQyMmRiZTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAnUu\n','2011-11-09 18:57:32'),('8d3cf6a882f60951f43d12a4b46a8ae1','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2011-11-22 08:13:08'),('f4a7142637554e85731a956c49805b2d','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2011-12-28 19:33:36'),('03fa33417c3913ef03bd04b9c8b07cb2','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2011-12-28 23:51:31'),('202f638be417ddfa01c908d553df83ee','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2011-12-29 11:36:32'),('9b1b7469237c8bf45791dff933c556d3','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2011-12-29 11:45:49'),('5b10af5003787241e2400c4b0e4cbed9','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2012-01-06 14:40:50'),('ec3e0d0627142ed9c07bea08ac8330a9','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2012-01-14 09:31:17'),('80d6e8f62da83f9c261a851b12f7f76b','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2012-01-15 12:13:38'),('c2cab9ea57003af3feb9b706e2b286bc','NTgyMTI2NTdhYWRjYWRlY2FhNzFiNGEzNGUyZjkxYzBjNjMyZmZmYzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLA3Uu\n','2012-01-16 23:11:33'),('8a745865208f0498a070fcacb851ec08','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-01-22 11:05:08'),('7b2a1cf082209edd9bd9b975321395a6','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-01-22 22:09:56'),('feebca4f018b7670017ef5b35bdad8dd','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-02-05 22:24:43'),('ba6866db0fed2af7ece7175b2793d769','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-02-23 21:22:36'),('b047e32d56a83eff35b2c033b120be33','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-02-23 22:08:44'),('77f924dbf5c1b51dc0a35ef72f6af57a','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-03-10 17:21:51'),('80fd47da2a7d341a74aff2601e95f0ab','ZmEwY2FhYzgyZjc3Yjk4YmZhMDExYjM0NTFkZDRjZDJhZWNjYTBkNTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n','2012-03-10 17:36:25'),('57b7f5549492e3c4cbbcfa260f0ff8e4','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-03-25 18:52:10'),('0ffc82e7d38545a6af99e4ef63807d29','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-03-18 17:46:08'),('892f9128b60d2b17b5497f7ac8ba8e94','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-03-18 17:50:30'),('976078193c6575f45eaf2ea7c18f890f','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-06-02 09:22:28'),('90909a8c9f73ee88dc70384c4db37ac6','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-08-11 08:16:08'),('0d48bdca5d0465bb67dd878bca0ddd4e','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-10-11 13:09:26'),('637c5fbc1aa8b82444cd82219579eb90','MTRiMGE0MmNmZTBlOGQwYTViMGU1YWJjNjljZWZhMWU3MWRkYjFhNjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQR1Lg==\n','2012-11-09 11:45:24');
+/*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `django_site`
+--
+
+DROP TABLE IF EXISTS `django_site`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `django_site` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `domain` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `django_site`
+--
+
+LOCK TABLES `django_site` WRITE;
+/*!40000 ALTER TABLE `django_site` DISABLE KEYS */;
+INSERT INTO `django_site` VALUES (1,'tyger.us','tyger.us');
+/*!40000 ALTER TABLE `django_site` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piston_consumer`
+--
+
+DROP TABLE IF EXISTS `piston_consumer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `piston_consumer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `key` varchar(18) NOT NULL,
+  `secret` varchar(32) NOT NULL,
+  `status` varchar(16) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `piston_consumer_fbfc09f1` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piston_consumer`
+--
+
+LOCK TABLES `piston_consumer` WRITE;
+/*!40000 ALTER TABLE `piston_consumer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piston_consumer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piston_nonce`
+--
+
+DROP TABLE IF EXISTS `piston_nonce`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `piston_nonce` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `token_key` varchar(18) NOT NULL,
+  `consumer_key` varchar(18) NOT NULL,
+  `key` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piston_nonce`
+--
+
+LOCK TABLES `piston_nonce` WRITE;
+/*!40000 ALTER TABLE `piston_nonce` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piston_nonce` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piston_resource`
+--
+
+DROP TABLE IF EXISTS `piston_resource`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `piston_resource` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `url` longtext NOT NULL,
+  `is_readonly` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piston_resource`
+--
+
+LOCK TABLES `piston_resource` WRITE;
+/*!40000 ALTER TABLE `piston_resource` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piston_resource` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `piston_token`
+--
+
+DROP TABLE IF EXISTS `piston_token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `piston_token` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(18) NOT NULL,
+  `secret` varchar(32) NOT NULL,
+  `token_type` int(11) NOT NULL,
+  `timestamp` int(11) NOT NULL,
+  `is_approved` tinyint(1) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `consumer_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `piston_token_fbfc09f1` (`user_id`),
+  KEY `piston_token_6565fc20` (`consumer_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `piston_token`
+--
+
+LOCK TABLES `piston_token` WRITE;
+/*!40000 ALTER TABLE `piston_token` DISABLE KEYS */;
+/*!40000 ALTER TABLE `piston_token` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `south_migrationhistory`
+--
+
+DROP TABLE IF EXISTS `south_migrationhistory`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `south_migrationhistory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `app_name` varchar(255) NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `applied` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `south_migrationhistory`
+--
+
+LOCK TABLES `south_migrationhistory` WRITE;
+/*!40000 ALTER TABLE `south_migrationhistory` DISABLE KEYS */;
+INSERT INTO `south_migrationhistory` VALUES (1,'challenge','0001_initial','2012-03-04 22:55:03'),(2,'device','0001_initial','2012-03-04 22:55:36'),(3,'bench','0001_initial','2012-03-04 22:55:55');
+/*!40000 ALTER TABLE `south_migrationhistory` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tagging_tag`
+--
+
+DROP TABLE IF EXISTS `tagging_tag`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tagging_tag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tagging_tag`
+--
+
+LOCK TABLES `tagging_tag` WRITE;
+/*!40000 ALTER TABLE `tagging_tag` DISABLE KEYS */;
+INSERT INTO `tagging_tag` VALUES (1,'arsenic'),(2,'gfp'),(3,'health'),(4,'tyger-library'),(5,'tutorial'),(6,'biosensor'),(7,'promoters'),(8,'tryptophan'),(9,'antifreeze'),(10,'e-coli'),(11,'library'),(12,'botany'),(13,'disease'),(14,'malaria'),(15,'mosquito'),(16,'pests'),(17,'repellent'),(18,'gastroitestinal'),(19,'medicine'),(20,'algae'),(21,'biofuel'),(22,'diesel'),(23,'biodegradable'),(24,'bioplastic'),(25,'tensile'),(26,'food'),(27,'industrial'),(28,'oil'),(29,'vegetable'),(30,'bioleaching'),(31,'copper'),(32,'ore');
+/*!40000 ALTER TABLE `tagging_tag` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tagging_taggeditem`
+--
+
+DROP TABLE IF EXISTS `tagging_taggeditem`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tagging_taggeditem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tag_id` int(11) NOT NULL,
+  `content_type_id` int(11) NOT NULL,
+  `object_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tag_id` (`tag_id`,`content_type_id`,`object_id`),
+  KEY `tagging_taggeditem_3747b463` (`tag_id`),
+  KEY `tagging_taggeditem_e4470c6e` (`content_type_id`),
+  KEY `tagging_taggeditem_829e37fd` (`object_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tagging_taggeditem`
+--
+
+LOCK TABLES `tagging_taggeditem` WRITE;
+/*!40000 ALTER TABLE `tagging_taggeditem` DISABLE KEYS */;
+INSERT INTO `tagging_taggeditem` VALUES (1,1,11,1),(2,2,11,1),(3,3,11,1),(4,1,11,2),(5,2,11,2),(6,3,11,2),(8,2,11,4),(9,5,11,4),(10,6,11,5),(11,2,11,5),(12,7,11,5),(13,5,11,5),(14,8,11,6),(15,5,11,6),(16,9,11,7),(17,10,11,7),(18,11,11,7),(19,12,11,8),(20,13,11,8),(21,14,11,8),(22,15,11,8),(23,16,11,8),(24,12,11,9),(25,13,11,9),(26,14,11,9),(27,15,11,9),(28,16,11,9),(29,17,11,9),(30,18,11,10),(31,3,11,10),(32,19,11,10),(33,20,11,11),(34,21,11,11),(35,12,11,11),(36,22,11,11),(37,23,11,12),(38,24,11,12),(39,25,11,12),(40,26,11,13),(41,27,11,13),(42,28,11,13),(43,29,11,13),(44,30,11,14),(45,31,11,14),(46,32,11,14);
+/*!40000 ALTER TABLE `tagging_taggeditem` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-10-26 15:12:13
