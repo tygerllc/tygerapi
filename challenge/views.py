@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404, redirect
 from challenge.models import Challenge
 from challenge.forms import ContactForm
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from django.core.urlresolvers import reverse
 from tagging.models import Tag, TaggedItem
 from django.views.generic import ListView
