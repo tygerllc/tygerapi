@@ -216,7 +216,7 @@ def syncdb():
     "Does a synbdb and a migrate"
     require('hosts', provided_by=[dev])
     run("cd ~/tygerapi; python manage.py syncdb --noinput; python manage.py migrate --noinput;" % env)
-    run("cd ~/tygerapi; python manage.py collectstatic")
+    sudo("cd /home/ec2-user/tygerapi; python manage.py collectstatic")
 
 def pull():
     "Does a git pull on all the repositories"

@@ -64,7 +64,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # join(ROOT_PATH, 'static/'),
+    join(ROOT_PATH, 'bootstrap/'),
     # "/Users/me/Dropbox/Tyger/tygerapi/static",
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
@@ -170,6 +170,15 @@ AUTH_PROFILE_MODULE = 'challenge.UserProfile'
 LOGIN_REDIRECT_URL = '/challenge/'
 LOGIN_URL = '/login/'
 PISTON_DISPLAY_ERRORS = True
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tyger@timogilvie.com'
+EMAIL_HOST_PASSWORD = 'tyg3rllc'
+EMAIL_PORT = 587
+
 
 try:
     from local_settings import *

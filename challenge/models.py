@@ -2,6 +2,7 @@ from django.db import models
 from tagging.fields import TagField
 from tagging.models import Tag
 from django.contrib.auth.models import User
+from django import forms
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
@@ -25,6 +26,11 @@ class UserProfile(models.Model):
     #TODO add achievements to user profile
     #TODO Extract User functions to their own app
     #TODO Add function to debit/credit votes & bounties
+
+class ContactForm(forms.Form):
+    name = forms.CharField()
+    email = forms.EmailField()
+    company = forms.CharField()
 
 class SourceSink(models.Model):
     name = models.CharField(max_length=200)

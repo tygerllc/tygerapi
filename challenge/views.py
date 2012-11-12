@@ -11,24 +11,28 @@ from tagging.models import Tag, TaggedItem
 from django.views.generic import ListView
 import models
 
-@login_required()
-def submit(request, challenge_id):
-    c = get_object_or_404(Challenge, pk=challenge_id)
-    try:
-        selected_criteria = c.criteria_set.get(pk=request.POST['criteria'])
-    except (KeyError, Challenge.DoesNotExist):
-        # Redisplay the poll voting form.
-        return render_to_response('challenge_detail.html', {
-            'challenge': c,
-            'error_message': "No challenge selected.",
-        }, context_instance=RequestContext(request))
-    else:
-        selected_criteria.status = not selected_criteria.status
-        selected_criteria.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('challenge_results', args=(c.id,)))
+def submitEmail(request):
+    errors = []
+    if request.method == 'POST':
+        if request.POST.get('email') and '@' not in request.POST['email']:
+            errors.append('Enter a valid e-mail address.')
+        if not errors:
+            try:
+                send_mail('New tyger contact',
+                request.POST.get('email'),
+                'noreply@tyger.us',
+                ['togilvie@tyger.us'],
+            )
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            errors.append("Thanks - we'll keep you up to date!")
+            return HttpResponseRedirect('/')
+    return render_to_response('index_splash.html',
+        {'msg': errors})
+
+def home_view(request):
+        return render_to_response('index_splash.html',
+        context_instance=RequestContext(request))
 
 @login_required()
 def tags(request):

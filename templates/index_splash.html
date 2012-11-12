@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tyger - a marketplace for synthetic biology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Styles -->
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    </style>
+    <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+      <div class="jumbotron">
+        <h1>A marketplace for synthetic biology</h1>
+        <p class="lead">Tyger is building the easiest way to collaborate and share solutions to synthetic biology's most difficult problems. </p>
+      <form class="form-inline" action="/submitEmail/" method="post">
+            {% csrf_token %}
+            <input type="text" class="input-medium" placeholder="Email" name="email">
+            <button type="submit" class="btn btn-medium btn-success">Keep me posted!</button>
+      </form>
+    </div>
+      <hr>
+      <div class="row-fluid marketing">
+        <div class="span6">
+          <h2>For Developers</h2>
+          <h4>Capital for great ideas</h4>
+          <p>Connect to venture capital, corporate licensees, and/or non-profit sponsors of important ideas. </p>
+
+          <h4>Protection of your IP</h4>
+          <p>Choose how you want to share your innovations. We support a variety of licensing programs and open source approaches. </p>
+
+        </div>
+
+        <div class="span6">
+          <h2>For Licensees</h2>
+          <h4>Access to innovators</h4>
+          <p>Need a specific problem solved? Let the community turn your requirements into a living organism. Pay only on successful delivery of a solution. </p>
+
+          <h4>Full service solutions</h4>
+          <p>Our professional services team can help at any stage of the process: from requirements gathering through characterization and small- or large-scale production. </p>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Tyger 2012</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"/>
+    <script src="{{ STATIC_URL }}js/bootstrap.js"/>
+
+  </body>
+</html>
