@@ -3,7 +3,7 @@ server {
   listen        80;
   server_name   www.tyger.us *.tyger.us;
   rewrite ^/(.*)/$ /$1 permanent;
-  rewrite ^     http://tyger.us/$request_uri permanent;
+  rewrite ^     http://tyger.us${request_uri} permanent;
 }
 
 # Serve static files and redirect any other request to Django
